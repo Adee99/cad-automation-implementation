@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+        crossorigin="anonymous">
+    <title>Automation App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+    
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script> -->
+
+    <!-- customer info dashboard -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body style="background-color: #f9fcff;">
+    
+
+    <!-- file upload -->
+
+    <div class="conatiner mt-5">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-3">
+                <input class="form-control" type="file" id="input"  accept=".xls,.xlsx"  >
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary" id="button">Convert</button>
+                <button class="btn btn-primary" onclick="displayData()">Display</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- file upload end -->
+
+
+    <!-- customer info dashboard -->
+
+
+    <div class="container" style="margin-top:30px">
+        <div class="row">
+          <div class="col-12">
+            <div class="title-heading">
+              How to UpSkill
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class = "col-lg-4 col-sm-4 col-md-4 col-xl-4 col-xs-12">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">STEP 1</h4>
+                <div class="card-image" style="color: #213661;">
+                  <i class="fas fa-laptop-code fa-5x"></i>
+                </div>
+                <p class="card-text ">Go through the course content thoroughly and enroll before the batch begins.</p>
+              </div>
+            </div>
+          </div>
+           <div class = "col-lg-4 col-sm-4 col-md-4 col-xl-4 col-xs-12">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">STEP 2</h4>
+                <div class="card-image" style="color: #5e371b;">
+                  <i class="fas fa-chalkboard-teacher fa-5x"></i>
+                </div>
+                <p class="card-text">Attend all the weekly interactive sessions from 9pm - 10pm, 4 times a week and do all your projects and assignments.</p>
+              </div>
+            </div>
+          </div>
+           <div class = "col-lg-4 col-sm-4 col-md-4 col-xl-4 col-xs-12">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">STEP 3</h4>
+                <div class="card-image" style="color:#bc3330;">
+                  <i class="fas fa-bullseye fa-5x"></i>
+                </div>
+                <p class="card-text">Eureka! Get certified and Get yourself placed as an intern in one of our partner startups now that you have completed the course.</p>
+              </div>
+            </div>
+          </div>
+      
+          <div class = "col-lg-4 col-sm-4 col-md-4 col-xl-4 col-xs-12">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">STEP 1</h4>
+                <div class="card-image" style="color: #213661;">
+                  <i class="fas fa-laptop-code fa-5x"></i>
+                </div>
+                <p class="card-text ">Go through the course content thoroughly and enroll before the batch begins.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class = "col-lg-4 col-sm-4 col-md-4 col-xl-4 col-xs-12">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">STEP 1</h4>
+                <div class="card-image" style="color: #213661;">
+                  <i class="fas fa-laptop-code fa-5x"></i>
+                </div>
+                <p class="card-text ">Go through the course content thoroughly and enroll before the batch begins.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class = "col-lg-4 col-sm-4 col-md-4 col-xl-4 col-xs-12">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">STEP 1</h4>
+                <div class="card-image" style="color: #213661;">
+                  <i class="fas fa-laptop-code fa-5x"></i>
+                </div>
+                <p class="card-text ">Go through the course content thoroughly and enroll before the batch begins.</p>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+
+    <!-- customer info dashboard -->
+
+    <!-- letters tab -->
+
+
+    <div class="tabs">
+
+	    <input type="radio" name="tabs" id="tab1" checked >
+	    <label for="tab1">
+	        <i class="fa fa-html5"></i><span>HTML5</span>
+	    </label>
+
+	    <input type="radio" name="tabs" id="tab2">
+	    <label for="tab2">
+	        <i class="fa fa-css3"></i><span>CSS3</span>
+	    </label>
+
+	    <input type="radio" name="tabs" id="tab3">
+	    <label for="tab3">
+	        <i class="fa fa-code"></i><span>jQuery</span>
+	    </label>
+
+	    <div id="tab-content1" class="tab-content">
+	        <h3>HTML5 Snippets</h3>
+            <div id="invoice" class="data">
+	        <p >
+<!-- 
+                Ref: <p id="data2">abc</p><br  ><br> -->
+
+                <p>
+                    <b>
+                        <span class="nullwrap">Ref: </span>
+                    </b>
+                        <span class="nullwrap" id="data2"> </span>
+                </p> 
+
+                ${apidata.Date}<br><br>
+
+
+                ${apidata.SupAddress}<br>
+                <br><br>
+
+
+                Dear Mr. ${apidata.SupName},<br><br>
+
+                <u>DELIVERY ORDER – ONE UNIT ${apidata.VehicleMade} ${apidata.VehicleNum} ${apidata.VehicleModel}  Motor Vehicle<br><br></u>
+
+                Please deliver the vehicle described below to our client Mr. ${apidata.CstName} of ${apidata.CstAddress} bearing<br>NIC/Reg. 123456 and transfer the same in favor of the client.<br><br>
+                Vehicle No		: 	${apidata.VehicleNum}<br>
+                Make & Model		:	${apidata.VehicleMade} ${apidata.VehicleModel} <br>
+                Chassis No		:	${apidata.ChasNo}<br>
+                Engine No		:	${apidata.EngNo}<br>
+                Year of Manufacture	:	${apidata.YOM}<br><br>
+                We hereby undertake to remit a sum of Rs.${apidata.RSUM} in your favour, as indicated in your invoice ${apidata.SetDate}, subject<br> to the receipt of Duplicate Key & the original Certificate of<br> Registration in favour of Test Customer. <br><br>   
+
+                Yours faithfully,<br><br>
+
+                ..............................<br>                                                                                          
+                Authorized Signatory	
+
+
+            </p>
+        </div>
+
+            <div><input type="checkbox" id="agree" onclick="changeTextDevOrder()" text="Mark As Complete">
+                <label2 for="agree">Mark as Complete</label2>
+                </div>
+    
+                <button onclick="webtopdf()">Download</button>
+
+
+	    </div> <!-- #tab-content1 -->
+
+	    <div id="tab-content2" class="tab-content">
+	        <h3>CSS3 Snippets</h3>
+	        <p>Cascading Style Sheets (CSS) is a style sheet language used for describing the look and formatting of a document written in a markup language.</p>
+
+	    </div> <!-- #tab-content2 -->
+
+	    <div id="tab-content3" class="tab-content">
+	        
+	        <h3>jQuery</h3>
+	        <p>jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.</p>
+
+	    </div> <!-- #tab-content3 -->
+
+	</div> <!-- .tabs -->
+
+    <!-- letters tab -->
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="indexweb.js"></script>
+</html>
