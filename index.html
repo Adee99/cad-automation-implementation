@@ -49,7 +49,7 @@
         <div class="row">
           <div class="col-12">
             <div class="title-heading">
-              How to UpSkill
+              Delivery Order Info
             </div>
           </div>
         </div>
@@ -57,33 +57,60 @@
           <div class = "col-lg-4 col-sm-4 col-md-4 col-xl-4 col-xs-12">
             <div class="card">
               <div class="card-body">
-                <h4 class="card-title">STEP 1</h4>
-                <div class="card-image" style="color: #213661;">
-                  <i class="fas fa-laptop-code fa-5x"></i>
+                <h4 class="card-title">Credit Memorandum</h4>
+                <div class="card-image" style="color: #0d463e;">
+                    <i class="fas fa-money-check-alt fa-5x"></i>
                 </div>
-                <p class="card-text ">Go through the course content thoroughly and enroll before the batch begins.</p>
+
+                <p class="card-text ">
+                        <div class="crdTabs">
+                        <b>CM Ref:</b> 
+                        <span class="nullwrap" id="refNum1"></span><br>
+                        <b>Date:</b>
+                        <span class="nullwrap" id="stdate1"></span>
+                        </div>
+                </p>
+
               </div>
             </div>
           </div>
            <div class = "col-lg-4 col-sm-4 col-md-4 col-xl-4 col-xs-12">
             <div class="card">
               <div class="card-body">
-                <h4 class="card-title">STEP 2</h4>
+                <h4 class="card-title">Customer</h4>
                 <div class="card-image" style="color: #5e371b;">
                   <i class="fas fa-chalkboard-teacher fa-5x"></i>
                 </div>
-                <p class="card-text">Attend all the weekly interactive sessions from 9pm - 10pm, 4 times a week and do all your projects and assignments.</p>
-              </div>
+                <p class="card-text ">
+                    <div class="crdTabs">
+                    <b>Name:</b> 
+                    <span class="nullwrap" id="cstName1"></span><br>
+                    <b>Address:</b>
+                    <span class="nullwrap" id="cstAdr1_1"></span>
+                    <span class="nullwrap" id="cstAdr1_2"></span>
+                    </div>
+                </p>
+            </div>
             </div>
           </div>
            <div class = "col-lg-4 col-sm-4 col-md-4 col-xl-4 col-xs-12">
             <div class="card">
               <div class="card-body">
-                <h4 class="card-title">STEP 3</h4>
+                <h4 class="card-title">Supplier</h4>
                 <div class="card-image" style="color:#bc3330;">
-                  <i class="fas fa-bullseye fa-5x"></i>
+                    <i class="fas fa-user-tie fa-5x"></i>
                 </div>
-                <p class="card-text">Eureka! Get certified and Get yourself placed as an intern in one of our partner startups now that you have completed the course.</p>
+
+                <p class="card-text ">
+                    <div class="crdTabs">
+                    <b>Name:</b> 
+                    <span class="nullwrap" id="supName1"></span><br>
+                    <b>Address:</b>
+                    <span class="nullwrap" id="supName1"></span>
+                    <span class="nullwrap" id="cstAdr1_3"></span>
+                    </div>
+                </p>
+
               </div>
             </div>
           </div>
@@ -91,11 +118,36 @@
           <div class = "col-lg-4 col-sm-4 col-md-4 col-xl-4 col-xs-12">
             <div class="card">
               <div class="card-body">
-                <h4 class="card-title">STEP 1</h4>
-                <div class="card-image" style="color: #213661;">
-                  <i class="fas fa-laptop-code fa-5x"></i>
+                <h4 class="card-title">Vehicle Info</h4>
+                <div class="card-image" style="color: #3c0950;">
+                    <i class="fas fa-car fa-5x"></i>
                 </div>
-                <p class="card-text ">Go through the course content thoroughly and enroll before the batch begins.</p>
+
+                <p class="card-text ">
+                    <div class="crdTabs">
+
+                    <b>Number:</b> 
+                    <span class="nullwrap" id="vhNum2"></span><br>
+
+                    <b>Made:</b>
+                    <span class="nullwrap" id="vhMade2"></span><br>
+
+    
+                    <b>Chasis:</b>
+                    <span class="nullwrap" id="chnum1"></span><br>
+
+                    
+                    <b>Engine:</b>
+                    <span class="nullwrap" id="engnum1"></span><br>
+
+  
+                    <b>Year of Manufacture:</b>
+                    <span class="nullwrap" id="yom1"></span><br>
+            
+                    </div>
+                </p>
+
+
               </div>
             </div>
           </div>
@@ -136,22 +188,39 @@
 
 	    <input type="radio" name="tabs" id="tab1" checked >
 	    <label for="tab1">
-	        <i class="fa fa-html5"></i><span>HTML5</span>
+	        <i class="fa fa-html5"></i><span>Delivery Order</span>
 	    </label>
 
 	    <input type="radio" name="tabs" id="tab2">
 	    <label for="tab2">
-	        <i class="fa fa-css3"></i><span>CSS3</span>
+	        <i class="fa fa-css3"></i><span>Offer Letters</span>
 	    </label>
 
-	    <input type="radio" name="tabs" id="tab3">
-	    <label for="tab3">
-	        <i class="fa fa-code"></i><span>jQuery</span>
+        <input type="radio" name="tabs" id="tab2">
+	    <label for="tab2">
+	        <i class="fa fa-css3"></i><span>Facility Term Sheet</span>
 	    </label>
+
+        <input type="radio" name="tabs" id="tab2">
+	    <label for="tab2">
+	        <i class="fa fa-css3"></i><span>Application for DM</span>
+	    </label>
+
+        <input type="radio" name="tabs" id="tab2">
+	    <label for="tab2">
+	        <i class="fa fa-css3"></i><span>Payment Schedule </span>
+	    </label>
+
+        <input type="radio" name="tabs" id="tab2">
+	    <label for="tab2">
+	        <i class="fa fa-css3"></i><span>Sample Letter</span>
+	    </label>
+
 
 	    <div id="tab-content1" class="tab-content">
-	        <h3>HTML5 Snippets</h3>
+	        <!-- <h3>HTML5 Snippets</h3> -->
             <div id="invoice" class="data">
+
 	        <p >
 <!-- 
                 Ref: <p id="data2">abc</p><br  ><br> -->
@@ -159,34 +228,45 @@
                 <p>
                     <b>
                         <span class="nullwrap">Ref: </span>
+                    
+                        <span class="nullwrap" id="refNum"></span>
                     </b>
-                        <span class="nullwrap" id="data2"> </span>
                 </p> 
 
-                ${apidata.Date}<br><br>
+                <p id="date"> </p>
 
-
-                ${apidata.SupAddress}<br>
+                <span id="cstAdr1"></span>
+                <span id="cstAdr2"></span>
                 <br><br>
 
 
-                Dear Mr. ${apidata.SupName},<br><br>
+                Dear Mr.<span id="supName"></span>,<br><br>
 
-                <u>DELIVERY ORDER – ONE UNIT ${apidata.VehicleMade} ${apidata.VehicleNum} ${apidata.VehicleModel}  Motor Vehicle<br><br></u>
+                <u>DELIVERY ORDER – ONE UNIT <span id="vhMade"></span> <span id="vhNum"></span> <span id="vhMode"></span>  Motor Vehicle<br><br></u>
 
-                Please deliver the vehicle described below to our client Mr. ${apidata.CstName} of ${apidata.CstAddress} bearing<br>NIC/Reg. 123456 and transfer the same in favor of the client.<br><br>
-                Vehicle No		: 	${apidata.VehicleNum}<br>
-                Make & Model		:	${apidata.VehicleMade} ${apidata.VehicleModel} <br>
-                Chassis No		:	${apidata.ChasNo}<br>
-                Engine No		:	${apidata.EngNo}<br>
-                Year of Manufacture	:	${apidata.YOM}<br><br>
-                We hereby undertake to remit a sum of Rs.${apidata.RSUM} in your favour, as indicated in your invoice ${apidata.SetDate}, subject<br> to the receipt of Duplicate Key & the original Certificate of<br> Registration in favour of Test Customer. <br><br>   
+                Please deliver the vehicle described below to our client Mr.<span id="cstName"></span> of <span id="cstAdr1"></span>
+                <span id="cstAdr2"></span> bearing<br>NIC/Reg. 123456 and transfer the same in favor of the client.<br><br>
+                Vehicle No		: 	<span id="vhNum1"></span><br>
+                Make & Model		:	<span id="vhMade1"></span> <span id="vhMode1"></span> <br>
+                Chassis No		:	<span id="chnum"></span><br>
+                Engine No		:	<span id="engnum"></span><br>
+                Year of Manufacture	:	<span id="yom"></span><br><br>
+                We hereby undertake to remit a sum of Rs.<span id="rsum"></span> in your favour, as indicated in your invoice <span id="stdate"></span>, subject<br> to the receipt of Duplicate Key & the original Certificate of Registration in favour of Test Customer. <br><br>   
 
-                Yours faithfully,<br><br>
 
-                ..............................<br>                                                                                          
-                Authorized Signatory	
+                <p>
+                   
+                        <span class="nullwrap"> Yours faithfully,<br><br>
+                                                                                                                                                
+                            ............................................<br>                                                                                          
+                            Authorized Signatory	
+                        </span>
+                    
+                        
+                </p> 
 
+
+               
 
             </p>
         </div>
