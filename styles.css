@@ -2,8 +2,25 @@
 
  .nullwrap{
     white-space: nowrap;
+    
 }
 
+.nullwrap2{
+  white-space: nowrap;
+}
+
+.dwnloadBtn{
+ 
+  padding-left: 80%;
+
+  
+}
+
+.checkBtn{
+
+  padding-top: 4%;
+  
+}
 
 /* delivery order card info */
 
@@ -149,3 +166,4 @@
     margin: 50px auto;
     }
 }
+

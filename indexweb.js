@@ -5,9 +5,9 @@ document.getElementById('input').addEventListener("change", (event) => {
 })
 
 let data=[{
-    "name":"jayanth",
+    "name":"abc",
     "data":"scd",
-    "abc":"sdef"
+    "anc":"mrvl"
 }]
 
 
@@ -97,21 +97,30 @@ document.getElementById('button').addEventListener("click", () => {
                 return item.RSUM;
               }))
 
+              const dmsum = rowObject.map((item => {
+                return item.DmSum;
+              }))
+
               const setdate = rowObject.map((item => {
                 return item.SetDate;
               }))
 
 
 
-              console.log(refnum);      
+
+
+              //console.log(refnum);      
               
               document.getElementById("refNum").innerHTML = refnum;
               document.getElementById("refNum1").innerHTML = refnum;
+           
+
               document.getElementById("date").innerHTML = date;
               document.getElementById("cstAdr1").innerHTML = cstAdrOne;
               document.getElementById("cstAdr1_1").innerHTML = cstAdrOne;
               document.getElementById("cstAdr2").innerHTML = cstAdrTwo;
               document.getElementById("cstAdr1_2").innerHTML = cstAdrTwo;
+              document.getElementById("refNum2").innerHTML = refnum;
            
  
               document.getElementById("cstName").innerHTML = cstname;
@@ -138,6 +147,8 @@ document.getElementById('button').addEventListener("click", () => {
               document.getElementById("yom1").innerHTML = yom;
 
               document.getElementById("rsum").innerHTML = rsum;
+              document.getElementById("rsum1").innerHTML = rsum;
+
               document.getElementById("stdate").innerHTML = setdate;
 
               document.getElementById("vhNum1").innerHTML = vheNum1;
@@ -146,6 +157,9 @@ document.getElementById('button').addEventListener("click", () => {
 
               document.getElementById("stdate1").innerHTML = setdate;
               document.getElementById("cstAdr1_3").innerHTML = cstAdrTwo;
+
+              document.getElementById("dmsum").innerHTML = dmsum;
+           
            
              
             
@@ -161,7 +175,7 @@ function webtopdf(){
     // const elem = document.getElementById('invoice');
     // html2pdf().from(elem).save();
 
-    var element = document.getElementById('tab-content1');
+    var element = document.getElementById('invoice8');
     var opt = {
     margin:       1,
     filename:     'myfile.pdf',
@@ -175,4 +189,17 @@ function webtopdf(){
 
     // Old monolithic-style usage:
     //html2pdf(element, opt);
+}
+
+
+function changeTextDevOrder(){
+  document.getElementById("changeStat").innerHTML = document.getElementById("stat").innerHTML+ '<span class="nullwrap" style="color: green;"><i class="fas fa-check-circle"></i></span>';
+}
+
+function completeOfrLtr(){
+  document.getElementById("changeStat1").innerHTML = document.getElementById("stat").innerHTML+ '<span class="nullwrap" style="color: green;"><i class="fas fa-check-circle"></i></span>';
+}
+
+function completeTrmSht(){
+  document.getElementById("changeStat2").innerHTML = document.getElementById("stat").innerHTML+ '<span class="nullwrap" style="color: green;"><i class="fas fa-check-circle"></i></span>';
 }
