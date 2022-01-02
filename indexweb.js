@@ -171,24 +171,39 @@ document.getElementById('button').addEventListener("click", () => {
 });
 
 
-function webtopdf(){
-    // const elem = document.getElementById('invoice');
-    // html2pdf().from(elem).save();
+// function webtopdf(){
+//     // const elem = document.getElementById('invoice');
+//     // html2pdf().from(elem).save();
 
-    var element = document.getElementById('invoice8');
-    var opt = {
-    margin:       1,
-    filename:     'myfile.pdf',
-    image:        { type: 'jpeg', quality: 0.98 },
-    html2canvas:  { scale: 2 },
-    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+//     var element = document.getElementById('invoice8');
+//     var opt = {
+//     margin:       1,
+//     filename:     'Delivery_Order_Report.pdf',
+//     image:        { type: 'jpeg', quality: 0.98 },
+//     html2canvas:  { scale: 2 },
+//     jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+//     };
+
+//     // New Promise-based usage:
+//     html2pdf().set(opt).from(element).save();
+
+//     // Old monolithic-style usage:
+//     //html2pdf(element, opt);
+// }
+
+window.onload = function(){
+  document.getElementById("downloadfile").addEventListener("click", () => {
+      const invoice = this.document.getElementById("invoice");
+      
+      var opt = {
+        margin: 1,
+        filename: 'Delivery_Order_Report.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
     };
-
-    // New Promise-based usage:
-    html2pdf().set(opt).from(element).save();
-
-    // Old monolithic-style usage:
-    //html2pdf(element, opt);
+    html2pdf().from(invoice).set(opt).save();
+  })
 }
 
 
