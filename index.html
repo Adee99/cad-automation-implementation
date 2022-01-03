@@ -376,8 +376,35 @@
 
 
 	    <div id="tab-content2" class="tab-content">
-	        <h3>CSS3 Snippets</h3>
-	        <p id="invoice8">Cascading Style Sheets (CSS) is a style sheet language used for describing the look and formatting of a document written in a markup language.</p>
+	        <h3>Sample Letter 1</h3>
+
+          <p id="test">
+            Ref: ${apidata.RefNo}<br  ><br>
+
+            ${apidata.Date}<br><br>
+
+
+            ${apidata.SupAddress}<br>
+            <br><br>
+
+
+            Dear Mr. ${apidata.SupName},<br><br>
+
+            <u>DELIVERY ORDER – ONE UNIT ${apidata.VehicleMade} ${apidata.VehicleNum} ${apidata.VehicleModel}  Motor Vehicle<br><br></u>
+
+            Please deliver the vehicle described below to our client Mr. ${apidata.CstName} of ${apidata.CstAddress} bearing<br>NIC/Reg. 123456 and transfer the same in favor of the client.<br><br>
+            Vehicle No		: 	${apidata.VehicleNum}<br>
+            Make & Model		:	${apidata.VehicleMade} ${apidata.VehicleModel} <br>
+            Chassis No		:	${apidata.ChasNo}<br>
+            Engine No		:	${apidata.EngNo}<br>
+            Year of Manufacture	:	${apidata.YOM}<br><br>
+            We hereby undertake to remit a sum of Rs.${apidata.RSUM} in your favour, as indicated in your invoice ${apidata.SetDate}, subject<br> to the receipt of Duplicate Key & the original Certificate of<br> Registration in favour of Test Customer. <br><br>   
+
+            Yours faithfully,<br><br>
+
+            ..............................<br>                                                                                          
+            Authorized Signatory	
+        </p>
      
           <div>
             <input type="checkbox" id="agree" onclick="completeOfrLtr()" text="Mark As Complete">
@@ -385,16 +412,42 @@
           </div>
 
           <div class="dwnloadBtn">
-            <button onclick="webtopdf()" class="btn btn-info" padd>Download</button>
+            <button id="ofrltrpdf" class="btn btn-info" padd>Download</button>
           </div>
 
 	    </div> <!-- #tab-content2 -->
 
 	    <div id="tab-content3" class="tab-content">
 	        
-	        <h3>jQuery</h3>
+	        <h3>Sample Letter 2</h3>
 
-          <p>Cascading Style Sheets (CSS) is a style sheet language used for describing the look and formatting of a document written in a markup language.</p>
+          <p id="test">
+            Ref: ${apidata.RefNo}<br  ><br>
+
+            ${apidata.Date}<br><br>
+
+
+            ${apidata.SupAddress}<br>
+            <br><br>
+
+
+            Dear Mr. ${apidata.SupName},<br><br>
+
+            <u>DELIVERY ORDER – ONE UNIT ${apidata.VehicleMade} ${apidata.VehicleNum} ${apidata.VehicleModel}  Motor Vehicle<br><br></u>
+
+            Please deliver the vehicle described below to our client Mr. ${apidata.CstName} of ${apidata.CstAddress} bearing<br>NIC/Reg. 123456 and transfer the same in favor of the client.<br><br>
+            Vehicle No		: 	${apidata.VehicleNum}<br>
+            Make & Model		:	${apidata.VehicleMade} ${apidata.VehicleModel} <br>
+            Chassis No		:	${apidata.ChasNo}<br>
+            Engine No		:	${apidata.EngNo}<br>
+            Year of Manufacture	:	${apidata.YOM}<br><br>
+            We hereby undertake to remit a sum of Rs.${apidata.RSUM} in your favour, as indicated in your invoice ${apidata.SetDate}, subject<br> to the receipt of Duplicate Key & the original Certificate of<br> Registration in favour of Test Customer. <br><br>   
+
+            Yours faithfully,<br><br>
+
+            ..............................<br>                                                                                          
+            Authorized Signatory	
+        </p>
 	       
           <div>
             <input type="checkbox" id="agree" onclick="completeTrmSht()" text="Mark As Complete">

@@ -221,3 +221,18 @@ window.onload = function(){
     html2pdf().from(invoice).set(opt).save();
   })
 }
+
+window.onload = function(){
+  document.getElementById("ofrltrpdf").addEventListener("click", () => {
+      const invoice = this.document.getElementById("test");
+      
+      var opt = {
+        margin: 1,
+        filename: 'Delivery_Order_Report.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
+    html2pdf().from(invoice).set(opt).save();
+  })
+}
