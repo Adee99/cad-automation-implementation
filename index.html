@@ -30,12 +30,14 @@
     <div class="conatiner mt-5">
         <div class="row">
             <div class="col-md-3"></div>
+
             <div class="col-md-3">
                 <input class="form-control" type="file" id="input"  accept=".xls,.xlsx"  >
             </div>
+            
             <div class="col-md-2">
-                <button class="btn btn-primary" id="button">Convert</button>
-                <button class="btn btn-primary" onclick="displayData()">Display</button>
+                <button class="btn btn-primary" id="button">Update</button>
+                <!-- <button class="btn btn-primary" onclick="displayData()">Display</button> -->
             </div>
         </div>
     </div>
@@ -333,7 +335,8 @@
 
                 Dear Mr.<span id="supName"></span>,<br><br>
 
-                DELIVERY ORDER ONE UNIT <span id="vhMade"></span> <span id="vhNum"></span> <span id="vhMode"></span>  Motor Vehicle<br><br>
+                <p style="text-decoration: underline;">
+                DELIVERY ORDER ONE UNIT <span id="vhMade"></span> <span id="vhNum"></span> <span id="vhMode"></span> Motor Vehicle.<br></p>
 
                 Please deliver the vehicle described below to our client Mr.<span id="cstName"></span> of <span id="cstAdr1"></span>
                 <span id="cstAdr2"></span> bearing<br>NIC/Reg. 123456 and transfer the same in favor of the client.<br><br>
@@ -342,7 +345,7 @@
                 Chassis No		:	<span id="chnum"></span><br>
                 Engine No		:	<span id="engnum"></span><br>
                 Year of Manufacture	:	<span id="yom"></span><br><br>
-                We hereby undertake to remit a sum of Rs.<span id="rsum"></span> in your favour, as indicated in your invoice<br><span id="stdate"></span>, subject to the receipt of Duplicate Key & the original Certificate of Registration in favour of<br> Test Customer. <br><br>   
+                We hereby undertake to remit a sum of Rs.<span id="rsum"></span> in your favour, as indicated in your invoice<br><span id="stdate"></span>, subject to the receipt of Duplicate Key & the original Certificate of Registration in favour of<br> Mr.<span id="cstName2"></span>. <br><br>   
 
 
                 <p>

@@ -125,6 +125,7 @@ document.getElementById('button').addEventListener("click", () => {
  
               document.getElementById("cstName").innerHTML = cstname;
               document.getElementById("cstName1").innerHTML = cstname;
+              document.getElementById("cstName2").innerHTML = cstname;
               document.getElementById("supName").innerHTML = supname;
               document.getElementById("supName1").innerHTML = supname;
 
@@ -191,6 +192,21 @@ document.getElementById('button').addEventListener("click", () => {
 //     //html2pdf(element, opt);
 // }
 
+
+
+
+function changeTextDevOrder(){
+  document.getElementById("changeStat").innerHTML = document.getElementById("stat").innerHTML+ '<span class="nullwrap" style="color: green;"><i class="fas fa-check-circle"></i></span>';
+}
+
+function completeOfrLtr(){
+  document.getElementById("changeStat1").innerHTML = document.getElementById("stat").innerHTML+ '<span class="nullwrap" style="color: green;"><i class="fas fa-check-circle"></i></span>';
+}
+
+function completeTrmSht(){
+  document.getElementById("changeStat2").innerHTML = document.getElementById("stat").innerHTML+ '<span class="nullwrap" style="color: green;"><i class="fas fa-check-circle"></i></span>';
+}
+
 window.onload = function(){
   document.getElementById("downloadfile").addEventListener("click", () => {
       const invoice = this.document.getElementById("invoice");
@@ -204,17 +220,4 @@ window.onload = function(){
     };
     html2pdf().from(invoice).set(opt).save();
   })
-}
-
-
-function changeTextDevOrder(){
-  document.getElementById("changeStat").innerHTML = document.getElementById("stat").innerHTML+ '<span class="nullwrap" style="color: green;"><i class="fas fa-check-circle"></i></span>';
-}
-
-function completeOfrLtr(){
-  document.getElementById("changeStat1").innerHTML = document.getElementById("stat").innerHTML+ '<span class="nullwrap" style="color: green;"><i class="fas fa-check-circle"></i></span>';
-}
-
-function completeTrmSht(){
-  document.getElementById("changeStat2").innerHTML = document.getElementById("stat").innerHTML+ '<span class="nullwrap" style="color: green;"><i class="fas fa-check-circle"></i></span>';
 }
