@@ -30,6 +30,7 @@ document.getElementById('button').addEventListener("click", () => {
               //console.log(refnum);
               //console.log(data);
               //document.getElementById("jsondata").innerHTML = JSON.stringify(rowObject,undefined,4)
+             
 
               const refnum = rowObject.map((item) => {
                   return item.RefNo;
@@ -219,20 +220,20 @@ window.onload = function(){
         jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
     };
     html2pdf().from(invoice).set(opt).save();
-  })
+  });
+
+  document.getElementById("ofrltrpdf").addEventListener("click", () => {
+    const invoice2 = this.document.getElementById("test");
+    
+    var opt = {
+      margin: 1,
+      filename: 'Delivery_Order_Report2.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+  };
+  html2pdf().from(invoice2).set(opt).save();
+})
+
 }
 
-window.onload = function(){
-  document.getElementById("ofrltrpdf").addEventListener("click", () => {
-      const invoice = this.document.getElementById("test");
-      
-      var opt = {
-        margin: 1,
-        filename: 'Delivery_Order_Report.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-    };
-    html2pdf().from(invoice).set(opt).save();
-  })
-}
