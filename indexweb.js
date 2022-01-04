@@ -10,7 +10,7 @@ let data=[{
     "anc":"mrvl"
 }]
 
-
+// fetch data from Excel
 document.getElementById('button').addEventListener("click", () => {
     XLSX.utils.json_to_sheet(data, 'out.xlsx');
     if(selectedFile){
@@ -31,7 +31,6 @@ document.getElementById('button').addEventListener("click", () => {
               //console.log(data);
               //document.getElementById("jsondata").innerHTML = JSON.stringify(rowObject,undefined,4)
              
-
               const refnum = rowObject.map((item) => {
                   return item.RefNo;
               })
@@ -67,7 +66,6 @@ document.getElementById('button').addEventListener("click", () => {
               const vheNum1 = rowObject.map((item => {
                 return item.VehicleNum;
               }))
-
 
               const vheMode = rowObject.map((item => {
                 return item.VehicleModel;
@@ -107,15 +105,11 @@ document.getElementById('button').addEventListener("click", () => {
               }))
 
 
-
-
-
               //console.log(refnum);      
               
               document.getElementById("refNum").innerHTML = refnum;
               document.getElementById("refNum1").innerHTML = refnum;
            
-
               document.getElementById("date").innerHTML = date;
               document.getElementById("cstAdr1").innerHTML = cstAdrOne;
               document.getElementById("cstAdr1_1").innerHTML = cstAdrOne;
@@ -123,7 +117,6 @@ document.getElementById('button').addEventListener("click", () => {
               document.getElementById("cstAdr1_2").innerHTML = cstAdrTwo;
               document.getElementById("refNum2").innerHTML = refnum;
            
- 
               document.getElementById("cstName").innerHTML = cstname;
               document.getElementById("cstName1").innerHTML = cstname;
               document.getElementById("cstName2").innerHTML = cstname;
@@ -132,7 +125,6 @@ document.getElementById('button').addEventListener("click", () => {
 
               document.getElementById("vhMade").innerHTML = vhMade;
               document.getElementById("vhMade2").innerHTML = vhMade;
-
 
               document.getElementById("vhNum").innerHTML = vheNum;
               document.getElementById("vhNum2").innerHTML = vheNum;
@@ -161,11 +153,6 @@ document.getElementById('button').addEventListener("click", () => {
               document.getElementById("cstAdr1_3").innerHTML = cstAdrTwo;
 
               document.getElementById("dmsum").innerHTML = dmsum;
-           
-           
-             
-            
-
               
          });
         }
@@ -193,9 +180,7 @@ document.getElementById('button').addEventListener("click", () => {
 //     //html2pdf(element, opt);
 // }
 
-
-
-
+// Delivery Order Status
 function changeTextDevOrder(){
   document.getElementById("changeStat").innerHTML = document.getElementById("stat").innerHTML+ '<span class="nullwrap" style="color: green;"><i class="fas fa-check-circle"></i></span>';
 }
@@ -208,6 +193,7 @@ function completeTrmSht(){
   document.getElementById("changeStat2").innerHTML = document.getElementById("stat").innerHTML+ '<span class="nullwrap" style="color: green;"><i class="fas fa-check-circle"></i></span>';
 }
 
+// pdf download function
 window.onload = function(){
   document.getElementById("downloadfile").addEventListener("click", () => {
       const invoice = this.document.getElementById("invoice");

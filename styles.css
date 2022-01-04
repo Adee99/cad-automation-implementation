@@ -2,7 +2,6 @@
 
  .nullwrap{
     white-space: nowrap;
-    
 }
 
 .nullwrap2{
@@ -10,14 +9,11 @@
 }
 
 .dwnloadBtn{
- 
   padding-left: 80%;
 
-  
 }
 
 .checkBtn{
-
   padding-top: 4%;
   
 }
@@ -34,6 +30,7 @@
   padding-top: 5%;
 }
 
+/* update button */
 .upBtn{
   padding-left: 10%;
   padding-top: 1%;
