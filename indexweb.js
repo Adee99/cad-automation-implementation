@@ -1,3 +1,4 @@
+// fetch data from Excel
 let selectedFile;
 console.log(window.XLSX);
 document.getElementById('input').addEventListener("change", (event) => {
@@ -10,7 +11,6 @@ let data=[{
     "anc":"mrvl"
 }]
 
-// fetch data from Excel
 document.getElementById('button').addEventListener("click", () => {
     XLSX.utils.json_to_sheet(data, 'out.xlsx');
     if(selectedFile){
@@ -57,7 +57,7 @@ document.getElementById('button').addEventListener("click", () => {
 
               const vhMade1 = rowObject.map((item => {
                 return item.VehicleMade;
-            }))
+              }))
 
               const vheNum = rowObject.map((item => {
                 return item.VehicleNum;
@@ -193,8 +193,25 @@ function completeTrmSht(){
   document.getElementById("changeStat2").innerHTML = document.getElementById("stat").innerHTML+ '<span class="nullwrap" style="color: green;"><i class="fas fa-check-circle"></i></span>';
 }
 
+
 // pdf download function
 window.onload = function(){
+
+  document.getElementById("emailfile").addEventListener("click", () => {
+    const invoice = this.document.getElementById("invoice");
+    
+    var opt = {
+      margin: 1,
+      filename: 'Delivery_Order_Report.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+      
+  };
+  window.location.href = "mailto:user@example.com?subject=Subject&body=message%20goes%20here";
+  html2pdf().from(invoice).set(opt).save();
+});
+
   document.getElementById("downloadfile").addEventListener("click", () => {
       const invoice = this.document.getElementById("invoice");
       
@@ -204,7 +221,9 @@ window.onload = function(){
         image: { type: 'jpeg', quality: 0.98 },
         html2canvas: { scale: 2 },
         jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+        
     };
+    //window.location.href = "mailto:user@example.com?subject=Subject&body=message%20goes%20here";
     html2pdf().from(invoice).set(opt).save();
   });
 
@@ -214,6 +233,7 @@ window.onload = function(){
     var opt = {
       margin: 1,
       filename: 'Delivery_Order_Report2.pdf',
+      //path: 'C:\Users\Acer\Documents\abc',
       image: { type: 'jpeg', quality: 0.98 },
       html2canvas: { scale: 2 },
       jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
@@ -222,4 +242,55 @@ window.onload = function(){
 })
 
 }
+
+// function TriggerOutlook()
+
+// {        
+
+
+//   Email.send({
+
+//     Host: "mailto:user@example.com",
+//     //window: "mailto:user@example.com?attachment=C:\Users\Acer\Documents\abc\Delivery_Order_Report.pdf",
+//     Username: "mailto:user@example.com",
+//     Password: "Enter your password",
+//     To: 'receiver@email_address.com',
+//     From: "sender@email_address.com",
+//     Subject: "Sending Email using javascript",
+//     Body: "Well that was easy!!",
+//     Attachments: [
+//       {
+//         name: "File_Name_with_Extension",
+//         path: "Full Path of the file"
+//       }]
+//   })
+//     // .then(function (message) {
+//     //   alert("Mail has been sent successfully")
+//     // });
+
+// }   
+
+
+// function sendEmail() {
+//   Email.send({
+//     Host: "smtp.gmail.com",
+//     Username: "sender@email_address.com",
+//     Password: "Enter your password",
+//     To: 'receiver@email_address.com',
+//     From: "sender@email_address.com",
+//     Subject: "Sending Email using javascript",
+//     Body: escape(window.document.title + String.fromCharCode(13)+ window.location.href),
+//     Attachments: [
+//       {
+//         name: "Delivery_Order_Report.pdf",
+//         path: "C:\Users\Acer\Documents\abc"
+//       }]
+//   })
+//     .then(function (message) {
+//       window.location.href = "mailto:?body="+Body+"&subject="+Subject +"&attachment="+Attachments; 
+//       alert("Mail has been sent successfully")
+//     });
+
+    
+// }
 

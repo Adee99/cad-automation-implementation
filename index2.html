@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAD Tracker</title>
+    
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<body>
+    
+    <div class="layout"><!-- layout -->
+
+        <aside class="sidebar" style="margin-top:4px"> <!-- sidebar -->
+            <!-- file upload -->
+            <div class="conatiner mt-6">
+                <div class="row3">
+                    <div class="col-md-5"></div>
+
+                    <div class="status-title-heading">
+                        <h1>CAD Tracker</h1>
+                        Document Generation
+                      </div>
+        
+                    <div class="choosefile">
+                        <input class="form" type="file" id="input"  accept=".xls,.xlsx"  >
+                    </div>
+                    
+                    <div class="upBtn" >
+                        <button class="button-65" id="button">Update Data</button>
+                        <!-- <button class="button-65" id="button2" onclick="TriggerOutlook()">Email</button> -->
+                        <!-- <button class="btn btn-primary" onclick="displayData()">Display</button> -->
+                    </div>
+                </div>
+            </div>   <!-- file upload -->
+
+            <!-- Delivery info status -->
+            <div class="col-12">
+            </div>
+              <div class="OrdrInfo" id="info">
+                <div class="bottom"></div>
+                <div class="statusTab">
+          
+                <div class="row3">
+                  <div class="column2">
+                
+                    <p>
+                    <b>
+                        <span class="nullwrap">CM Reference No:</span>
+                    </b>
+                        <span class="nullwrap" id="refNum2"></span>
+                    </p> 
+            
+            
+                    <p>
+                        <b>
+                            <span class="nullwrap">Delivery Order: </span>
+                        </b>
+                            <span class="nullwrap" id="stat"></span>
+                            <span class="nullwrap" id="changeStat" style="color: #ff0000;"><i class="fas fa-times-circle"></i></span>
+                    </p> 
+          
+                  </div> <!-- column -->
+                
+                  <div class="column2">
+
+                    <p>
+                    <b>
+                        <span class="nullwrap">Offer Letters : </span>
+                    </b>
+                        <span class="nullwrap" id="stat"></span>
+                        <span class="nullwrap" id="changeStat1" style="color: #ff0000;"><i class="fas fa-times-circle"></i></span>
+                    </p> 
+          
+          
+                    <p>
+                    <b>
+                        <span class="nullwrap">Facility Term Sheet: </span>
+                    </b>
+                        <span class="nullwrap" id="stat"></span>
+                        <span class="nullwrap" id="changeStat2" style="color: #ff0000;"><i class="fas fa-times-circle"></i></span>
+                    </p> 
+              </div>
+          
+          
+              <div class="column2">
+                    <p>
+                    <b>
+                        <span class="nullwrap">Application for DM: </span>
+                    </b>
+                        <span class="nullwrap" id="stat"></span>
+                        <span class="nullwrap" id="changeStat3" style="color: #ff0000;"><i class="fas fa-times-circle"></i></span>
+                    </p> 
+            
+                    <p>
+                    <b>
+                        <span class="nullwrap">Payment Schedule: </span>
+                    </b>
+                        <span class="nullwrap" id="stat"></span>
+                        <span class="nullwrap" id="changeStat4" style="color: #ff0000;"><i class="fas fa-times-circle"></i></span>
+                    </p> 
+              </div>
+
+              <div class="emailBtn" id="emailfile">
+              <button class="button-65" id="button" >Email Documents</button>
+              </div>   
+                    </div> <!-- row2 -->
+                </div>
+          </div><!-- check status -->
+
+        </aside> <!-- sidebar -->
+
+
+    <main class="layout__main"> <!-- layout__main -->      
+    <!-- customer info dashboard -->
+    <div class="container" >
+        <div class="row">
+          <div class="col-12">
+            <div class="title-heading-menu">
+              Delivery Order Info
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class = "col-lg-4 col-sm-4 col-md-4 col-xl-4 col-xs-12">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Credit Memorandum</h4>
+                <div class="card-image" style="color: #0d463e;">
+                    <i class="fas fa-money-check-alt fa-5x"></i>
+                </div>
+
+                <p class="card-text ">
+                        <div class="crdTabs">
+                        <b>CM Ref:</b> 
+                        <span class="nullwrap" id="refNum1"></span><br>
+                        <b>Date:</b>
+                        <span class="nullwrap" id="stdate1"></span>
+                        </div>
+                </p>
+
+              </div>
+            </div>
+          </div>
+           <div class = "col-lg-4 col-sm-4 col-md-4 col-xl-4 col-xs-12">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Customer</h4>
+                <div class="card-image" style="color: #5e371b;">
+                  <i class="fas fa-chalkboard-teacher fa-5x"></i>
+                </div>
+                <p class="card-text ">
+                    <div class="crdTabs">
+                    <b>Name:</b> 
+                    <span class="nullwrap" id="cstName1"></span><br>
+                    <b>Address:</b>
+                    <span class="nullwrap" id="cstAdr1_1"></span>
+                    <span class="nullwrap" id="cstAdr1_2"></span>
+                    </div>
+                </p>
+            </div>
+            </div>
+          </div>
+           <div class = "col-lg-4 col-sm-4 col-md-4 col-xl-4 col-xs-12">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Supplier</h4>
+                <div class="card-image" style="color:#bc3330;">
+                    <i class="fas fa-user-tie fa-5x"></i>
+                </div>
+
+                <p class="card-text ">
+                    <div class="crdTabs">
+                    <b>Name:</b> 
+                    <span class="nullwrap" id="supName1"></span><br>
+                    <b>Address:</b>
+                    <span class="nullwrap" id="supName1"></span>
+                    <span class="nullwrap" id="cstAdr1_3"></span>
+                    </div>
+                </p>
+
+              </div>
+            </div>
+          </div>
+      
+          <div class = "col-lg-4 col-sm-4 col-md-4 col-xl-4 col-xs-12">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Vehicle Info</h4>
+                <div class="card-image" style="color: #3c0950;">
+                    <i class="fas fa-car fa-5x"></i>
+                </div>
+
+                <p class="card-text ">
+                    <div class="crdTabs">
+
+                    <b>Number:</b> 
+                    <span class="nullwrap" id="vhNum2"></span><br>
+
+                    <b>Made:</b>
+                    <span class="nullwrap" id="vhMade2"></span><br>
+
+    
+                    <b>Chasis:</b>
+                    <span class="nullwrap" id="chnum1"></span><br>
+
+                    
+                    <b>Engine:</b>
+                    <span class="nullwrap" id="engnum1"></span><br>
+
+  
+                    <b>Year of Manufacture:</b>
+                    <span class="nullwrap" id="yom1"></span><br>
+            
+                    </div>
+                </p>
+
+              </div>
+            </div>
+          </div>
+
+          <div class = "col-lg-4 col-sm-4 col-md-4 col-xl-4 col-xs-12">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">DM Value</h4>
+                <div class="card-image" style="color: #807e10;">
+                    <i class="fas fa-wallet fa-5x"></i>
+                </div>
+               
+                <p class="card-text ">
+                    <div class="crdTabs">
+                    <b>LKR</b> 
+                    <span class="nullwrap" id="rsum1"></span><br>
+                    </div>
+                </p>
+
+              </div>
+            </div>
+          </div>
+
+          <div class = "col-lg-4 col-sm-4 col-md-4 col-xl-4 col-xs-12">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Purchase Value</h4>
+                <div class="card-image" style="color: #000000;">
+                    <i class="fas fa-money-bill-wave fa-5x"></i>
+                </div>
+
+                <p class="card-text ">
+                  <div class="crdTabs">
+                  <b>LKR</b> 
+                  <span class="nullwrap" id="dmsum"></span><br>
+                  </div>
+              </p>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+
+    <!-- customer info dashboard -->
+
+
+      <!-- letters tab heading-->
+
+    <div class="col-12">
+        <div class="title-heading-menu">
+          Delivery Order Letters
+        </div>
+      </div>
+      
+      <!-- letter order content -->
+  
+      <div class="tabs">
+  
+          <input type="radio" name="tabs" id="tab1" checked >
+          <label for="tab1">
+              <i class="fa fa-html"></i><span>Delivery Order</span>
+          </label>
+  
+          <input type="radio" name="tabs" id="tab2">
+          <label for="tab2">
+              <i class="fa fa-css3"></i><span>Offer Letters</span>
+          </label>
+  
+          <input type="radio" name="tabs" id="tab3">
+          <label for="tab3">
+              <i class="fa fa-css3"></i><span>Facility Term Sheet</span>
+          </label>
+  
+          <input type="radio" name="tabs" id="tab2">
+          <label for="tab2">
+              <i class="fa fa-css3"></i><span>Application for DM</span>
+          </label>
+  
+          <input type="radio" name="tabs" id="tab2">
+          <label for="tab2">
+              <i class="fa fa-css3"></i><span>Payment Schedule </span>
+          </label>
+  
+          <input type="radio" name="tabs" id="tab2">
+          <label for="tab2">
+              <i class="fa fa-css3"></i><span>Sample Letter</span>
+          </label>
+  
+  
+        <!-- tab 1- letter 1 -->
+  
+          <div id="tab-content1" class="tab-content">
+         
+          <div id="invoice" class="data">
+  
+              <p>
+                  <p>
+                      <b>
+                          <span class="nullwrap">Ref: </span>
+                      
+                          <span class="nullwrap" id="refNum"></span>
+                      </b>
+                  </p> 
+  
+                  <p id="date"> </p>
+  
+                  <span id="cstAdr1"></span>
+                  <span id="cstAdr2"></span>
+                  <br><br>
+  
+  
+                  Dear Mr.<span id="supName"></span>,<br><br>
+  
+                  <p style="text-decoration: underline;">
+                  DELIVERY ORDER ONE UNIT <span id="vhMade"></span> <span id="vhNum"></span> <span id="vhMode"></span> Motor Vehicle.<br></p>
+  
+                  Please deliver the vehicle described below to our client Mr.<span id="cstName"></span> of <span id="cstAdr1"></span>
+                  <span id="cstAdr2"></span> bearing<br>NIC/Reg. 123456 and transfer the same in favor of the client.<br><br>
+                  Vehicle No		: 	<span id="vhNum1"></span><br>
+                  Make & Model		:	<span id="vhMade1"></span> <span id="vhMode1"></span> <br>
+                  Chassis No		:	<span id="chnum"></span><br>
+                  Engine No		:	<span id="engnum"></span><br>
+                  Year of Manufacture	:	<span id="yom"></span><br><br>
+                  We hereby undertake to remit a sum of Rs.<span id="rsum"></span> in your favour, as indicated in your invoice<br><span id="stdate"></span>, subject to the receipt of Duplicate Key & the original Certificate of Registration in favour of<br> Mr.<span id="cstName2"></span>. <br><br>   
+  
+  
+                  <p>
+                     
+                          <span class="nullwrap2"> Yours faithfully,<br><br>
+                                                                                                                                                  
+  ............................................<br>                                                                                          
+                              Authorized Signatory	
+                          </span>
+                  </p> 
+            </p>
+          
+  
+             
+                </div>
+  
+                <div class="checkBtn">
+                  <input type="checkbox" id="agree" onclick="changeTextDevOrder()" text="Mark As Complete">
+                  <label2 for="agree">Mark as Complete</label2>
+                </div>
+                  
+                <div class="dwnloadBtn">
+                  <button id="downloadfile" class="btn btn-info">Download</button>
+                </div>
+  
+      </div>
+        <!-- #tab-content1 -->
+  
+          <div id="tab-content2" class="tab-content">
+              <h3>This is a Sample Letter Only</h3><br>
+            <h4>No Dynamic Data is loaded here</h4>
+  
+            <p id="test">
+              Ref: ${apidata.RefNo}<br  ><br>
+  
+              ${apidata.Date}<br><br>
+  
+  
+              ${apidata.SupAddress}<br>
+              <br><br>
+  
+  
+              Dear Mr. ${apidata.SupName},<br><br>
+  
+              <u>DELIVERY ORDER – ONE UNIT ${apidata.VehicleMade} ${apidata.VehicleNum} ${apidata.VehicleModel}  Motor Vehicle<br><br></u>
+  
+              Please deliver the vehicle described below to our client Mr. ${apidata.CstName} of ${apidata.CstAddress} bearing<br>NIC/Reg. 123456 and transfer the same in favor of the client.<br><br>
+              Vehicle No		: 	${apidata.VehicleNum}<br>
+              Make & Model		:	${apidata.VehicleMade} ${apidata.VehicleModel} <br>
+              Chassis No		:	${apidata.ChasNo}<br>
+              Engine No		:	${apidata.EngNo}<br>
+              Year of Manufacture	:	${apidata.YOM}<br><br>
+              We hereby undertake to remit a sum of Rs.${apidata.RSUM} in your favour, as indicated in your invoice ${apidata.SetDate}, subject<br> to the receipt of Duplicate Key & the original Certificate of<br> Registration in favour of Test Customer. <br><br>   
+  
+              Yours faithfully,<br><br>
+  
+              ..............................<br>                                                                                          
+              Authorized Signatory	
+          </p>
+       
+            <div>
+              <input type="checkbox" id="agree" onclick="completeOfrLtr()" text="Mark As Complete">
+              <label2 for="agree">Mark as Complete</label2>
+            </div>
+  
+            <div class="dwnloadBtn">
+              <button id="ofrltrpdf" class="btn btn-info" padd>Download</button>
+            </div>
+  
+          </div> <!-- #tab-content2 -->
+  
+          <div id="tab-content3" class="tab-content">
+              
+          <h3>This is a Sample Letter Only</h3><br>
+          <h4>No Dynamic Data is loaded here</h4>
+  
+            <p id="test">
+              Ref: ${apidata.RefNo}<br  ><br>
+  
+              ${apidata.Date}<br><br>
+  
+  
+              ${apidata.SupAddress}<br>
+              <br><br>
+  
+  
+              Dear Mr. ${apidata.SupName},<br><br>
+  
+              <u>DELIVERY ORDER – ONE UNIT ${apidata.VehicleMade} ${apidata.VehicleNum} ${apidata.VehicleModel}  Motor Vehicle<br><br></u>
+  
+              Please deliver the vehicle described below to our client Mr. ${apidata.CstName} of ${apidata.CstAddress} bearing<br>NIC/Reg. 123456 and transfer the same in favor of the client.<br><br>
+              Vehicle No		: 	${apidata.VehicleNum}<br>
+              Make & Model		:	${apidata.VehicleMade} ${apidata.VehicleModel} <br>
+              Chassis No		:	${apidata.ChasNo}<br>
+              Engine No		:	${apidata.EngNo}<br>
+              Year of Manufacture	:	${apidata.YOM}<br><br>
+              We hereby undertake to remit a sum of Rs.${apidata.RSUM} in your favour, as indicated in your invoice ${apidata.SetDate}, subject<br> to the receipt of Duplicate Key & the original Certificate of<br> Registration in favour of Test Customer. <br><br>   
+  
+              Yours faithfully,<br><br>
+  
+              ..............................<br>                                                                                          
+              Authorized Signatory	
+          </p>
+             
+            <div>
+              <input type="checkbox" id="agree" onclick="completeTrmSht()" text="Mark As Complete">
+              <label2 for="agree">Mark as Complete</label2>
+            </div>
+  
+            <div>
+              <button onclick="webtopdf()" class="btn btn-info">Download</button>
+            </div>
+  
+          </div> <!-- #tab-content3 -->
+  
+      </div> <!-- .tabs -->
+    </main> <!-- layout__main -->  
+</div> <!-- layout -->
+</body>
+<script src="indexweb.js"></script>
+</html>
