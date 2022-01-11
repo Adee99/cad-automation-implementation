@@ -113,18 +113,35 @@ document.getElementById('button').addEventListener("click", () => {
               document.getElementById("date").innerHTML = date;
               document.getElementById("cstAdr1").innerHTML = cstAdrOne;
               document.getElementById("cstAdr1_1").innerHTML = cstAdrOne;
+              document.getElementById("cstAdr1_4").innerHTML = cstAdrOne;
+              document.getElementById("cstAdr1_5").innerHTML = cstAdrOne;
               document.getElementById("cstAdr2").innerHTML = cstAdrTwo;
               document.getElementById("cstAdr1_2").innerHTML = cstAdrTwo;
+              document.getElementById("cstAdr1_41").innerHTML = cstAdrTwo; 
+              document.getElementById("cstAdr1_51").innerHTML = cstAdrTwo; 
+              
+             
               document.getElementById("refNum2").innerHTML = refnum;
+
+        
+             
+
            
               document.getElementById("cstName").innerHTML = cstname;
+             
               document.getElementById("cstName1").innerHTML = cstname;
               document.getElementById("cstName2").innerHTML = cstname;
+              document.getElementById("cstName3").innerHTML = cstname;
+              document.getElementById("cstName4").innerHTML = cstname;
+              
+
               document.getElementById("supName").innerHTML = supname;
               document.getElementById("supName1").innerHTML = supname;
 
               document.getElementById("vhMade").innerHTML = vhMade;
+              document.getElementById("vhMade1").innerHTML = vhMade1;
               document.getElementById("vhMade2").innerHTML = vhMade;
+              //document.getElementById("vhMade3").innerHTML = vhMade;
 
               document.getElementById("vhNum").innerHTML = vheNum;
               document.getElementById("vhNum2").innerHTML = vheNum;
@@ -142,17 +159,22 @@ document.getElementById('button').addEventListener("click", () => {
 
               document.getElementById("rsum").innerHTML = rsum;
               document.getElementById("rsum1").innerHTML = rsum;
+              document.getElementById("rsum2").innerHTML = "LKR "+rsum;
+              document.getElementById("rsum3").innerHTML = "LKR "+rsum;
 
               document.getElementById("stdate").innerHTML = setdate;
 
               document.getElementById("vhNum1").innerHTML = vheNum1;
-              document.getElementById("vhMade1").innerHTML = vhMade1;
+          
               document.getElementById("vhMode1").innerHTML = vheMode1;
 
               document.getElementById("stdate1").innerHTML = setdate;
               document.getElementById("cstAdr1_3").innerHTML = cstAdrTwo;
+             
 
               document.getElementById("dmsum").innerHTML = dmsum;
+
+           
               
          });
         }
@@ -194,6 +216,7 @@ function completeTrmSht(){
 }
 
 
+
 // pdf download function
 window.onload = function(){
 
@@ -208,7 +231,7 @@ window.onload = function(){
       jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
       
   };
-  window.location.href = "mailto:user@example.com?subject=Subject&body=message%20goes%20here";
+  window.location.href = "mailto:user@example.com? attach = Delivery_Order_Report.pdf";
   html2pdf().from(invoice).set(opt).save();
 });
 
@@ -293,4 +316,22 @@ window.onload = function(){
 
     
 // }
+
+//function to show user data edit table
+$(function() {
+  $(".btn-success").on("click",function(e) {
+    e.preventDefault();
+    $(".tabledetailedit").hide();
+    $("#"+this.id+"div").show();
+  });
+});
+
+$(function() {
+  $(".btn-info").on("click",function(e) {
+    e.preventDefault();
+    $(".tabledetailedit").hide();
+    $("#"+this.id+"div").hide();
+  });
+});
+
 
