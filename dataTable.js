@@ -2,7 +2,7 @@
 Bootstable
  @description  Javascript library to make HMTL tables editable, using Bootstrap
  @version 1.1
- Concept Credit: @autor Tito Hinostroza
+ Credit: @autor Tito Hinostroza
 */
 "use strict";
 //Global variables
@@ -139,12 +139,6 @@ function butRowAcep(but) {
     document.getElementById("cstAdr2").innerHTML = document.getElementById("cstAdr1_51").innerHTML;
     document.getElementById("cstAdr1_2").innerHTML = document.getElementById("cstAdr1_51").innerHTML;
     document.getElementById("cstAdr1_3").innerHTML = document.getElementById("cstAdr1_51").innerHTML;
-
-    
-
-
-
-
 
     document.getElementById("splCondition2").innerHTML = document.getElementById("splCondition").innerHTML;
     document.getElementById("splCondition3").innerHTML = document.getElementById("splCondition").innerHTML;

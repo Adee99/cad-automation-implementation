@@ -121,20 +121,14 @@ document.getElementById('button').addEventListener("click", () => {
               document.getElementById("cstAdr1_51").innerHTML = cstAdrTwo; 
               
              
-              document.getElementById("refNum2").innerHTML = refnum;
+              document.getElementById("refNum2").innerHTML = refnum;          
 
-        
-             
-
-           
               document.getElementById("cstName").innerHTML = cstname;
-             
               document.getElementById("cstName1").innerHTML = cstname;
               document.getElementById("cstName2").innerHTML = cstname;
               document.getElementById("cstName3").innerHTML = cstname;
               document.getElementById("cstName4").innerHTML = cstname;
               
-
               document.getElementById("supName").innerHTML = supname;
               document.getElementById("supName1").innerHTML = supname;
 
@@ -170,12 +164,8 @@ document.getElementById('button').addEventListener("click", () => {
 
               document.getElementById("stdate1").innerHTML = setdate;
               document.getElementById("cstAdr1_3").innerHTML = cstAdrTwo;
-             
 
-              document.getElementById("dmsum").innerHTML = dmsum;
-
-           
-              
+              document.getElementById("dmsum").innerHTML = dmsum;  
          });
         }
     } 
@@ -214,8 +204,6 @@ function completeOfrLtr(){
 function completeTrmSht(){
   document.getElementById("changeStat2").innerHTML = document.getElementById("stat").innerHTML+ '<span class="nullwrap" style="color: green;"><i class="fas fa-check-circle"></i></span>';
 }
-
-
 
 // pdf download function
 window.onload = function(){
@@ -325,7 +313,6 @@ $(function() {
     $("#"+this.id+"div").show();
   });
 });
-
 
 //function to hide user data edit table
 $(function() {
