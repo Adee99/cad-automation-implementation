@@ -16,8 +16,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
-    
-    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -104,7 +102,6 @@
                     </p> 
               </div>
           
-          
               <div class="column2">
                     <p>
                     <b>
@@ -131,7 +128,6 @@
           </div><!-- check status -->
 
         </aside> <!-- sidebar -->
-
 
     <main class="layout__main"> <!-- layout__main -->      
     <!-- customer info dashboard -->
@@ -279,15 +275,8 @@
           </div>
       
         </div>
-      </div>
-
-    <!-- customer info dashboard -->
-
-
-
-
-
-
+      </div> <!-- customer info dashboard -->
+   
     <!-- special Conditions Tab -->
     <div class="wrapper4">
       <p class="centered-box text-right">
@@ -295,10 +284,7 @@
      
         <button type="button" class="btn btn-success" class="editData" id="displayTable" >Edit Details</button>
       </p>
-    
-  
     </div><!-- special Conditions Tab -->
-
 
     <!-- cutomized editable tables -->
 
@@ -315,8 +301,6 @@
         </table> -->
           <table class="table table-borded table-responsive table-striped align-content-end"  id="table-list">
               
-                 
-        
                   <tr>
                       <th class="table-dark">Customer Name</th>
                       <th class="table-white" id="cstName3" ></th>
@@ -374,43 +358,8 @@
           </div>
           <!-- <button class="btn btn-info" id="add"><span class="glyphicon glyphicon-plus-sign"></span></button> -->
       </div>    
-  </div>
-      <br>
-  
-
-
-
-
-
-    <!-- cutomized editable tables -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  </div><!-- cutomized editable tables -->
+    <br>
 
 
       <!-- letters tab heading-->
@@ -455,7 +404,6 @@
               <i class="fa fa-css3"></i><span>Sample Letter</span>
           </label>
   
-  
         <!-- tab 1- letter 1 -->
   
           <div id="tab-content1" class="tab-content">
@@ -476,7 +424,6 @@
                   <span id="cstAdr1"></span>
                   <span id="cstAdr2"></span>
                   <br><br>
-  
   
                   Dear Mr.<span id="supName"></span>,<br><br>
   
@@ -504,8 +451,6 @@
                   </p> 
             </p>
           
-  
-             
                 </div>
   
                 <div class="checkBtn">
@@ -614,25 +559,16 @@
 
 <!-- cutomized editable tables -->
 
-<script src="bootstable.js"></script>
+<script src="dataTable.js"></script>
 <script>
 //apply
 $("#table-list").SetEditable();
 $('#add').click(function() {
     rowAddNew('table-list', [1,2,3]);
 });
-
 </script>
 
-
 <!-- cutomized editable tables -->
-
-
-
-
-
-
-
 
 <script src="indexweb.js"></script>
 </html>

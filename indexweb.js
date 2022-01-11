@@ -326,6 +326,8 @@ $(function() {
   });
 });
 
+
+//function to hide user data edit table
 $(function() {
   $(".btn-info").on("click",function(e) {
     e.preventDefault();
