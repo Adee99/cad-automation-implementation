@@ -208,20 +208,20 @@ function completeTrmSht(){
 // pdf download function
 window.onload = function(){
 
-  document.getElementById("emailfile").addEventListener("click", () => {
-    const invoice = this.document.getElementById("invoice");
+//   document.getElementById("emailfile").addEventListener("click", () => {
+//     const invoice = this.document.getElementById("invoice");
     
-    var opt = {
-      margin: 1,
-      filename: 'Delivery_Order_Report.pdf',
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2 },
-      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+//     var opt = {
+//       margin: 1,
+//       filename: 'Delivery_Order_Report.pdf',
+//       image: { type: 'jpeg', quality: 0.98 },
+//       html2canvas: { scale: 2 },
+//       jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
       
-  };
-  window.location.href = "mailto:user@example.com? attach = Delivery_Order_Report.pdf";
-  html2pdf().from(invoice).set(opt).save();
-});
+//   };
+//   window.location.href = "mailto:user@example.com? attach = Delivery_Order_Report.pdf";
+//   html2pdf().from(invoice).set(opt).save();
+// });
 
   document.getElementById("downloadfile").addEventListener("click", () => {
       const invoice = this.document.getElementById("invoice");
@@ -255,12 +255,8 @@ window.onload = function(){
 }
 
 // function TriggerOutlook()
-
 // {        
-
-
 //   Email.send({
-
 //     Host: "mailto:user@example.com",
 //     //window: "mailto:user@example.com?attachment=C:\Users\Acer\Documents\abc\Delivery_Order_Report.pdf",
 //     Username: "mailto:user@example.com",
@@ -300,9 +296,7 @@ window.onload = function(){
 //     .then(function (message) {
 //       window.location.href = "mailto:?body="+Body+"&subject="+Subject +"&attachment="+Attachments; 
 //       alert("Mail has been sent successfully")
-//     });
-
-    
+//     });    
 // }
 
 //function to show user data edit table
@@ -323,4 +317,70 @@ $(function() {
   });
 });
 
+$(function() {
+  $(".button-65").on("click",function(e) {
+    e.preventDefault();
+    $(".displayemail").hide();
+    $("#"+this.id+"div").show();
+  });
+});
 
+// email documents 
+var file;
+var dataUri;
+
+function uploadFileToServer()
+{
+    
+   file = event.target.files[0];
+   var reader = new FileReader();
+   reader.readAsBinaryString(file);
+   reader.onload = function () {
+   dataUri = "data:" + file.type + ";base64," + btoa(reader.result);
+   };
+   reader.onerror = function() {
+       console.log('Something went wrong');
+   };
+} 
+
+function sendEmail() {
+  let fields = {
+    name: document.querySelector("#name").value,
+    email: document.querySelector("#email").value,
+    message: document.querySelector("#message").value
+  };
+  
+  let body = '<br><b>Name:</b> ' + fields.name + '<br>' +
+  '<b>E-mail:</b> ' + fields.email + '<br>' +
+  '<b>Message:</b> ' + fields.message + '</p>';
+  
+  Email.send({
+    SecureToken : "306dd484-c271-4c41-ac7f-fe4b5c37f741",
+    To : fields.email,
+    From : "testalphamails882@gmail.com",
+    Subject : "Comaplaint",
+    Body : body,
+    Attachments: [
+      {
+      name: file.name,
+      data: dataUri
+      }
+    ]
+  }).then(function (message) {
+    alert("Mail has been sent successfully")
+    });
+  };
+  // $(function () {
+  //   $('.SendEmail').click(function (event) {
+  //     var email = 'sample@gmail.com';
+  //     var subject = 'Test';
+  //     var emailBody = 'Hi Sample,';
+  //     //var attach = 'C:\\\Users\Acer\Documents\abc\Delivery_Order_Report.pdf';
+  //     var attachments =  [{
+  //       name: "Delivery_Order_Report.pdf",
+  //       path: "C:\Users\Acer\Documents\abc"
+  //       }]
+  //     document.location = "mailto:"+email+"?subject="+subject+"&body="+emailBody+
+  //         "?attach="+attachments.name;
+  //   });
+  // });

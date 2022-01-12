@@ -66,6 +66,7 @@
   border: 4px solid rgb(103,145,117);
 } */
 
+/* special Conditons card */
 .specialCnd{
   padding-top:1%;
 }
@@ -87,6 +88,10 @@ body {
 
  .tabledetailedit { 
    display:none;
+}
+
+.displayemail{
+  display:none;
 }
 
 .table{
@@ -298,6 +303,7 @@ clear: both;
 .emailBtn{
   padding-top: 8%;
   padding-left: 4%;
+  padding-bottom: 4%;
 }
 
 .dwnloadBtn{

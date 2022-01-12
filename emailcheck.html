@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sending Mail</title>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script type="text/javascript">
+// function sendEmail() {
+// Email.send({
+// SecureToken: "306dd484-c271-4c41-ac7f-fe4b5c37f741",
+// //Host: 'smtp.elasticemail.com',
+// // Username : "testalphamails882@gmail.com",
+// // Password : "13CDE8E8E141C67DA845919382D6A9854647",
+// To : 'dyjayawardana@gmail.com',
+// From : 'testalphamails882@gmail.com',
+// Subject: "Sending Email using javascript with SMTPJS new",
+// Body: "Hello There",
+// Attachments: [{
+// name: "Delivery_Order_Report.pdf",
+// path: "C:\Users\Acer\Documents\abc"
+// }]
+// })
+// .then(function (message) {
+// alert("Mail has been sent successfully")
+// });
+// }
+
+// function sendEmail() {
+//       try {
+//          var theApp = new ActiveXObject("Outlook.Application");
+//          var objNS = theApp.GetNameSpace('MAPI');
+//          var theMailItem = theApp.CreateItem(0); // value 0 = MailItem
+//          theMailItem.to = ('test@gmail.com');
+//          theMailItem.Subject = ('test');
+//          theMailItem.Body = ('test');
+//          theMailItem.Attachments.Add("C:\Users\Acer\Documents\abc\Delivery_Order_Report.pdf");
+//          theMailItem.display();
+//       } catch (err) {
+//          alert(err.message);
+//       }
+//    }
+
+
+
+   function SendAttach() {
+    var theApp  //Reference to Outlook.Application 
+    var theMailItem //Outlook.mailItem
+    //Attach Files to the email
+    var attach3 = "c:\\Users\Acer\Documents\abc\Delivery_Order_Report.pdf"
+    //Construct the Email including To(address),subject,body
+    //var recipient
+    var subject = "Email Using JavaScript"
+    var msg = "This is a test mail,sent to you using javascript by kushan thakershy"
+    //Create a object of Outlook.Application
+    try {
+        var theApp = new ActiveXObject("Mail.Application");
+        var objNS = theApp.GetNameSpace('MAPI');
+        var theMailItem = theApp.CreateItem(0) // value 0 = MailItem
+        //Bind the variables with the email
+        theMailItem.to = "anita.bharadva@compulynx.org"
+        theMailItem.Subject = (subject);
+        theMailItem.Body = (msg);
+        theMailItem.Attachments.add(attach3);
+        theMailItem.display();
+
+        //Show the mail before sending for review purpose
+        //You can directly use the theMailItem.send() function
+        //if you do not want to show the message.
+
+    }
+    catch (err) {
+        alert("Something Wrong");
+//         alert("The following may have cause this error: \n" +
+//  "1. The Outlook express 2003 is not installed on the machine.\n" +
+//  "2. The msoutl.olb is not availabe at the location " +
+//  "C:\\Program Files\\Microsoft Office\\OFFICE11\\msoutl.old on client's machine " +
+//  "due to bad installation of the office 2003." +
+//  "Re-Install office2003 with default settings.\n" +
+//  "3. The Initialize and Scripts ActiveX controls not marked as safe is not set to enable.")
+        //document.write("<a href=\"" + "./testemail.asp" + "\"" + ">" + "Go Back" + "</a>")
+    }
+
+}
+
+
+</script>
+</head>
+<body>
+<form method="post">
+<input type="button" value="Send Mail"onclick="SendAttach()" />
+</form>
+</body>
+</html>
