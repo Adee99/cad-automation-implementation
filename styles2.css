@@ -373,3 +373,10 @@ clear: both;
     width: 176px;
   }
 }
+
+/* check status & download */
+
+.checkBtn{
+  padding-left: 3%;
+}
+

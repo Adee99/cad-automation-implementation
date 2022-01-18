@@ -205,6 +205,23 @@ function completeTrmSht(){
   document.getElementById("changeStat2").innerHTML = document.getElementById("stat").innerHTML+ '<span class="nullwrap" style="color: green;"><i class="fas fa-check-circle"></i></span>';
 }
 
+function completeAppDm(){
+  document.getElementById("changeStat3").innerHTML = document.getElementById("stat").innerHTML+ '<span class="nullwrap" style="color: green;"><i class="fas fa-check-circle"></i></span>';
+}
+
+function paySchd(){
+  document.getElementById("changeStat4").innerHTML = document.getElementById("stat").innerHTML+ '<span class="nullwrap" style="color: green;"><i class="fas fa-check-circle"></i></span>';
+}
+
+function triggerAllEvents(){
+  changeTextDevOrder();
+  completeOfrLtr();
+  completeTrmSht();
+  completeAppDm();
+  paySchd();
+
+}
+
 // pdf download function
 window.onload = function(){
 
@@ -225,8 +242,10 @@ window.onload = function(){
 
   document.getElementById("downloadfile").addEventListener("click", () => {
       const invoice = this.document.getElementById("invoice");
+      const invoice2 = this.document.getElementById("test");
+      const invoice3 = this.document.getElementById("test2");
       
-      var opt = {
+      var opt1 = {
         margin: 1,
         filename: 'Delivery_Order_Report.pdf',
         image: { type: 'jpeg', quality: 0.98 },
@@ -234,14 +253,8 @@ window.onload = function(){
         jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
         
     };
-    //window.location.href = "mailto:user@example.com?subject=Subject&body=message%20goes%20here";
-    html2pdf().from(invoice).set(opt).save();
-  });
 
-  document.getElementById("ofrltrpdf").addEventListener("click", () => {
-    const invoice2 = this.document.getElementById("test");
-    
-    var opt = {
+    var opt2 = {
       margin: 1,
       filename: 'Delivery_Order_Report2.pdf',
       //path: 'C:\Users\Acer\Documents\abc',
@@ -249,8 +262,36 @@ window.onload = function(){
       html2canvas: { scale: 2 },
       jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
   };
-  html2pdf().from(invoice2).set(opt).save();
-})
+
+    var opt3 = {
+      margin: 1,
+      filename: 'Delivery_Order_Report3.pdf',
+      //path: 'C:\Users\Acer\Documents\abc',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+  };
+
+
+    //window.location.href = "mailto:user@example.com?subject=Subject&body=message%20goes%20here";
+    html2pdf().from(invoice).set(opt1).save();
+    html2pdf().from(invoice2).set(opt2).save();
+    html2pdf().from(invoice3).set(opt3).save();
+  });
+
+//   document.getElementById("ofrltrpdf").addEventListener("click", () => {
+//     const invoice2 = this.document.getElementById("test");
+    
+//     var opt = {
+//       margin: 1,
+//       filename: 'Delivery_Order_Report2.pdf',
+//       //path: 'C:\Users\Acer\Documents\abc',
+//       image: { type: 'jpeg', quality: 0.98 },
+//       html2canvas: { scale: 2 },
+//       jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+//   };
+//   html2pdf().from(invoice2).set(opt).save();
+// })
 
 }
 
@@ -384,3 +425,54 @@ function sendEmail() {
   //         "?attach="+attachments.name;
   //   });
   // });
+
+function downloadZip(){
+  // var zip = new JSZip();
+  // zip.file("Hello.txt", "hello word\n");
+
+  // zip.generateAsync({type:"blob"})
+  //   .then(function(content) {
+  //     saveAs(content, "archieve.zip");
+  //   });
+
+var zip = new JSZip();
+var count = 0;
+var zipFilename = "zipFilename.zip";
+var urls = [
+  './data/Delivery_Order_Report.pdf',
+];
+
+urls.forEach(function(url){
+  var filename = "filename.pdf";
+  // loading a file and add it in a zip file
+  JSZipUtils.getBinaryContent(url, function (err, data) {
+     if(err) {
+        throw err; // or handle the error
+     }
+     zip.file(filename, data, {binary:true});
+     count++;
+     if (count == urls.length) {
+       zip.generateAsync({type:'blob'}).then(function(content) {
+          saveAs(content, zipFilename);
+       });
+    }
+  });
+});
+
+}
+
+
+
+// $(function download() {
+//   var doc = new jsPDF();
+
+//   doc.setFontSize(40);
+//   doc.text(35, 25, "Octonyan loves jsPDF");
+
+// var zip = new JSZip();
+// zip.file("Hello.pdf", doc.output());
+// zip.generateAsync({ type: "blob" })
+// .then(function (content) {
+//   saveAs(content, "example.zip");
+// });
+// })
