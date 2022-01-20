@@ -161,6 +161,7 @@ document.getElementById('button').addEventListener("click", () => {
               document.getElementById("vhNum1").innerHTML = vheNum1;
           
               document.getElementById("vhMode1").innerHTML = vheMode1;
+              document.getElementById("vhMode5").innerHTML = vheMode1;
 
               document.getElementById("stdate1").innerHTML = setdate;
               document.getElementById("cstAdr1_3").innerHTML = cstAdrTwo;
@@ -249,17 +250,17 @@ window.onload = function(){
         margin: 1,
         filename: 'Delivery_Order_Report.pdf',
         image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
+        html2canvas: { scale: 4 },
         jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
         
     };
 
     var opt2 = {
-      margin: 1,
+      margin: 0.6,
       filename: 'Delivery_Order_Report2.pdf',
       //path: 'C:\Users\Acer\Documents\abc',
       image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2 },
+      html2canvas: { scale: 2},
       jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
   };
 
@@ -274,9 +275,47 @@ window.onload = function(){
 
 
     //window.location.href = "mailto:user@example.com?subject=Subject&body=message%20goes%20here";
-    html2pdf().from(invoice).set(opt1).save();
-    html2pdf().from(invoice2).set(opt2).save();
-    html2pdf().from(invoice3).set(opt3).save();
+   // html2pdf().from(invoice).set(opt1).save();
+    html2pdf().from(invoice2).set(opt2).toPdf().get('pdf').then(function(pdf) {
+      var totalPages = pdf.internal.getNumberOfPages();
+      for (i = 1; i <= totalPages; i++) {
+          pdf.setPage(i);
+          pdf.setFontSize(10);
+          pdf.setTextColor(100);
+          pdf.text('Page ' + i + ' of ' + totalPages, (pdf.internal.pageSize.getWidth() / 1.3), (pdf.internal.pageSize.getHeight() - 0.8));
+      }
+  }).save();
+    //html2pdf().from(invoice3).set(opt3).save();
+
+var zip = new JSZip();
+var count = 0;
+var zipFilename = "alldocx.zip";
+var urls = [
+  // 'html2pdf().from(invoice).set(opt1).save()',
+  "./data/Delivery_Order_Report.pdf",
+  "./data/Delivery_Order_Report2.pdf",
+  "./data/Delivery_Order_Report3.pdf"
+];
+
+
+
+urls.forEach(function(url){
+  var filename = "filename.pdf";
+  // loading a file and add it in a zip file
+  JSZipUtils.getBinaryContent(url, function (err, data) {
+     if(err) {
+        throw err; // or handle the error
+     }
+     zip.file(filename, data, {binary:true});
+     count++;
+     if (count == urls.length) {
+       zip.generateAsync({type:'blob'}).then(function(content) {
+          saveAs(content, zipFilename);
+       });
+    }
+  });
+});
+
   });
 
 //   document.getElementById("ofrltrpdf").addEventListener("click", () => {
@@ -285,7 +324,6 @@ window.onload = function(){
 //     var opt = {
 //       margin: 1,
 //       filename: 'Delivery_Order_Report2.pdf',
-//       //path: 'C:\Users\Acer\Documents\abc',
 //       image: { type: 'jpeg', quality: 0.98 },
 //       html2canvas: { scale: 2 },
 //       jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
@@ -439,7 +477,7 @@ var zip = new JSZip();
 var count = 0;
 var zipFilename = "zipFilename.zip";
 var urls = [
-  './data/Delivery_Order_Report.pdf',
+  html2pdf().from(invoice).set(opt1).save(),
 ];
 
 urls.forEach(function(url){

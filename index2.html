@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="styles2.css">
     <link rel="stylesheet" href="./data/stylestable.css">
+    <link rel="stylesheet" href="letterStyles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -53,7 +54,7 @@
                         <button class="button-65" id="button">Update Data</button>
                         <!-- <button class="button-65" id="button2" onclick="TriggerOutlook()">Email</button> -->
                         <!-- <button class="btn btn-primary" onclick="displayData()">Display</button> -->
-                        <!-- <button class="button-65" id="button" onclick="download()">Zip Data</button> -->
+                        <!-- <button class="button-65" id="button" onclick="downloadZip()">Zip Data</button> -->
                     </div>
                 </div>
             </div>   <!-- file upload -->
@@ -517,34 +518,230 @@
           <div id="tab-content2" class="tab-content">
               <h3>This is a Sample Letter Only</h3><br>
             <h4>No Dynamic Data is loaded here</h4>
-  
+<!--   
             <p id="test">
-              Ref: ${apidata.RefNo}<br  ><br>
+              Ref: <br  ><br>
+
+              <b>Private & Confidential</b><br><br>
   
-              ${apidata.Date}<br><br>
+              Today’s date<br><br>
   
   
-              ${apidata.SupAddress}<br>
+              Customer Name<br>
+              Address
               <br><br>
   
   
-              Dear Mr. ${apidata.SupName},<br><br>
+              Dear Sir,<br><br>
   
-              <u>DELIVERY ORDER – ONE UNIT ${apidata.VehicleMade} ${apidata.VehicleNum} ${apidata.VehicleModel}  Motor Vehicle<br><br></u>
+              <u>FACILITY OFFER</u><br><br>
+
+              We refer to your application dated <b>Invoice date</b> and are pleased to extend the below mentioned facility on the following terms and conditions:<br><br>
+                           
+              Facility<span class="ofrltrDetails">Term Finance on the Principles of Diminishing Musharaka (Vehicle)</span><br><br>
+              <span>Amount</span><span class="ofrltrDetails">Rs.</span><br><br>
+              Amount&emsp;&emsp;&ensp;Rs.<br><br>
+              Pricing&emsp;&emsp;&emsp;At a rate of Rate per annum, Annual floating,<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(Benchmarked to Weekly AWPLR + Rate p.a. to be re-priced annually on the<br> 
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;1st of January every year from the date of disbursement, with a floor of<br> 
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;p.a. and a cap of  p.a.).<br><br>
+
+              <b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;*The initial pricing given above is valid for first 30 days of this Letter of Offer.<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;The Bank has discretion to change the initial pricing subject to change in<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;market rates. New pricing for disbursement after 30 days will be notified to<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;you.</b><br><br>
+              
+              Purpose&emsp;&ensp;&emsp;To enable you to jointly purchase with Amana Bank PLC (Amana) the Vehicle is<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;described as follows:<br><br>
+
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Vehicle No		: 	<span id="vhNum1"></span><br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Make & Model		:	<span id="vhMade1"></span> <span id="vhMode1"></span> <br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Chassis No		:	<span id="chnum"></span><br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Engine No		:	<span id="engnum"></span><br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Year of Manufacture	:	<span id="yom"></span><br><br>
+
+              Tenure&emsp;&ensp;&emsp;&emsp;months<br><br>
+
+              Repayment&emsp;&nbsp;In consideration of the facility granted, you will be obliged to make monthly<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;repayments in terms of the Payment Schedule attached hereto in respect of<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;the separate units of the Property.<br><br>
+
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Please note the Payment Schedule attached hereto will constitute an integral<br>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;part of this Letter of Offer.
+
+
+
+        
+          </p> -->
+
+
+
+<pre id="test">
+                
+  Ref No
+
+  By Hand
+
+  <b>Private & Confidential</b>
+
+  Today’s date
+
+  Customer Name
+  Address
   
-              Please deliver the vehicle described below to our client Mr. ${apidata.CstName} of ${apidata.CstAddress} bearing<br>NIC/Reg. 123456 and transfer the same in favor of the client.<br><br>
-              Vehicle No		: 	${apidata.VehicleNum}<br>
-              Make & Model		:	${apidata.VehicleMade} ${apidata.VehicleModel} <br>
-              Chassis No		:	${apidata.ChasNo}<br>
-              Engine No		:	${apidata.EngNo}<br>
-              Year of Manufacture	:	${apidata.YOM}<br><br>
-              We hereby undertake to remit a sum of Rs.${apidata.RSUM} in your favour, as indicated in your invoice ${apidata.SetDate}, subject<br> to the receipt of Duplicate Key & the original Certificate of<br> Registration in favour of Test Customer. <br><br>   
+  Dear Sir,
+
+  FACILITY OFFER
+
+  We refer to your application dated Invoice date and are pleased to extend the
+  below mentioned facility on the following terms and conditions:
+
+  Facility    Term Finance on the Principles of Diminishing Musharaka (Vehicle) 
+    
+  Amount      Rs.
+    
+  Pricing     At a rate of Rate per annum, Annual floating, 
+              (Benchmarked to Weekly AWPLR + Rate p.a. to be re-priced annually on the
+              1st of January every year from the date of disbursement, with a floor of 
+              p.a. and a cap of  p.a.). 
+    
+              <b>*The initial pricing given above is valid for first 30 days of this Letter 
+              of Offer.The Bank has discretion to change the initial pricing subject to 
+              change in market rates. New pricing for disbursement after 30 days will be 
+              notified to you.</b>
+            
+  Purpose     To enable you to jointly purchase with Amana Bank PLC (Amana) the Vehicle
+              is described as follows:
+
+                Vehicle No		: 	Relevant details
+                Make & Model		:	<span id="vhMode5"></span>
+                Chassis No		:	Relevant details
+                Engine No		:	Relevant details
+                Year of Manufacture	:	Relevant details
+
   
-              Yours faithfully,<br><br>
+
+
+
+  Tenure      months
+
+  Repayment   In consideration of the facility granted, you will be obliged to make 
+              monthly repayments in terms of the Payment Schedule attached hereto in
+              respect of the separate units of the Property.
+              
+              Please note the Payment Schedule attached hereto will constitute an 
+              integral part of this Letter of Offer.
+              
+  Special Conditions	  N/A
+              
+  Initials: ______________	                 		_____________________
+            Amana Bank PLC			                  Csutomer Name
+
   
-              ..............................<br>                                                                                          
-              Authorized Signatory	
-          </p>
+  
+  Facility Offer Letter dated January 19, 2022 B
+              
+
+            1)  The pricing is bench marked to Weekly Average Weighted Prime 
+                Lending Rate (Weekly AWPLR + p.a.) as published by the Central
+                Bank of Sri Lanka, The pricing will be based on the Weekly AWPLR + p.a. 
+                applicable of first disbursement and will be reviewed and adjusted 
+                annually first of which adjustment will be done on 1st January every 
+                year.
+
+            2)  In the event of your default of any one installment/unit referred
+                to in the annexure hereof on due date, Amana is entitled to terminate
+                the facility granted to you and in such event, you are obliged to repay
+                the Total Outstanding due, with or without demand at once, forthwith.
+                However, if you fail to pay the Total Outstanding at once forthwith, 
+                you are obliged to pay such Total Outstanding together with any liquidated 
+                damages as may be applicable until the Outstanding is repaid in full.
+  
+ 
+  Security/Documentation:
+        • Primary mortgage for Rs. over the vehicle.
+        • Make & Model	:
+        • Lodgment of original Vehicle Certificate of Registration (CR)
+        • Takaful cover over the vehicle 
+        • DMC documents 
+        • Duplicate Key	
+        • Personal Guarantor
+  
+  General Terms and Conditions
+              
+        • Amana shall have the right to inspect the assets financed and also your
+          business premises, stocks, debtors and other records as and when it is 
+          considered necessary.All expenses in this connection shall be paid by you.
+
+        • All assets financed and/or mortgaged to the Bank must be insured against all
+          losses and damages and all associated risks (such as Risks of fire, Burglary,
+          Malicious Damage, Strike, Riot Civil commotion, natural perils and acts of 
+          terrorism etc.), with an insurer providing policies acceptable to the bank 
+          (Takaful) covering to its full value, in the joint names of the Bank and the 
+          owner,duly assigning the bank as the loss payee during the tenor.of the 
+          facility.The original policy document should be lodged with the bank and the
+          policy must be renewed periodically.The cost of insurance premium shall be 
+          borne by the customer.The customer should renew such cover 15 days prior to the
+          expiry of such policy and forward the renewal receipt/endorsementto the bank 
+          7 days prior to the renewal date. Failing which the bank will renew 
+          the policy by debiting the customer’s account without further prior.
+
+        • The facility offered herein shall not be utilized for any purpose/s other than
+          the purpose/s for which the said facility has been granted.
+
+        • Processing & Documentation fee of Rs. is applicable with reference to the 
+          facility,to be recovered from your account.
+
+
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
        
             <!-- <div>
               <input type="checkbox" id="agree" onclick="completeOfrLtr()" text="Mark As Complete">
