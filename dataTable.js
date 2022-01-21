@@ -126,6 +126,8 @@ function butRowAcep(but) {
     document.getElementById("cstName").innerHTML = document.getElementById("cstName4").innerHTML;
     document.getElementById("cstName1").innerHTML = document.getElementById("cstName4").innerHTML;
     document.getElementById("cstName2").innerHTML = document.getElementById("cstName4").innerHTML;
+    document.getElementById("cstName5").innerHTML = document.getElementById("cstName4").innerHTML;
+    document.getElementById("cstName6").innerHTML = document.getElementById("cstName4").innerHTML;
     //document.getElementById("splCondition1").innerHTML = document.getElementById("splCondition").innerHTML;
 
 
@@ -135,13 +137,16 @@ function butRowAcep(but) {
     document.getElementById("cstAdr1").innerHTML = document.getElementById("cstAdr1_5").innerHTML;
     document.getElementById("cstAdr1_1").innerHTML = document.getElementById("cstAdr1_5").innerHTML;
     document.getElementById("cstAdr1_4").innerHTML = document.getElementById("cstAdr1_5").innerHTML;
+    document.getElementById("cstAdr1_6").innerHTML = document.getElementById("cstAdr1_5").innerHTML;
     //document.getElementById("cstAdr1_1").innerHTML = document.getElementById("cstAdr1_5").innerHTML;
     document.getElementById("cstAdr2").innerHTML = document.getElementById("cstAdr1_51").innerHTML;
     document.getElementById("cstAdr1_2").innerHTML = document.getElementById("cstAdr1_51").innerHTML;
     document.getElementById("cstAdr1_3").innerHTML = document.getElementById("cstAdr1_51").innerHTML;
+    document.getElementById("cstAdr1_61").innerHTML = document.getElementById("cstAdr1_51").innerHTML;
 
     document.getElementById("splCondition2").innerHTML = document.getElementById("splCondition").innerHTML;
     document.getElementById("splCondition3").innerHTML = document.getElementById("splCondition").innerHTML;
+    document.getElementById("splCondition4").innerHTML = document.getElementById("splCondition").innerHTML;
     //document.getElementById("vhMade1").innerHTML = document.getElementById("vhMade").innerHTML;
     //console.log(cont["vhMade"]);
   });

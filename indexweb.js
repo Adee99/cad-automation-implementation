@@ -5,6 +5,19 @@ document.getElementById('input').addEventListener("change", (event) => {
     selectedFile = event.target.files[0];
 })
 
+window.onload = setInterval(clock,1000);
+function clock()
+{
+    var d = new Date();
+    var date = d.getDate();
+    var year = d.getFullYear();
+    var month = d.getMonth();
+    var monthArr = ["January", "February","March", "April", "May", "June", "July", "August", "September", "October", "November","December"];
+    month = monthArr[month];
+    document.getElementById("date2").innerHTML=date+" "+month+", "+year;
+}
+
+
 let data=[{
     "name":"abc",
     "data":"scd",
@@ -109,16 +122,19 @@ document.getElementById('button').addEventListener("click", () => {
               
               document.getElementById("refNum").innerHTML = refnum;
               document.getElementById("refNum1").innerHTML = refnum;
+              document.getElementById("refNum3").innerHTML = refnum;
            
               document.getElementById("date").innerHTML = date;
               document.getElementById("cstAdr1").innerHTML = cstAdrOne;
               document.getElementById("cstAdr1_1").innerHTML = cstAdrOne;
               document.getElementById("cstAdr1_4").innerHTML = cstAdrOne;
               document.getElementById("cstAdr1_5").innerHTML = cstAdrOne;
+              document.getElementById("cstAdr1_6").innerHTML = cstAdrOne;
               document.getElementById("cstAdr2").innerHTML = cstAdrTwo;
               document.getElementById("cstAdr1_2").innerHTML = cstAdrTwo;
               document.getElementById("cstAdr1_41").innerHTML = cstAdrTwo; 
               document.getElementById("cstAdr1_51").innerHTML = cstAdrTwo; 
+              document.getElementById("cstAdr1_61").innerHTML = cstAdrTwo;
               
              
               document.getElementById("refNum2").innerHTML = refnum;          
@@ -128,6 +144,9 @@ document.getElementById('button').addEventListener("click", () => {
               document.getElementById("cstName2").innerHTML = cstname;
               document.getElementById("cstName3").innerHTML = cstname;
               document.getElementById("cstName4").innerHTML = cstname;
+              document.getElementById("cstName5").innerHTML = cstname;
+              document.getElementById("cstName6").innerHTML = cstname;
+              
               
               document.getElementById("supName").innerHTML = supname;
               document.getElementById("supName1").innerHTML = supname;
@@ -139,22 +158,27 @@ document.getElementById('button').addEventListener("click", () => {
 
               document.getElementById("vhNum").innerHTML = vheNum;
               document.getElementById("vhNum2").innerHTML = vheNum;
+              document.getElementById("vhNum3").innerHTML = vheNum;
 
               document.getElementById("vhMode").innerHTML = vheMode;
               
               document.getElementById("chnum").innerHTML = chasNum;
               document.getElementById("chnum1").innerHTML = chasNum;
+              document.getElementById("chnum3").innerHTML = chasNum;
 
               document.getElementById("engnum").innerHTML = engNum;
               document.getElementById("engnum1").innerHTML = engNum;
+              document.getElementById("engnum3").innerHTML = engNum;
 
               document.getElementById("yom").innerHTML = yom;
               document.getElementById("yom1").innerHTML = yom;
+              document.getElementById("yom3").innerHTML = yom;
 
               document.getElementById("rsum").innerHTML = rsum;
               document.getElementById("rsum1").innerHTML = rsum;
               document.getElementById("rsum2").innerHTML = "LKR "+rsum;
               document.getElementById("rsum3").innerHTML = "LKR "+rsum;
+              document.getElementById("rsum4").innerHTML = rsum;
 
               document.getElementById("stdate").innerHTML = setdate;
 
@@ -167,6 +191,18 @@ document.getElementById('button').addEventListener("click", () => {
               document.getElementById("cstAdr1_3").innerHTML = cstAdrTwo;
 
               document.getElementById("dmsum").innerHTML = dmsum;  
+
+
+
+              //dateTime
+              //datetime
+              n =  new Date();
+              y = n.getFullYear();
+              m = n.getMonth() + 1;
+              d = n.getDate();
+              document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+
+
          });
         }
     } 
@@ -257,6 +293,7 @@ window.onload = function(){
 
     var opt2 = {
       margin: 0.6,
+      top:0.6,
       filename: 'Delivery_Order_Report2.pdf',
       //path: 'C:\Users\Acer\Documents\abc',
       image: { type: 'jpeg', quality: 0.98 },
@@ -282,7 +319,7 @@ window.onload = function(){
           pdf.setPage(i);
           pdf.setFontSize(10);
           pdf.setTextColor(100);
-          pdf.text('Page ' + i + ' of ' + totalPages, (pdf.internal.pageSize.getWidth() / 1.3), (pdf.internal.pageSize.getHeight() - 0.8));
+          pdf.text('Page ' + i + ' of ' + totalPages, (pdf.internal.pageSize.getWidth() / 1.2), (pdf.internal.pageSize.getHeight() - 0.4));
       }
   }).save();
     //html2pdf().from(invoice3).set(opt3).save();

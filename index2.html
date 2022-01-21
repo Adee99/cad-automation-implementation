@@ -51,7 +51,7 @@
                     </div>
                     
                     <div class="upBtn" >
-                        <button class="button-65" id="button">Update Data</button>
+                        <button class="button-65" id="button" onclick="clock()">Update Data</button>
                         <!-- <button class="button-65" id="button2" onclick="TriggerOutlook()">Email</button> -->
                         <!-- <button class="btn btn-primary" onclick="displayData()">Display</button> -->
                         <!-- <button class="button-65" id="button" onclick="downloadZip()">Zip Data</button> -->
@@ -516,8 +516,8 @@
         <!-- #tab-content1 -->
   
           <div id="tab-content2" class="tab-content">
-              <h3>This is a Sample Letter Only</h3><br>
-            <h4>No Dynamic Data is loaded here</h4>
+              <!-- <h3>This is a Sample Letter Only</h3><br>
+            <h4>No Dynamic Data is loaded here</h4> -->
 <!--   
             <p id="test">
               Ref: <br  ><br>
@@ -578,16 +578,17 @@
 
 <pre id="test">
                 
-  Ref No
+  Ref No:<span id="refNum3"></span>
 
   By Hand
 
   <b>Private & Confidential</b>
 
-  Today’s date
+  <span id="date2"></span>
 
-  Customer Name
-  Address
+  Mr.<span id="cstName5"></span>,
+  <span id="cstAdr1_6"></span>
+  <span id="cstAdr1_61"></span>
   
   Dear Sir,
 
@@ -598,7 +599,7 @@
 
   Facility    Term Finance on the Principles of Diminishing Musharaka (Vehicle) 
     
-  Amount      Rs.
+  Amount      Rs.<span id="rsum4"></span>
     
   Pricing     At a rate of Rate per annum, Annual floating, 
               (Benchmarked to Weekly AWPLR + Rate p.a. to be re-priced annually on the
@@ -613,15 +614,11 @@
   Purpose     To enable you to jointly purchase with Amana Bank PLC (Amana) the Vehicle
               is described as follows:
 
-                Vehicle No		: 	Relevant details
+                Vehicle No		: 	<span id="vhNum3"></span>
                 Make & Model		:	<span id="vhMode5"></span>
-                Chassis No		:	Relevant details
-                Engine No		:	Relevant details
-                Year of Manufacture	:	Relevant details
-
-  
-
-
+                Chassis No		:	<span id="chnum3"></span>
+                Engine No		:	<span id="engnum3"></span>
+                Year of Manufacture	:	<span id="yom3"></span>
 
   Tenure      months
 
@@ -632,12 +629,12 @@
               Please note the Payment Schedule attached hereto will constitute an 
               integral part of this Letter of Offer.
               
-  Special Conditions	  N/A
+  Special Conditions	  <span id="splCondition4">N/A</span>
               
   Initials: ______________	                 		_____________________
-            Amana Bank PLC			                  Csutomer Name
+            Amana Bank PLC			                  Mr.<span id="cstName6"></span>
 
-  
+<!-- <span class="html2pdf__page-break"></span> -->
   
   Facility Offer Letter dated January 19, 2022 B
               
@@ -666,7 +663,7 @@
         • DMC documents 
         • Duplicate Key	
         • Personal Guarantor
-  
+        <span class="html2pdf__page-break"></span>
   General Terms and Conditions
               
         • Amana shall have the right to inspect the assets financed and also your
@@ -692,20 +689,90 @@
         • Processing & Documentation fee of Rs. is applicable with reference to the 
           facility,to be recovered from your account.
 
+  Operational Conditions
 
-
+        • In conformity with normal banking practice, Amana reserves the right 
+          to review the said facility from time to time and to discontinue same
+          or to vary the terms and conditions relating thereto, including but not
+          limited to changes, at the sole discretion of Amana.
           
+        • Amana reserves the right to alter and change and/or restructure the 
+          limit/limits detailed above and review and change its pricing on each
+          and any of the transaction under the facility limits offered herein based
+          upon any changes in market conditions,the financial conditions of yourself
+          and/or the conduct of your transaction.We shall make indication of such price
+          changes to you before we enter into a transaction.
+
+
+  
+  Initials: ______________	                 		__________________
+            Amana Bank PLC			
+
+        • The facility offered herein shall become operative upon the completion and
+          execution of all documents mentioned above. All legal and other expenses 
+          incurred in this regard shall be borne by you.	
+
+
+  Assignment and Transfers
+          
+        • This offer made in this letter shall be binding upon and inure for the 
+          benefit of yourself and your respective successors and permitted assignees.
+
+        • You shall not assign and/or transfer all or any part of its rights or 
+          obligations under this offer letter without the prior written consent of 
+          Amana.
+
+        • Amana may assign or otherwise transfer all or any part of its rights or 
+          obligations under this offer to any Licensed Commercial Bank or Licensed
+          Specialized Bank operating in Sri Lanka.
+
+  Government Regulations and Taxes
+
+        • The above facility is subject to all relevant approvals, directives and 
+          regulations that are issued or may be issued from time to time by the 
+          Government of Sri Lanka or other relevant regulatory bodies.
+
+        • Taxes – All relevant taxes at the current rates or at any future rates and 
+          any other levies or charges that may be levied from time to time on the mark-up
+          agreed upon and other charges payable to Government Authorities shall be charged
+          to and recovered from you.	
+
+        • You will promptly notify us of any material changes in the ownership, management
+          and/or financial condition of yourself, so that the settlement of the facility 
+          offered herein and/or our position will not be prejudiced in any manner.
+
+  Extra payments on overdue amount of facilities              
+          
+        • If any amount due from you to the Bank under this agreement is not paid in full
+          on its due date, you hereby undertake to pay on request of the Bank, a Late 
+          Payment Fee of 2% p.a. over the overdue amount, which will be donated, by the 
+          Bank on behalf of you to a charity or charities approved by the Bank, after the 
+          recovery of any actual costs(excluding any opportunity costs) incurred by the Bank
+          as a result of the late payment of the unpaid amount.
+          <span class="html2pdf__page-break"></span>
+  Validity of Acceptance
+	
+          If this offer of facility is acceptable, kindly confirm your acceptance of the 
+          above terms and conditions by signing and returning to us the duplicate of this
+          letter,within 14 days from the date hereof failing which the above offer will be
+          treated as lapsed and regarded as null and void.
+
+  Yours faithfully,
 
 
 
+  .................... 				                                    ....................
+  Authorized Signatory					       Authorized Signatory
 
+  
+  Acceptance
 
+  With regard to the above facility, I have fully understood the product form, nature, 
+  structure and pricing computations and accept the facility on the terms and conditions
+  applicable as outlined in the Facility Offer.
 
-
-
-
-
-
+  _____________________				_____________________
+        NIC no					             Date                    
 
 
 
