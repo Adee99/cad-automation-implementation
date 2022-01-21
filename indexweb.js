@@ -15,6 +15,7 @@ function clock()
     var monthArr = ["January", "February","March", "April", "May", "June", "July", "August", "September", "October", "November","December"];
     month = monthArr[month];
     document.getElementById("date2").innerHTML=date+" "+month+", "+year;
+    document.getElementById("date3").innerHTML=date+" "+month+", "+year;
 }
 
 
@@ -146,6 +147,7 @@ document.getElementById('button').addEventListener("click", () => {
               document.getElementById("cstName4").innerHTML = cstname;
               document.getElementById("cstName5").innerHTML = cstname;
               document.getElementById("cstName6").innerHTML = cstname;
+              document.getElementById("cstName7").innerHTML = cstname;
               
               
               document.getElementById("supName").innerHTML = supname;
@@ -302,7 +304,7 @@ window.onload = function(){
   };
 
     var opt3 = {
-      margin: 1,
+      margin: 0.6,
       filename: 'Delivery_Order_Report3.pdf',
       //path: 'C:\Users\Acer\Documents\abc',
       image: { type: 'jpeg', quality: 0.98 },
@@ -322,7 +324,7 @@ window.onload = function(){
           pdf.text('Page ' + i + ' of ' + totalPages, (pdf.internal.pageSize.getWidth() / 1.2), (pdf.internal.pageSize.getHeight() - 0.4));
       }
   }).save();
-    //html2pdf().from(invoice3).set(opt3).save();
+    html2pdf().from(invoice3).set(opt3).save();
 
 var zip = new JSZip();
 var count = 0;

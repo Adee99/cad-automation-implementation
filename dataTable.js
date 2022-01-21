@@ -129,7 +129,7 @@ function butRowAcep(but) {
     document.getElementById("cstName5").innerHTML = document.getElementById("cstName4").innerHTML;
     document.getElementById("cstName6").innerHTML = document.getElementById("cstName4").innerHTML;
     //document.getElementById("splCondition1").innerHTML = document.getElementById("splCondition").innerHTML;
-
+    document.getElementById("cstName7").innerHTML = document.getElementById("cstName4").innerHTML;
 
     document.getElementById("rsum").innerHTML = document.getElementById("rsum3").innerHTML;
     document.getElementById("rsum1").innerHTML = document.getElementById("rsum3").innerHTML;
