@@ -296,7 +296,7 @@ window.onload = function(){
     var opt2 = {
       margin: 0.6,
       top:0.6,
-      filename: 'Delivery_Order_Report2.pdf',
+      filename: 'Offer_Letter.pdf',
       //path: 'C:\Users\Acer\Documents\abc',
       image: { type: 'jpeg', quality: 0.98 },
       html2canvas: { scale: 2},
@@ -305,7 +305,7 @@ window.onload = function(){
 
     var opt3 = {
       margin: 0.6,
-      filename: 'Delivery_Order_Report3.pdf',
+      filename: 'Facility_Term_Sheet.pdf',
       //path: 'C:\Users\Acer\Documents\abc',
       image: { type: 'jpeg', quality: 0.98 },
       html2canvas: { scale: 2 },
@@ -314,7 +314,7 @@ window.onload = function(){
 
 
     //window.location.href = "mailto:user@example.com?subject=Subject&body=message%20goes%20here";
-   // html2pdf().from(invoice).set(opt1).save();
+    html2pdf().from(invoice).set(opt1).save();
     html2pdf().from(invoice2).set(opt2).toPdf().get('pdf').then(function(pdf) {
       var totalPages = pdf.internal.getNumberOfPages();
       for (i = 1; i <= totalPages; i++) {
