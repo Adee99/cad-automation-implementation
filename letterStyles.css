@@ -1,9 +1,53 @@
-.ofrltrDetails{
+/* .ofrltrDetails{
     padding-left:auto;
-}
+} */
 
 @page {
     margin: 2cm;
     margin-top:2.5cm;
     margin-bottom: 2.5cm;
 }
+
+.box1{
+        background-color: white;
+        width: 50%;
+        border: 1px solid black;
+        position: relative;        
+}
+
+.box2{
+    background-color: white;
+    border: 1px solid black;
+    padding: 2px;
+    width: 96%;
+    position: relative;
+}
+
+.box3{
+    background-color: white;
+    border: 1px solid black;
+    padding: 2px;
+    width: 96%;
+    position: relative;
+}
+
+.table1, th, td{
+    border:1px solid black;
+}
+
+/* content boxes */
+
+
+
+
+/* #outPopUp {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -150px;
+    background: red;
+  
+} */

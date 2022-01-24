@@ -16,6 +16,8 @@ function clock()
     month = monthArr[month];
     document.getElementById("date2").innerHTML=date+" "+month+", "+year;
     document.getElementById("date3").innerHTML=date+" "+month+", "+year;
+    document.getElementById("date4").innerHTML=date+" "+month+", "+year;
+    document.getElementById("date5").innerHTML=date+" "+month+", "+year;
 }
 
 
@@ -131,11 +133,15 @@ document.getElementById('button').addEventListener("click", () => {
               document.getElementById("cstAdr1_4").innerHTML = cstAdrOne;
               document.getElementById("cstAdr1_5").innerHTML = cstAdrOne;
               document.getElementById("cstAdr1_6").innerHTML = cstAdrOne;
+              document.getElementById("cstAdr1_7").innerHTML = cstAdrOne;
+              document.getElementById("cstAdr1_8").innerHTML = cstAdrOne;
               document.getElementById("cstAdr2").innerHTML = cstAdrTwo;
               document.getElementById("cstAdr1_2").innerHTML = cstAdrTwo;
               document.getElementById("cstAdr1_41").innerHTML = cstAdrTwo; 
               document.getElementById("cstAdr1_51").innerHTML = cstAdrTwo; 
               document.getElementById("cstAdr1_61").innerHTML = cstAdrTwo;
+              document.getElementById("cstAdr1_71").innerHTML = cstAdrTwo;
+              document.getElementById("cstAdr1_81").innerHTML = cstAdrTwo;
               
              
               document.getElementById("refNum2").innerHTML = refnum;          
@@ -148,33 +154,51 @@ document.getElementById('button').addEventListener("click", () => {
               document.getElementById("cstName5").innerHTML = cstname;
               document.getElementById("cstName6").innerHTML = cstname;
               document.getElementById("cstName7").innerHTML = cstname;
+              document.getElementById("cstName8").innerHTML = cstname;
+              document.getElementById("cstName9").innerHTML = cstname;
               
               
               document.getElementById("supName").innerHTML = supname;
               document.getElementById("supName1").innerHTML = supname;
+              document.getElementById("supName2").innerHTML = supname;
+              document.getElementById("supName3").innerHTML = supname;
 
               document.getElementById("vhMade").innerHTML = vhMade;
               document.getElementById("vhMade1").innerHTML = vhMade1;
               document.getElementById("vhMade2").innerHTML = vhMade;
-              //document.getElementById("vhMade3").innerHTML = vhMade;
+              document.getElementById("vhMade3").innerHTML = vhMade;
+              document.getElementById("vhMade4").innerHTML = vhMade;
+              document.getElementById("vhMade5").innerHTML = vhMade;
 
               document.getElementById("vhNum").innerHTML = vheNum;
               document.getElementById("vhNum2").innerHTML = vheNum;
               document.getElementById("vhNum3").innerHTML = vheNum;
+              document.getElementById("vhNum4").innerHTML = vheNum;
+              document.getElementById("vhNum5").innerHTML = vheNum;
+              document.getElementById("vhNum6").innerHTML = vheNum;
 
               document.getElementById("vhMode").innerHTML = vheMode;
               
               document.getElementById("chnum").innerHTML = chasNum;
               document.getElementById("chnum1").innerHTML = chasNum;
               document.getElementById("chnum3").innerHTML = chasNum;
+              document.getElementById("chnum4").innerHTML = chasNum;
+              document.getElementById("chnum5").innerHTML = chasNum;
+              document.getElementById("chnum6").innerHTML = chasNum;
 
               document.getElementById("engnum").innerHTML = engNum;
               document.getElementById("engnum1").innerHTML = engNum;
               document.getElementById("engnum3").innerHTML = engNum;
+              document.getElementById("engnum4").innerHTML = engNum;
+              document.getElementById("engnum5").innerHTML = engNum;
+              document.getElementById("engnum6").innerHTML = engNum;
 
               document.getElementById("yom").innerHTML = yom;
               document.getElementById("yom1").innerHTML = yom;
               document.getElementById("yom3").innerHTML = yom;
+              document.getElementById("yom4").innerHTML = yom;
+              document.getElementById("yom5").innerHTML = yom;
+              document.getElementById("yom6").innerHTML = yom;
 
               document.getElementById("rsum").innerHTML = rsum;
               document.getElementById("rsum1").innerHTML = rsum;
@@ -188,12 +212,14 @@ document.getElementById('button').addEventListener("click", () => {
           
               document.getElementById("vhMode1").innerHTML = vheMode1;
               document.getElementById("vhMode5").innerHTML = vheMode1;
+              document.getElementById("vhMode6").innerHTML = vheMode1;
+              document.getElementById("vhMode7").innerHTML = vheMode1;
+
 
               document.getElementById("stdate1").innerHTML = setdate;
               document.getElementById("cstAdr1_3").innerHTML = cstAdrTwo;
 
               document.getElementById("dmsum").innerHTML = dmsum;  
-
 
 
               //dateTime
@@ -283,6 +309,7 @@ window.onload = function(){
       const invoice = this.document.getElementById("invoice");
       const invoice2 = this.document.getElementById("test");
       const invoice3 = this.document.getElementById("test2");
+      const invoice4 = this.document.getElementById("test3");
       
       var opt1 = {
         margin: 1,
@@ -293,38 +320,61 @@ window.onload = function(){
         
     };
 
-    var opt2 = {
-      margin: 0.6,
-      top:0.6,
-      filename: 'Offer_Letter.pdf',
-      //path: 'C:\Users\Acer\Documents\abc',
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2},
-      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-  };
+      var opt2 = {
+        margin: 0.6,
+        top:0.6,
+        filename: 'Offer_Letter.pdf',
+        //path: 'C:\Users\Acer\Documents\abc',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2},
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
 
-    var opt3 = {
-      margin: 0.6,
-      filename: 'Facility_Term_Sheet.pdf',
-      //path: 'C:\Users\Acer\Documents\abc',
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2 },
-      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-  };
+      var opt3 = {
+        margin: 0.6,
+        filename: 'Facility_Term_Sheet.pdf',
+        //path: 'C:\Users\Acer\Documents\abc',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
+
+      var opt4 = {
+        margin: 0.5,
+        filename: 'Sharia_Documents.pdf',
+        //path: 'C:\Users\Acer\Documents\abc',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
 
 
     //window.location.href = "mailto:user@example.com?subject=Subject&body=message%20goes%20here";
-    html2pdf().from(invoice).set(opt1).save();
-    html2pdf().from(invoice2).set(opt2).toPdf().get('pdf').then(function(pdf) {
+    //html2pdf().from(invoice).set(opt1).save();
+  //   html2pdf().from(invoice2).set(opt2).toPdf().get('pdf').then(function(pdf) {
+  //     var totalPages = pdf.internal.getNumberOfPages();
+  //     for (i = 1; i <= totalPages; i++) {
+  //         pdf.setPage(i);
+  //         pdf.setFontSize(10);
+  //         pdf.setTextColor(100);
+  //         pdf.text('Page ' + i + ' of ' + totalPages, (pdf.internal.pageSize.getWidth() / 1.2), (pdf.internal.pageSize.getHeight() - 0.4));
+  //     }
+  // }).save();
+    //html2pdf().from(invoice3).set(opt3).save();
+    html2pdf().from(invoice4).set(opt4).toPdf().get('pdf').then(function(pdf){
       var totalPages = pdf.internal.getNumberOfPages();
       for (i = 1; i <= totalPages; i++) {
-          pdf.setPage(i);
-          pdf.setFontSize(10);
-          pdf.setTextColor(100);
-          pdf.text('Page ' + i + ' of ' + totalPages, (pdf.internal.pageSize.getWidth() / 1.2), (pdf.internal.pageSize.getHeight() - 0.4));
-      }
-  }).save();
-    html2pdf().from(invoice3).set(opt3).save();
+        pdf.setPage(i);
+        pdf.setFontSize(10);
+        pdf.setTextColor(100);
+        pdf.text('Page ' + i + ' of ' + totalPages, (pdf.internal.pageSize.getWidth() / 1.2), (pdf.internal.pageSize.getHeight() - 0.4));
+    }
+    }).save();
+
+
+
+
+
 
 var zip = new JSZip();
 var count = 0;

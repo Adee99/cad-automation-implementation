@@ -242,7 +242,8 @@ box-shadow: 1px 10px 16px 0 rgba(0,0,0,0.3);
 }
 #tab1:checked ~ #tab-content1,
 #tab2:checked ~ #tab-content2,
-#tab3:checked ~ #tab-content3 {
+#tab3:checked ~ #tab-content3,
+#tab4:checked ~ #tab-content4{
   display: block;
 }
 @media (min-width: 768px) {
