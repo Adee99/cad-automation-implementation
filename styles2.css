@@ -264,6 +264,10 @@ box-shadow: 1px 10px 16px 0 rgba(0,0,0,0.3);
 box-sizing: border-box;
 }
 
+.tab4{
+  padding-left: 15%;
+}
+
 /* .column2 {
 float: left;
 width: 33.33%;

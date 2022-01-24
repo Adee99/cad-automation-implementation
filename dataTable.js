@@ -140,12 +140,14 @@ function butRowAcep(but) {
     document.getElementById("cstAdr1_4").innerHTML = document.getElementById("cstAdr1_5").innerHTML;
     document.getElementById("cstAdr1_6").innerHTML = document.getElementById("cstAdr1_5").innerHTML;
     document.getElementById("cstAdr1_7").innerHTML = document.getElementById("cstAdr1_5").innerHTML;
+    document.getElementById("cstAdr1_8").innerHTML = document.getElementById("cstAdr1_5").innerHTML;
     //document.getElementById("cstAdr1_1").innerHTML = document.getElementById("cstAdr1_5").innerHTML;
     document.getElementById("cstAdr2").innerHTML = document.getElementById("cstAdr1_51").innerHTML;
     document.getElementById("cstAdr1_2").innerHTML = document.getElementById("cstAdr1_51").innerHTML;
     document.getElementById("cstAdr1_3").innerHTML = document.getElementById("cstAdr1_51").innerHTML;
     document.getElementById("cstAdr1_61").innerHTML = document.getElementById("cstAdr1_51").innerHTML;
     document.getElementById("cstAdr1_71").innerHTML = document.getElementById("cstAdr1_51").innerHTML;
+    document.getElementById("cstAdr1_81").innerHTML = document.getElementById("cstAdr1_51").innerHTML;
 
     document.getElementById("splCondition2").innerHTML = document.getElementById("splCondition").innerHTML;
     document.getElementById("splCondition3").innerHTML = document.getElementById("splCondition").innerHTML;

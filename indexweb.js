@@ -350,17 +350,17 @@ window.onload = function(){
 
 
     //window.location.href = "mailto:user@example.com?subject=Subject&body=message%20goes%20here";
-    //html2pdf().from(invoice).set(opt1).save();
-  //   html2pdf().from(invoice2).set(opt2).toPdf().get('pdf').then(function(pdf) {
-  //     var totalPages = pdf.internal.getNumberOfPages();
-  //     for (i = 1; i <= totalPages; i++) {
-  //         pdf.setPage(i);
-  //         pdf.setFontSize(10);
-  //         pdf.setTextColor(100);
-  //         pdf.text('Page ' + i + ' of ' + totalPages, (pdf.internal.pageSize.getWidth() / 1.2), (pdf.internal.pageSize.getHeight() - 0.4));
-  //     }
-  // }).save();
-    //html2pdf().from(invoice3).set(opt3).save();
+    html2pdf().from(invoice).set(opt1).save();
+    html2pdf().from(invoice2).set(opt2).toPdf().get('pdf').then(function(pdf) {
+      var totalPages = pdf.internal.getNumberOfPages();
+      for (i = 1; i <= totalPages; i++) {
+          pdf.setPage(i);
+          pdf.setFontSize(10);
+          pdf.setTextColor(100);
+          pdf.text('Page ' + i + ' of ' + totalPages, (pdf.internal.pageSize.getWidth() / 1.2), (pdf.internal.pageSize.getHeight() - 0.4));
+      }
+  }).save();
+    html2pdf().from(invoice3).set(opt3).save();
     html2pdf().from(invoice4).set(opt4).toPdf().get('pdf').then(function(pdf){
       var totalPages = pdf.internal.getNumberOfPages();
       for (i = 1; i <= totalPages; i++) {
