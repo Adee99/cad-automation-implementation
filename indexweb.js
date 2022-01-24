@@ -376,34 +376,34 @@ window.onload = function(){
 
 
 
-var zip = new JSZip();
-var count = 0;
-var zipFilename = "alldocx.zip";
-var urls = [
-  // 'html2pdf().from(invoice).set(opt1).save()',
-  "./data/Delivery_Order_Report.pdf",
-  "./data/Delivery_Order_Report2.pdf",
-  "./data/Delivery_Order_Report3.pdf"
-];
+// var zip = new JSZip();
+// var count = 0;
+// var zipFilename = "alldocx.zip";
+// var urls = [
+//   // 'html2pdf().from(invoice).set(opt1).save()',
+//   "./data/Delivery_Order_Report.pdf",
+//   "./data/Delivery_Order_Report2.pdf",
+//   "./data/Delivery_Order_Report3.pdf"
+// ];
 
 
 
-urls.forEach(function(url){
-  var filename = "filename.pdf";
-  // loading a file and add it in a zip file
-  JSZipUtils.getBinaryContent(url, function (err, data) {
-     if(err) {
-        throw err; // or handle the error
-     }
-     zip.file(filename, data, {binary:true});
-     count++;
-     if (count == urls.length) {
-       zip.generateAsync({type:'blob'}).then(function(content) {
-          saveAs(content, zipFilename);
-       });
-    }
-  });
-});
+// urls.forEach(function(url){
+//   var filename = "filename.pdf";
+//   // loading a file and add it in a zip file
+//   JSZipUtils.getBinaryContent(url, function (err, data) {
+//      if(err) {
+//         throw err; // or handle the error
+//      }
+//      zip.file(filename, data, {binary:true});
+//      count++;
+//      if (count == urls.length) {
+//        zip.generateAsync({type:'blob'}).then(function(content) {
+//           saveAs(content, zipFilename);
+//        });
+//     }
+//   });
+// });
 
   });
 
@@ -553,40 +553,40 @@ function sendEmail() {
   //   });
   // });
 
-function downloadZip(){
-  // var zip = new JSZip();
-  // zip.file("Hello.txt", "hello word\n");
+// function downloadZip(){
+//   // var zip = new JSZip();
+//   // zip.file("Hello.txt", "hello word\n");
 
-  // zip.generateAsync({type:"blob"})
-  //   .then(function(content) {
-  //     saveAs(content, "archieve.zip");
-  //   });
+//   // zip.generateAsync({type:"blob"})
+//   //   .then(function(content) {
+//   //     saveAs(content, "archieve.zip");
+//   //   });
 
-var zip = new JSZip();
-var count = 0;
-var zipFilename = "zipFilename.zip";
-var urls = [
-  html2pdf().from(invoice).set(opt1).save(),
-];
+// var zip = new JSZip();
+// var count = 0;
+// var zipFilename = "zipFilename.zip";
+// var urls = [
+//   html2pdf().from(invoice).set(opt1).save(),
+// ];
 
-urls.forEach(function(url){
-  var filename = "filename.pdf";
-  // loading a file and add it in a zip file
-  JSZipUtils.getBinaryContent(url, function (err, data) {
-     if(err) {
-        throw err; // or handle the error
-     }
-     zip.file(filename, data, {binary:true});
-     count++;
-     if (count == urls.length) {
-       zip.generateAsync({type:'blob'}).then(function(content) {
-          saveAs(content, zipFilename);
-       });
-    }
-  });
-});
+// urls.forEach(function(url){
+//   var filename = "filename.pdf";
+//   // loading a file and add it in a zip file
+//   JSZipUtils.getBinaryContent(url, function (err, data) {
+//      if(err) {
+//         throw err; // or handle the error
+//      }
+//      zip.file(filename, data, {binary:true});
+//      count++;
+//      if (count == urls.length) {
+//        zip.generateAsync({type:'blob'}).then(function(content) {
+//           saveAs(content, zipFilename);
+//        });
+//     }
+//   });
+// });
 
-}
+// }
 
 
 
