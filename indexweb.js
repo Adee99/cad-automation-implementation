@@ -305,7 +305,7 @@ window.onload = function(){
 //   html2pdf().from(invoice).set(opt).save();
 // });
 
-  document.getElementById("downloadfile").addEventListener("click", () => {
+  document.getElementById("sendemail").addEventListener("click", () => {
       const invoice = this.document.getElementById("invoice");
       const invoice2 = this.document.getElementById("test");
       const invoice3 = this.document.getElementById("test2");
@@ -485,59 +485,59 @@ $(function() {
   });
 });
 
-$(function() {
-  $(".button-65").on("click",function(e) {
-    e.preventDefault();
-    $(".displayemail").hide();
-    $("#"+this.id+"div").show();
-  });
-});
+// $(function() {
+//   $(".button-65").on("click",function(e) {
+//     e.preventDefault();
+//     $(".displayemail").hide();
+//     $("#"+this.id+"div").show();
+//   });
+// });
 
 // email documents 
-var file;
-var dataUri;
+// var file;
+// var dataUri;
 
-function uploadFileToServer()
-{
+// function uploadFileToServer()
+// {
     
-   file = event.target.files[0];
-   var reader = new FileReader();
-   reader.readAsBinaryString(file);
-   reader.onload = function () {
-   dataUri = "data:" + file.type + ";base64," + btoa(reader.result);
-   };
-   reader.onerror = function() {
-       console.log('Something went wrong');
-   };
-} 
+//    file = event.target.files[0];
+//    var reader = new FileReader();
+//    reader.readAsBinaryString(file);
+//    reader.onload = function () {
+//    dataUri = "data:" + file.type + ";base64," + btoa(reader.result);
+//    };
+//    reader.onerror = function() {
+//        console.log('Something went wrong');
+//    };
+// } 
 
-function sendEmail() {
-  let fields = {
-    name: document.querySelector("#name").value,
-    email: document.querySelector("#email").value,
-    message: document.querySelector("#message").value
-  };
+// function sendEmail() {
+//   let fields = {
+//     name: document.querySelector("#name").value,
+//     email: document.querySelector("#email").value,
+//     message: document.querySelector("#message").value
+//   };
   
-  let body = '<br><b>Name:</b> ' + fields.name + '<br>' +
-  '<b>E-mail:</b> ' + fields.email + '<br>' +
-  '<b>Message:</b> ' + fields.message + '</p>';
+//   let body = '<br><b>Name:</b> ' + fields.name + '<br>' +
+//   '<b>E-mail:</b> ' + fields.email + '<br>' +
+//   '<b>Message:</b> ' + fields.message + '</p>';
   
-  Email.send({
-    SecureToken : "306dd484-c271-4c41-ac7f-fe4b5c37f741",
-    To : fields.email,
-    From : "testalphamails882@gmail.com",
-    Subject : "Comaplaint",
-    Body : body,
-    Attachments: [
-      {
-      name: file.name,
-      data: dataUri
-      }
-    ]
-  }).then(function (message) {
-    alert("Mail has been sent successfully")
-    });
-  };
+//   Email.send({
+//     SecureToken : "306dd484-c271-4c41-ac7f-fe4b5c37f741",
+//     To : fields.email,
+//     From : "testalphamails882@gmail.com",
+//     Subject : "Comaplaint",
+//     Body : body,
+//     Attachments: [
+//       {
+//       name: file.name,
+//       data: dataUri
+//       }
+//     ]
+//   }).then(function (message) {
+//     alert("Mail has been sent successfully")
+//     });
+//   };
   // $(function () {
   //   $('.SendEmail').click(function (event) {
   //     var email = 'sample@gmail.com';

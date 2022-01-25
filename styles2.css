@@ -350,6 +350,11 @@ clear: both;
   padding-left: 5%;
 }
 
+#sendemail{
+  text-align: left;
+  padding: 12px 8px;
+}
+
 .button-65:hover {
   background-color: #1366d6;
   box-shadow: rgba(0, 0, 0, .05) 0 5px 30px, rgba(0, 0, 0, .05) 0 1px 4px;
