@@ -108,12 +108,14 @@ document.getElementById('button').addEventListener("click", () => {
                 return item.YOM;
               }))
 
-              const rsum = rowObject.map((item => {
-                return item.RSUM;
+              let rsum = rowObject.map((item => {
+                return item.RSUM.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
               }))
 
-              const dmsum = rowObject.map((item => {
-                return item.DmSum;
+              //  rsum = new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 2 }).format(rsum);
+
+              let dmsum = rowObject.map((item => {
+                return item.DmSum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
               }))
 
               const setdate = rowObject.map((item => {
@@ -202,8 +204,8 @@ document.getElementById('button').addEventListener("click", () => {
 
               document.getElementById("rsum").innerHTML = rsum;
               document.getElementById("rsum1").innerHTML = rsum;
-              document.getElementById("rsum2").innerHTML = "LKR "+rsum;
-              document.getElementById("rsum3").innerHTML = "LKR "+rsum;
+              document.getElementById("rsum2").innerHTML = rsum;
+              document.getElementById("rsum3").innerHTML = rsum;
               document.getElementById("rsum4").innerHTML = rsum;
 
               document.getElementById("stdate").innerHTML = setdate;
