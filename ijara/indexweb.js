@@ -1,4 +1,5 @@
 // fetch data from Excel
+let reffnum = 0;
 let selectedFile;
 console.log(window.XLSX);
 document.getElementById('input').addEventListener("change", (event) => {
@@ -18,6 +19,8 @@ function clock()
     document.getElementById("date3").innerHTML=date+" "+month+", "+year;
     document.getElementById("date4").innerHTML=date+" "+month+", "+year;
     document.getElementById("date5").innerHTML=date+" "+month+", "+year;
+    document.getElementById("date6").innerHTML=date+" "+month+", "+year;
+
   
 }
 
@@ -50,7 +53,7 @@ document.getElementById('button').addEventListener("click", () => {
               //console.log(data);
               //document.getElementById("jsondata").innerHTML = JSON.stringify(rowObject,undefined,4)
              
-              const reffnum = rowObject.map((item) => {
+              reffnum = rowObject.map((item) => {
                   return item.RefNo;
               })
 
@@ -74,29 +77,29 @@ document.getElementById('button').addEventListener("click", () => {
               })
 
 
-              const vhMade = rowObject.map((item => {
-                  return item.VehicleMade;
-              }))
+              // const vhMade = rowObject.map((item => {
+              //     return item.VehicleMade;
+              // }))
 
-              const vhMade1 = rowObject.map((item => {
-                return item.VehicleMade;
-              }))
+              // const vhMade1 = rowObject.map((item => {
+              //   return item.VehicleMade;
+              // }))
 
-              const vhNum = rowObject.map((item => {
-                return item.VehicleNum;
-              }))
+              // const vhNum = rowObject.map((item => {
+              //   return item.VehicleNum;
+              // }))
 
-              const vhNum1 = rowObject.map((item => {
-                return item.VehicleNum;
-              }))
+              // const vhNum1 = rowObject.map((item => {
+              //   return item.VehicleNum;
+              // }))
 
-              const vhMode = rowObject.map((item => {
-                return item.VehicleModel;
-              }))
+              // const vhMode = rowObject.map((item => {
+              //   return item.VehicleModel;
+              // }))
 
-              const vhMode1 = rowObject.map((item => {
-                return item.VehicleModel;
-              }))
+              // const vhMode1 = rowObject.map((item => {
+              //   return item.VehicleModel;
+              // }))
 
               
               const custname = rowObject.map((item => {
@@ -121,12 +124,12 @@ document.getElementById('button').addEventListener("click", () => {
                 return item.YOM;
               }))
 
-              const rsum = rowObject.map((item => {
-                return item.RSUM;
+              const marketvalue = rowObject.map((item => {
+                return item.MarketValue;
               }))
 
-              const dmsum = rowObject.map((item => {
-                return item.DmSum;
+              const dmvalue = rowObject.map((item => {
+                return item.Total;
               }))
 
               const setdate = rowObject.map((item => {
@@ -163,6 +166,15 @@ document.getElementById('button').addEventListener("click", () => {
               const servicecharge = rowObject.map((item => {
                 return item.SCharge;
               }))
+              const pgName = rowObject.map((item => {
+                return item.Personal_Guarantee_Full_Name;
+              }))
+              const pgAdrs = rowObject.map((item => {
+                return item.Personal_Guarantee_Address;
+              }))
+              const pgNIC = rowObject.map((item => {
+                return item.Personal_Guarantee_NIC;
+              }))
 
 
 
@@ -171,6 +183,7 @@ document.getElementById('button').addEventListener("click", () => {
               
               document.getElementById("reffNum").innerHTML = reffnum;
               document.getElementById("reffNum1").innerHTML = reffnum;
+              document.getElementById("reffNum2").innerHTML = reffnum;
               // document.getElementById("reffNum3").innerHTML = reffnum;
               document.getElementById("reffNum5").innerHTML = reffnum;
               document.getElementById("reffNum6").innerHTML = reffnum;
@@ -184,13 +197,18 @@ document.getElementById('button').addEventListener("click", () => {
               document.getElementById("reffNum14").innerHTML =reffnum;
               document.getElementById("reffNum15").innerHTML =reffnum;
               document.getElementById("reffNum16").innerHTML =reffnum;
-              document.getElementById("reffNum16").innerHTML =reffnum;
+              document.getElementById("reffNum17").innerHTML =reffnum;
+              document.getElementById("reffNum18").innerHTML =reffnum;
+              document.getElementById("reffNum19").innerHTML =reffnum;
+              document.getElementById("reffNum20").innerHTML =reffnum;
            
               // document.getElementById("date").innerHTML = date;
+              document.getElementById("custAdr0_1").innerHTML = custAdrOne;
               document.getElementById("custAdr1").innerHTML = custAdrOne;
               document.getElementById("custAdr1_1").innerHTML = custAdrOne;
               document.getElementById("custAdr1_2").innerHTML = custAdrOne;
               document.getElementById("custAdr1_3").innerHTML = custAdrOne;
+              document.getElementById("custAdr1_4").innerHTML = custAdrOne;
               document.getElementById("custAdr1_5").innerHTML = custAdrOne;
               document.getElementById("custAdr1_6").innerHTML = custAdrOne;
               document.getElementById("custAdr1_7").innerHTML = custAdrOne;
@@ -199,6 +217,11 @@ document.getElementById('button').addEventListener("click", () => {
               document.getElementById("custAdr1_10").innerHTML = custAdrOne;
               document.getElementById("custAdr1_11").innerHTML = custAdrOne;
               document.getElementById("custAdr1_12").innerHTML = custAdrOne;
+              document.getElementById("custAdr1_13").innerHTML = custAdrOne;
+              document.getElementById("custAdr1_14").innerHTML = custAdrOne;
+              document.getElementById("custAdr1_15").innerHTML = custAdrOne;
+              document.getElementById("custAdr1_16").innerHTML = custAdrOne;
+
 
               //document.getElementById("custAdr2").innerHTML = custAdrTwo;
               // document.getElementById("custAdr1_2").innerHTML = custAdrTwo;
@@ -208,7 +231,7 @@ document.getElementById('button').addEventListener("click", () => {
               
              
               // document.getElementById("reffNum2").innerHTML = reffnum;          
-
+              document.getElementById("custName0_1").innerHTML = custname;
               document.getElementById("custName").innerHTML = custname;
               document.getElementById("custName1").innerHTML = custname;
               document.getElementById("custName2").innerHTML = custname;
@@ -223,6 +246,10 @@ document.getElementById('button').addEventListener("click", () => {
               document.getElementById("custName11").innerHTML = custname;
               document.getElementById("custName12").innerHTML = custname;
               document.getElementById("custName13").innerHTML = custname;
+              document.getElementById("custName14").innerHTML = custname;
+              document.getElementById("custName15").innerHTML = custname;
+              document.getElementById("custName16").innerHTML = custname;
+
               // document.getElementById("custfName").innerHTML = custfname;
               // document.getElementById("custfName1").innerHTML = custfname;
               // document.getElementById("custfName2").innerHTML = custfname;
@@ -237,10 +264,14 @@ document.getElementById('button').addEventListener("click", () => {
               document.getElementById("cusNIC3").innerHTML = cusnic;
               document.getElementById("cusNIC4").innerHTML = cusnic;
               document.getElementById("cusNIC5").innerHTML = cusnic;
+              document.getElementById("cusNIC6").innerHTML = cusnic;
 
               document.getElementById("dateoffer").innerHTML = dateoffer;
               document.getElementById("dateoffer2").innerHTML = dateoffer;
+              document.getElementById("dateoffer3").innerHTML = dateoffer;
+
               document.getElementById("dateapplied").innerHTML = dateapplied;
+              document.getElementById("dateapplied2").innerHTML = dateapplied;
 
               document.getElementById("noofunits").innerHTML = noofunit;
               document.getElementById("noofunits2").innerHTML = noofunit;
@@ -248,44 +279,56 @@ document.getElementById('button').addEventListener("click", () => {
               document.getElementById("make").innerHTML = make;
               document.getElementById("make2").innerHTML = make;
 
+              document.getElementById("supname0_1").innerHTML = supname;
               document.getElementById("supname").innerHTML = supname;
               document.getElementById("supname2").innerHTML = supname;
-              
-              // document.getElementById("supname1").innerHTML = spname;
+              document.getElementById("supname3").innerHTML = supname;
+
+              document.getElementById("supAdrs0_1").innerHTML = supadrs;
               document.getElementById("supAdrs").innerHTML = supadrs;
               document.getElementById("supAdrs2").innerHTML = supadrs;
+              document.getElementById("supAdrs3").innerHTML = supadrs;
+
+              document.getElementById("pgName").innerHTML = pgName;
+              document.getElementById("pgName2").innerHTML = pgName;
+
+              document.getElementById("pgAdrs").innerHTML = pgAdrs;
+              document.getElementById("pgAdrs2").innerHTML = pgAdrs;
+
+              document.getElementById("pgNIC").innerHTML = pgNIC;
+              document.getElementById("pgNIC2").innerHTML = pgNIC;
 
               document.getElementById("vehtype").innerHTML = vehtype;
               document.getElementById("vehtype2").innerHTML = vehtype;
               document.getElementById("vehtype3").innerHTML = vehtype;
               document.getElementById("vehtype4").innerHTML = vehtype;
+              document.getElementById("vehtype5").innerHTML = vehtype;
+              document.getElementById("vehtype6").innerHTML = vehtype;
 
 
-              // document.getElementById("vhMade").innerHTML = vhMade;
-              // document.getElementById("vhMade1").innerHTML = vhMade1;
-              // document.getElementById("vhMade2").innerHTML = vhMade;
-              //document.getElementById("vhMade3").innerHTML = vhMade;
-
-              // document.getElementById("vhNum").innerHTML = vhNum;
-              // document.getElementById("vhNum2").innerHTML = vhNum;
-              // document.getElementById("vhNum3").innerHTML = vhNum;
-
-              // document.getElementById("vhMode").innerHTML = vhMode;
+              
               
               document.getElementById("chasnum").innerHTML = chasNum;
               document.getElementById("chasnum2").innerHTML = chasNum;
               document.getElementById("chasnum3").innerHTML = chasNum;
+              document.getElementById("chasnum4").innerHTML = chasNum;
+              document.getElementById("chasnum5").innerHTML = chasNum;
 
               document.getElementById("enginum").innerHTML = engNum;
               document.getElementById("enginum2").innerHTML = engNum;
               document.getElementById("enginum3").innerHTML = engNum;
+              document.getElementById("enginum4").innerHTML = engNum;
+              document.getElementById("enginum5").innerHTML = engNum;
 
               document.getElementById("yofm").innerHTML = yom;
               document.getElementById("yofm2").innerHTML = yom;
               document.getElementById("yofm3").innerHTML = yom;
+              document.getElementById("yofm4").innerHTML = yom;
+              document.getElementById("yofm5").innerHTML = yom;
 
               document.getElementById("regstatus").innerHTML = regstatus;
               document.getElementById("regstatus2").innerHTML = regstatus;
+              document.getElementById("regstatus3").innerHTML = regstatus;
 
               document.getElementById("netrent").innerHTML = netrent;
 
@@ -297,15 +340,21 @@ document.getElementById('button').addEventListener("click", () => {
 
               document.getElementById("servicecharge").innerHTML = servicecharge;
 
-              document.getElementById("rsum").innerHTML = rsum;
-              document.getElementById("rsum1").innerHTML = rsum;
-              document.getElementById("rsum2").innerHTML = "LKR "+rsum;
-              document.getElementById("rsum3").innerHTML = "LKR "+rsum;
-              document.getElementById("rsum4").innerHTML = rsum;
+              document.getElementById("mvalue").innerHTML = marketvalue;
+
+              document.getElementById("dmvalue").innerHTML = dmvalue;
+              document.getElementById("dmvalue2").innerHTML = dmvalue;
+              document.getElementById("dmvalue3").innerHTML = dmvalue;
+
+              // document.getElementById("rsum").innerHTML = rsum;
+              // document.getElementById("rsum1").innerHTML = rsum;
+              // document.getElementById("rsum2").innerHTML = "LKR "+rsum;
+              // document.getElementById("rsum3").innerHTML = "LKR "+rsum;
+              // document.getElementById("rsum4").innerHTML = rsum;
 
               document.getElementById("stdate").innerHTML = setdate;
 
-              document.getElementById("vhNum1").innerHTML = vheNum1;
+               document.getElementById("vhNum1").innerHTML = vheNum1;
           
               document.getElementById("vhMode1").innerHTML = vheMode1;
               document.getElementById("vhMode5").innerHTML = vheMode1;
@@ -410,9 +459,9 @@ window.onload = function(){
       
       var opt1 = {
         margin: 1,
-        filename: 'Official Purchase Order.pdf',
+        filename: reffnum + '_Official Purchase Order.pdf',
         image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 4 },
+        html2canvas: { scale: 2 },
         jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
         
     };
@@ -420,7 +469,7 @@ window.onload = function(){
     var opt2 = {
       margin: 0.6,
       top:0.6,
-      filename: 'Offer_Letter.pdf',
+      filename: reffnum + '_Offer_Letter.pdf',
       //path: 'C:\Users\Acer\Documents\abc',
       image: { type: 'jpeg', quality: 0.98 },
       html2canvas: { scale: 2},
@@ -429,22 +478,22 @@ window.onload = function(){
 
     var opt3 = {
       margin: 0.6,
-      filename: 'Lease Agreement.pdf',
+      filename: reffnum + '_Lease Agreement.pdf',
       //path: 'C:\Users\Acer\Documents\abc',
       image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2 },
+      html2canvas: { scale: 1 },
       jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
   };
   var opt4 = {
     margin: 0.6,
-    filename: 'Gurantte Bond.pdf',
+    filename: reffnum + '_Gurantte Bond.pdf',
     //path: 'C:\Users\Acer\Documents\abc',
     image: { type: 'jpeg', quality: 0.98 },
     html2canvas: { scale: 2 },
     jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
 }; var opt5 = {
   margin: 0.6,
-  filename: 'Ijara Additional Document.pdf',
+  filename: reffnum + '_Ijara Additional Document.pdf',
   //path: 'C:\Users\Acer\Documents\abc',
   image: { type: 'jpeg', quality: 0.98 },
   html2canvas: { scale: 2 },
@@ -646,7 +695,13 @@ $(function() {
   // });
 
 // function downloadZip(){
+//   // var zip = new JSZip();
+//   // zip.file("Hello.txt", "hello word\n");
 
+//   // zip.generateAsync({type:"blob"})
+//   //   .then(function(content) {
+//   //     saveAs(content, "archieve.zip");
+//   //   });
 
 // var zip = new JSZip();
 // var count = 0;

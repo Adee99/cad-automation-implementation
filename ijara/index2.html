@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <title>CAD Tracker</title>
+    <title>Ijara</title>
     
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
 
@@ -42,7 +42,7 @@
                     <div class="col-md-5"></div>
 
                     <div class="status-title-heading">
-                        <h1>CAD Tracker</h1>
+                        <h1><b>Ijara</b></h1>
                         Document Generation
                       </div>
         
@@ -71,9 +71,9 @@
                 
                     <p>
                     <b>
-                        <span class="nullwrap">CM Reference No:</span>
+                        <span class="nullwrap">Reference No:</span>
                     </b>
-                        <span class="nullwrap" id="refNum2"></span>
+                        <span class="nullwrap" id="reffNum2"></span>
                     </p> 
                     <p>
                     <b>
@@ -140,6 +140,9 @@
                 <!-- <button onclick="sendEmail()">Send</button> -->
               </div>
               </div>
+              <div class="dwnloadBtn2">
+                <button id="downloadfile" class="btn btn-info">Download</button>
+              </div>
 
             
               
@@ -170,10 +173,10 @@
 
                 <p class="card-text ">
                         <div class="crdTabs">
-                        <b>CM Ref:</b> 
+                        <b>Ref:</b> 
                         <span class="nullwrap" id="reffNum1"></span><br>
                         <b>Date:</b>
-                        <span class="nullwrap" id="stdate1"></span>
+                        <span class="nullwrap" id="dateapplied2"></span>
                         </div>
                 </p>
 
@@ -190,9 +193,9 @@
                 <p class="card-text ">
                     <div class="crdTabs">
                     <b>Name:</b> 
-                    <span class="nullwrap" id="cstName1"></span><br>
+                    <span class="nullwrap" id="custName0_1"></span><br>
                     <b>Address:</b>
-                    <span class="nullwrap" id="cstAdr1_1"></span>
+                    <span class="nullwrap" id="custAdr0_1"></span>
                     <span class="nullwrap" id="cstAdr1_2"></span>
                     </div>
                 </p>
@@ -210,10 +213,9 @@
                 <p class="card-text ">
                     <div class="crdTabs">
                     <b>Name:</b> 
-                    <span class="nullwrap" id="supName1"></span><br>
+                    <span class="nullwrap" id="supname0_1"></span><br>
                     <b>Address:</b>
-                    <span class="nullwrap" id="supName1"></span>
-                    <span class="nullwrap" id="cstAdr1_3"></span>
+                    <span class="nullwrap" id="supAdrs0_1"></span>
                     </div>
                 </p>
 
@@ -233,22 +235,22 @@
                     <div class="crdTabs">
 
                     <b>Number:</b> 
-                    <span class="nullwrap" id="vhNum2"></span><br>
+                    <span class="nullwrap" id="regstatus3"></span><br>
 
                     <b>Made:</b>
-                    <span class="nullwrap" id="vhMade2"></span><br>
+                    <span class="nullwrap" id="vehtype6"></span><br>
 
     
                     <b>Chasis:</b>
-                    <span class="nullwrap" id="chnum1"></span><br>
+                    <span class="nullwrap" id="chasnum5"></span><br>
 
                     
                     <b>Engine:</b>
-                    <span class="nullwrap" id="engnum1"></span><br>
+                    <span class="nullwrap" id="enginum5"></span><br>
 
   
                     <b>Year of Manufacture:</b>
-                    <span class="nullwrap" id="yom1"></span><br>
+                    <span class="nullwrap" id="yofm5"></span><br>
             
                     </div>
                 </p>
@@ -268,7 +270,7 @@
                 <p class="card-text ">
                     <div class="crdTabs">
                     <b>LKR</b> 
-                    <span class="nullwrap" id="rsum1"></span><br>
+                    <span class="nullwrap" id="dmvalue"></span><br>
                     </div>
                 </p>
 
@@ -287,7 +289,7 @@
                 <p class="card-text ">
                   <div class="crdTabs">
                   <b>LKR</b> 
-                  <span class="nullwrap" id="dmsum"></span><br>
+                  <span class="nullwrap" id="mvalue"></span><br>
                   </div>
               </p>
               </div>
@@ -371,8 +373,8 @@
                 </tr>
                   <tr>
                       <th class="table-dark">DM Value</th>
-                      <th class="table-white" id="rsum2"></th>
-                      <td id="rsum3"></td>
+                      <th class="table-white" id="dmvalue2"></th>
+                      <td id="dmvalue3"></td>
                   </tr>
 
                   <tr data>
@@ -540,7 +542,9 @@ authorized signatories of Amana Bank.
   and (b) theLessee’s instructions to Amana Bank pay the Supplier’s invoice 
   for the Property.
     
-  3.You shall 
+  3.You shall deliver to Amana Bank and Lessee your written warranties, in 
+  substance and in form as required by the aforesaid purchase order. 
+
   4.By acceptance of this Confirmed Purchase Order you agree that all warranties, 
   or oral, expressed or implied are for the benefit of and may be enforced both 
   by Amana Bank and Lessee or either of them, jointly and/or severally.
@@ -568,8 +572,6 @@ authorized signatories of Amana Bank.
   above andoverleaf) of your above Purchase Order.
   _____________________________  	    _____________________________
   Supplier                                  Lessee 
-
-
 
 <b>Customer Copy</b>
 Our Ref. No.:<span id="reffNum6"> </span>
@@ -649,7 +651,9 @@ Conditions.
   and (b) theLessee’s instructions to Amana Bank pay the Supplier’s invoice 
   for the Property.
     
-  3.You shall 
+  3.You shall deliver to Amana Bank and Lessee your written warranties, in 
+  substance and in form as required by the aforesaid purchase order.
+
   4.By acceptance of this Confirmed Purchase Order you agree that all warranties, 
   or oral, expressed or implied are for the benefit of and may be enforced both 
   by Amana Bank and Lessee or either of them, jointly and/or severally.
@@ -678,8 +682,6 @@ Conditions.
   _____________________________  	    _____________________________
   Supplier                                  Lessee 
 
- 
-  
 <b>Supplier Copy</b>
 Our Ref. No.:<span id="reffNum8"> </span>
 Date :<span id="date4"></span>
@@ -737,8 +739,6 @@ Conditions.
       <td>Serial No. : N/A</td>
     </tr>
   </table>
- <!-- Not printing in the pdf after the table
-   -->
   <b>2. Purchase Price	  : </b>Rs.2,700,000.00 + Rs.0.00 (VAT) = Rs. 2,700,000.00
                           (Rupees Two Million Seven Hundred Thousand and Cents 
                           Zero only)
@@ -760,7 +760,9 @@ acceptance of the said Property and approval of your invoice for the same
 and (b) theLessee’s instructions to Amana Bank pay the Supplier’s invoice 
 for the Property.
   
-3.You shall 
+3.You shall deliver to Amana Bank and Lessee your written warranties, in 
+  substance and in form as required by the aforesaid purchase order.
+
 4.By acceptance of this Confirmed Purchase Order you agree that all warranties, 
 or oral, expressed or implied are for the benefit of and may be enforced both 
 by Amana Bank and Lessee or either of them, jointly and/or severally.
@@ -788,8 +790,6 @@ I/We hereby confirm my/our acceptance of all Terms and Conditions (mentioned
 above andoverleaf) of your above Purchase Order.
 _____________________________  	                      _____________________________
 Supplier                                              Lessee 
-
-
 
 <b>Bank Copy</b>
 Our Ref. No.:<span id="reffNum10"> </span>
@@ -857,8 +857,7 @@ Conditions.
   retain the Original and deliver the Duplicate and the Triplicate to Amana Bank.
     
   Please note that this Purchase Order is valid only if it is signed by two 
-  authorized signatories of Amana Bank.
-  
+  authorized signatories of Amana Bank.  
 <b> Other Terms and Conditions</b>
   1.Title to the said Property shall be vested in Amana Bank free from any lien 
   encumbrances with effect from the date of purchase by Amana Bank of the 
@@ -869,7 +868,9 @@ Conditions.
   and (b) theLessee’s instructions to Amana Bank pay the Supplier’s invoice 
   for the Property.
     
-  3.You shall 
+  3.You shall deliver to Amana Bank and Lessee your written warranties, in 
+  substance and in form as required by the aforesaid purchase order.
+
   4.By acceptance of this Confirmed Purchase Order you agree that all warranties, 
   or oral, expressed or implied are for the benefit of and may be enforced both 
   by Amana Bank and Lessee or either of them, jointly and/or severally.
@@ -884,8 +885,7 @@ Conditions.
   the owner and that there are not any further conditions imposed by the 
   Registrar of Motor Vehicles as the owner of the vehicle.
     
-  7.This Purchase Order will be valid for 30 days from the date of issuance.
-    
+  7.This Purchase Order will be valid for 30 days from the date of issuance.  
   8.The Supplier is required to submit a Duplicate Key of the said motor vehicle to 
   Amãna Bank.
   Yours faithfully,
@@ -931,7 +931,6 @@ Date	 :<span id = "dateoffer"></span>
 <span id = "custAdr1_10"></span>
 
 
-
 OFFER LETTER WITH THE ACCEPTANCE OF THE OFFER
 
 We refer to your application dated <span id = "dateapplied"></span> and are pleased to offer the
@@ -946,8 +945,6 @@ Make & Model		: <span id = "vehtype"></span>
 Chassis No.		: <span id = "chasnum"></span>
 Engine No.		: <span id = "enginum"></span>
 Year of Manufacture	: <span id = "yofm"></span>
-
-
 
 (b)	Name and Address of Supplier 	: <span id = "supname"></span>
                                 <span id = "supAdrs"></span>
@@ -966,11 +963,9 @@ Net Rental Payable	: Rs. <span id = "netrent"></span>
 VAT			: Rs.<span id = "vat"></span>
 Gross Rental Payable	: Rs.  <span id = "grossrent"></span>
 
-
-
-
 Initials :- ………………………… 			       ………………………………
-  Amana Bank PLC	               <span id = "custName11"></span>						 
+  Amana Bank PLC	               <span id = "custName11"></span>	
+
 Other Terms & Conditions
 
 (1)This offer is made to you based on the information furnished by you in application 
@@ -1001,13 +996,13 @@ commencement of the Lease Agreement.
 fluctuation in the cost of funds up to the time of signing of the LeaseAgreement
 and Value Added Tax at any time during the period of the Lease.
 
-(7)Please note that by accepting this offer you will be deemed to have acceptedthe terms and
-conditions set out herein and in the attached Lease Agreement whichis the basis on which we 
-will purchase and lease to you the Asset/Equipment.
+(7)Please note that by accepting this offer you will be deemed to have acceptedthe terms 
+and conditions set out herein and in the attached Lease Agreement whichis the basis on 
+which we will purchase and lease to you the Asset/Equipment.
 
-(8)Please sign and return the attached copy of this Letter of Offer with acceptanceof the offer
-made herein on or before «Date_of_Expiry_of_Offer_Letter» after whichthis offer shall be of no 
-force or avail in law.
+(8)Please sign and return the attached copy of this Letter of Offer with acceptance of the
+offer made herein on or before «Date_of_Expiry_of_Offer_Letter» after whichthis offer shall
+be of no force or avail in law.
 
 
 Yours faithfully,
@@ -1016,6 +1011,7 @@ Yours faithfully,
 ………………………					                  …………………………….		
 Manager 						          Authorized Officer		
 -------------------------------------------------------------------------------------------------
+
 ACCEPTANCE
 
 I/We accept the offer made hereinabove dated «Date_Offer_Letter» and confirm that I/We will abide 
@@ -1057,16 +1053,14 @@ Date      	: <span id = "dateoffer2"></span>
 (k)	Vehicle to be Delivered at 	: <span id = "custAdr1_11"></span>
 
 
-I/We hereby acknowledge the receipt of the above mentioned Vehicle (which is the subjectmatter) of
-the Lease Agreement No. <span id = "reffNum14"></span> dated…………………………………… between the Amãna Bank and me. I/We have 
-examined the above Vehicle and found it to be in good order and condition and to my satisfaction. 
+I/We hereby acknowledge the receipt of the above mentioned Vehicle (which is the 
+subjectmatter) of the Lease Agreement No. <span id = "reffNum14"></span> 
+dated…………………………………… between the Amãna Bank and me. I/We have examined the above 
+Vehicle and found it to be in good order and condition and to my satisfaction. 
 
 
-
-I/We acknowledge that the terms of the lease shall commence from the date of this receipt. 
-
-
-
+I/We acknowledge that the terms of the lease shall commence from the date of this
+receipt. 
 
 
 
@@ -1080,15 +1074,12 @@ Form No.LS 25
 PROMISE TO GIFT
 
 
-Amãna Bank PLC (‘the Bank’) of No. 486, Galle Road, Colombo 3 hereby promises to gift to:<span id = "custName13"></span>
-of <span id = "custAdr1_12"></span> (Lessee) the vehicle referred to in the Lease Agreement No. <span id = "reffNum15"></span>dated ………………….
-between the Bank and the Lessee on the date of the expiry of the said Lease Agreement provided that 
-the said Lessee has fully compliedwith all of the Lessee’s obligations and duties under the said 
-Lease Agreement.
-
-
-
-
+Amãna Bank PLC (‘the Bank’) of No. 486, Galle Road, Colombo 3 hereby promises to gift 
+to:<span id = "custName13"></span>of <span id = "custAdr1_12"></span> (Lessee) the 
+vehicle referred to in the Lease Agreement No. <span id = "reffNum15"></span>dated ………………….
+between the Bank and the Lessee on the date of the expiry of the said Lease Agreement 
+provided that the said Lessee has fully compliedwith all of the Lessee’s obligations
+and duties under the said Lease Agreement.
 
 
 
@@ -1108,448 +1099,774 @@ Date		    	:
 
 <pre id="test3">
   LEASE AGREEMENT
-NO: <<REf No>> FOR
-MOVABLE PROPERTY
-THIS AGREEMENT is made by and between
-AMANA BANK PLC a Company duly incorporated in Sri Lanka bearing Company Registration No. PB 3618 PQ and having its registered office at No. 486, Galle Road, Colombo 3 and a branch office at Colombo 03 (hereinafter called ‘the Lessor’ which expression shall where the context so admits include its successors and assigns) of the one part;
-AND
-<<Customer Name>> of<<Customer Address>>
-(hereinafter called ‘the Lessee’ which expression shall where the context so admits include its successors and permitted assigns ) of the other part.
-The said Lessor and the said Lessee shall also hereinafter be individually referred to as ‘Party’ and jointly referred to as ‘Parties’.
-WHEREAS the Lessor makes investments in strict compliance with the principles of Sharia;
-AND WHEREAS in strict compliance with the principles of Sharia, the Lessee has requested the Lessor to acquire certain property and lease the same to the Lessee and the Parties have mutually agreed to carry out such lease subject to the terms and conditions of this Lease Agreement. 
- 	 
-NOW THIS AGREEMENT WITNESSETH and it is hereby agreed by and between the Parties as follows: 
-
-1.0 	LEASE 
-
-1.01 	The Lessor hereby agrees to lease to the Lessee and the Lessee hereby agrees to take on lease the said Leased Property hereinafter morefully described in the said Schedule A below, including all accessories attached thereto and including all alterations replacements and/or additions to such Leased Property that may be made during the subsistence of this Lease Agreement for the Lease Term (as hereinafter defined in Clause 2.01 below) subject to the terms, conditions, covenants and stipulations herein contained and in the Schedules hereto attached.
-
-2.0 	TERM OF LEASE AND RENTS
-
-2.01 	The duration of the lease hereby granted (hereinafter referred to as the ‘Lease Term’) is as set forth in Schedule ‘A’ hereto attached, subject to the terms and conditions hereof and shall start on the 
-Commencement Date (as defined in Schedule A hereto) which shall be the date of physical delivery of the Leased Property to the Lessee as evidenced by a duly executed Acceptance Receipt in the form set out in Schedule B attached hereto and which shall be part and parcel hereof. 
-
-2.02 	The rent payable by the Lessee hereunder with respect to the Leased Property shall be as set forth in Schedule ‘A’ hereto attached. For the entire Lease Term, the rents of Rs 87,293.00 per month including the profit mark up at 10.75% per annum on the lease facility granted by the Lessor shall be payable in accordance with the schedule as hereinafter provided in Schedule ‘A’ hereto attached. The rent payable hereunder by the Lessee shall be paid regularly and punctually in the amounts specified in Schedule ‘A’ without any deduction or adjustments subject to the other provisions of this Clause 2.0.
-
-2.03 	If the Leased Property has been damaged due to no fault of the Lessee or in the event that the Lessee is unable to otherwise operate the Leased Property such as in the case of a Force Majeure Event (Clause 13.06) (which the Lessor shall determine in its absolute discretion),the Lessor may at its sole and absolute discretion provide consent in writing for an abatement in rent payable under Schedule A hereto, for a period which the Lessor considers reasonable in the following circumstances:
-	(a)	In the event that the Lessor deems that the Leased Property may be repaired within a reasonable period; or
-(b)	The Lessor deems that the circumstances undermining the due operation of the Leased Property shall abate within a reasonable period.
-Provided that all rentals due under this Lease Agreement shall become due upon expiry of the abatement period permitted by the Lessor, and the lease tenor will be deemed extended correspondingly.
-
-2.04 	In the event that the Lessor in its sole and absolute discretion is satisfied that the Leased Property has been rendered useless, destroyed or damaged beyond repair due to a proven manufacturing defect or due to a Force Majeure Event (Clause 13.06) from which the Lessee could not have reasonably saved the Leased Property then the Lessor may at its sole and absolute discretion allow termination of lease as a ‘total loss’ event. Provided that the Lessor deems that such uselessness, destruction or damage is not due to the negligence or misconduct of or any act or omission on the part of the Lessee or the Lessee’s servants, agents, employees and contracts.
-
-2.05 	All rents, other costs and charges of any kind payable hereunder to the Lessor, shall be paid in Sri Lanka Rupees at the Lessor’s office as provided in Clause 13.04 (Notice).    
-
-3.0 	DELIVERY
-
-The Lessee hereby agrees that upon acceptance of the Leased Property, the Lessee shall duly execute the Acceptance Receipt in the form provided under Schedule B hereunder confirming that the Leased Property is in good working order, condition and appearance and in all respects complete and satisfactory to the Lessee. Where the item/property which is specified in this Lease Agreement has not been delivered to the lessee at or before the time fixed under this Lease Agreement for its delivery or has been delivered after such time or where such item/property delivered does not conform to the terms, conditions, warranties, specifications in the supply agreement(if any) relating to such item/property , the Lessee may, subject to the provisions of Article 13 (2) of Finance Leasing Act , reject and return such item/property to the Lessor and terminate this Lease Agreement within a period of one week from the date in writing sent by registered post to the Lessor.    
-
-4.0 	USE OF LEASED PROPERTY
-
-4.01 	The Lessee shall keep the Leased Property at the place specified in Schedule A hereto provided that in the event that the Leased Property is a vehicle, the Lessee shall be bound to maintain it in the place specified in the said Schedule A hereto, when not in use. The Lessee shall not remove, relocate, reinstall, use or operate the Leased Property to or in any other place without the prior written consent of the Lessor.
-
-4.02 	The Lessee hereby agrees and undertakes that:
-(a)	the Lessee shall at all times store, house, use, maintain and operate the Leased Property carefully and prudently and strictly in conformity with industry standards and, where applicable, the instructions and directions of the manufacturers and/or suppliers thereof (including those relating to the environmental conditions, if any, under which the Leased Property is to be transported, stored, housed, used, maintained or operated), whether such instructions and directions are contained in the operational manuals relevant to such Leased Property or are otherwise provided with or before or after the delivery of the Leased Property by the manufacturer and/or suppliers thereof;
-(b)	the Leased Property shall be handled used and operated by suitably trained and experienced persons and shall not be handled, used or operated by persons deemed by the Lessor to be insufficiently trained and/or experienced; 
-(c)	the Lessee shall not do or omit to do any act or thing by which the warranties and performance guaranties given by the suppliers and/or manufacturers of the Leased Property shall or may become invalidated or unenforceable, whether wholly or in part;
-(d)	the Leased Property shall be used for its normal and usual purpose for the business (in the event the Lessee is an entity such as a company or personal use of the Lessee and except with the prior written permission of the Lessor shall not be used for any other purpose whatsoever.
-(e)	the Lessee shall store, house, install, use maintain and operate the Leased Property in compliance with all relevant laws, rules, regulations, orders and directions, whether of the Governmental or of any Provincial Authority or of any Municipal or Local Authority or of any court, tribunal or other competent authority or officer; 
-(f)	the Lessee shall not sell, transfer, assign or otherwise dispose of, or sub-lease, let for hire, loan, give on license, or part with the possession of, or in any way mortgage, hypothecate, pledge, charge or otherwise encumber, the Leased Property without the prior written consent of the Lessor.
-(g)	the Lessee shall not, without the prior written consent of the Lessor, make any alternation, addition, or improvement to the Leased Property or change the condition thereof; and all alterations, additions and improvements of whatsoever kind or nature made (including replacement or substitution of any part or component or accessory) shall become part of and an accretion to the Leased Property and shall belong to and be the property of the Lessor and shall be subject to the terms and conditions of this Lease Agreement.
-
-4.03 	Nothing contained in this Clause 4 shall derogate from the liability of the Lessee for any storage, handling, use, maintenance or operation of the Leased Property 
-(a)	in breach of any of the terms and conditions contained herein; or 
-(b)	in a manner contrary to any provisions or requirements of the Insurance  policy or policies which now cover or will thereafter during Lease Term (as defined in Clause 2.01 above) cover the Lessor’s liability as owner of the Leased Property; or 
-(c)	in contravention of any law, rule, regulation, order or direction, whether of the Governmental or any Provincial or Municipal or Local Authority or of any court, tribunal or other competent authority or officer.
-The Lessee hereby agrees to hold the lessor indemnified and served harmless from and against all claims and demands made and all fines or penalties levied or imposed in respect of or arising out of the storage, handling, use, maintenance or operation of the Leased Property
-
-5.0 	MAINTENANCE OF LEASED PROPERTY
-
-5.01 	The Lessee agrees to maintain each item of the Leased Property in a reasonable condition and to the satisfaction of the Lessor. All maintenance work in respect thereof shall be carried out strictly in accordance with the maintenance manuals or other instructions and directions of the manufacturers and/or suppliers of the Leased Property, or where no such manuals instructions or directions are provided, in accordance with the best practices prevailing in the industry.
-
-5.02 	The Lessee agrees to be solely responsible for all maintenance and operating costs and expenses relating to the Leased Property which shall include but shall not be limited to fuel, oil and lubricants, repairs, replacement or components and/or parts, periodic and preventive maintenance and repair costs, maintenance of electrical circuits, switches, fuses and safety devices, and other costs and expenses, fees, licenses and charges incurred in connection with or in any way referable to the delivery, storage, handling, use and operation of the Leased Property and/or any part thereof.
-
-5.03 	The Lessee also agrees to be responsible for and forthwith to pay all fees, taxes, fines or penalties of every nature and kind whatsoever and by and to whosoever payable and relating to the transportation, storage, handling, use, maintenance and operation of the Leased Property, except the income tax and Zakath of the Lessor.
-
-5.04 	In the event of any maintenance or operation costs and expenses as aforesaid or fees, taxes, fines and penalties or any other charges not being paid by the Lessee as herein required, the Lessor may, but shall not be obligated to, pay such cost, expenses, fees, taxes, fines, penalties and charges and the Lessee shall forthwith upon demand reimburse the Lessor therefor.
-
-6.0 	INSURANCE COVER ON ACCIDENTS & INJURIES 
-6.01 	The Leased property shall be comprehensively insured /covered by Takaful for the entire lease term for full replacement value.
-6.02 	The Lessee undertakes to keep the Lessor informed, well in time, of the termination of the  Insurance cover on the Leased Property and renew/extend the Insurance cover from time to time, so as to cover the entire period of the Lease Term (as defined in Clause 2.01 above).
-6.03 	The Lessee hereby agrees that should the Insurance be obtained and / or renewed / extended by the Lessor. The cost of so doing will be reimbursed, forthwith, to the Lessor by the Lessee. 
-6.04 	The Lessee, its agents and employees shall comply with all the terms and conditions of the said Insurance cover policy, including the immediate reporting of accidents or damage to the Lessor and the Insurance  company and shall do all the things necessary or proper to protect or preserve the Leased Property in accordance with the relevant Insurance  policy. The Lessee shall also provide all assistance to the Insurance   company and the Lessor for a prompt settlement of any claim and shall take all such actions and steps as may be necessary in that regard.
-6.05 	The Lessee shall be responsible for accidents and injuries, whether fatal or otherwise and any damages and losses occurring to any person or property which may result from or be traceable to the storage, handling, use, maintenance or operation of the Leased Property by the Lessee, the Lessee’s contractors, employees or agents, or any failure on the part of the Lessee to observe and perform any of the Lessee’s obligations under this Lease Agreement or the instructions contained in the relevant manufacturers’ and/or the suppliers’ maintenance and/or operation manual/s or any other instructions of the manufacturers and/or suppliers and/or the Lessor. 
-6.06 	The Lessee shall hold the Lessor indemnified and saved harmless from and against any and all costs, charges or expenses (including attorney’s fees) in connection with any claim or demand for which the Lessee is responsible hereunder. If the Lessor shall have to pay any sum or sums of money in respect of any such claim or demand and incurs any costs, charges or expenses (including attorney’s fees) in that connection, the full amount so incurred and paid by the Lessor shall be reimbursed by the Lessee to the Lessor in full upon demand. 
-6.07 	In the event the Leased property being affixed to any land or building the Lessee shall ensure that all assessment rates / taxes in relation to such land and building are properly and punctually paid by the Lessee to the relevant Government or Provincial or Local authorities and that such buildings are properly valued and insured against any damages from fire, burglary…….., flood ….., storms, terrorist attacks, riots , explosions and other force majeure events. 
- 	 	 	 	 
-7. 0 	TITLE
-
-7.01 	All rights title and ownership in and to the Leased Property leased hereunder and all obligations relating thereto shall at all times remain vested in the Lessor subject to the terms of this Lease Agreement and the Lessee covenants and agrees not to do or perform any act prejudicial to such rights title and ownership. Without limiting the generality of the foregoing the Lessee agrees not to sell, transfer, assign or otherwise dispose of, or sub-lease, let for hire, loan, or give on licence, or part with the possession of, or conceal or abandon, or in any way mortgage, hypothecate, pledge, charge or otherwise, encumber, or damage or destroy any item of Leased Property or any part thereof.
-
-7.02 	The Lessor shall be entitled to label the Leased Property as having been leased from the Lessor.
-
-7.03 	The Lessee hereby agrees to indemnify and save harmless the Lessor from any and all claims, losses, cost, damages, suits, expenses, including attorney’s fees which the Lessor may sustain or incur as a result of a breach of Clause 7.01 above.
-
-7.04 	As between the Lessor and the Lessee the Leased Property shall remain personal and moveable property and shall continue in the ownership of the Lessor notwithstanding that the same may have been affixed to any land or building in the event that the Leased Property comprises machinery and/or equipment. The Lessee shall be responsible for any damage caused to any such land or building by the affixing to or removal therefrom of the Leased Property, whether affixed or removed by the Lessee or by the Lessor, and the Lessee shall indemnify and save harmless the Lessor from and against any and all claims made in respect of such damage.
-8.0 	RETURN OF THE LEASED PROPERTY
-
-8.01 	If so requested by the Lessor at any time during the Lease Term or on termination thereof by effluxion of time or otherwise or during or at termination of any extension of the Lease Term, the Lessee shall be obliged to return to the Lessor the Leased Property forthwith.
-
-8.02 	Return of the Leased Property shall be at the place as specified in Schedule “A” hereto attached in the original condition and good order fair ware and tear excepted.
-
-8.03 	When returning the Leased Property as aforesaid, the Leased Property shall be in the same condition as it was at the commencement of this Lease Agreement subject to fair wear and tear. The Lessee and the Lessor or their respective agents shall inspect and provide a jointly signed report on the condition of the Leased Property.  
-
-9.0 	LIMITATION OF LIABILITY
-
-9.01 	It is agreed and understood between the Parties that the Lessor shall not be liable or accountable to the Lessee or any other person claiming through or under the Lessee or to any third party for any loss (including but not limited to loss of property or life and/or loss due to physical and/or mental injury), damage, claim, demand, liability, cost or expense of any nature or kind sustained either directly or indirectly 
-(a) 	by the Lessee; 
-(b)	by any contractor or agent of the Lessee; 
-(c)	by any of their respective employees; or 
-(d)	by any third party
-resulting from any inadequacy for any purpose, mechanical failure whether due to misuse, abuse or lack of adequate maintenance or care of the Leased Property by the Lessee or by the Lessee’s contractor, agents, or employees or from loss or interruption of use of the Leased Property, or any loss of business, profits, consequential or any other damage of any nature whatsoever.
-
-9.02 	The Lessor shall not be required to carry out any of the terms of this Lease Agreement if prevented from so doing by a Force Majeure Event (Clause 13.06) and shall not be liable for any loss or damages sustained by the Lessee and resulting therefrom.
-
-9.03 	If the Leased Property or any part thereof is damaged due to a Force Majeure Event, but is capable of being repaired, the Lessor may at its sole discretion opt to either repair the Leased Property or may, by written notice (Notice, Clause13.04) to the Lessee forthwith terminate this Lease Agreement or permit abatement of this Agreement (See Clause 2.03). If the Lessor opts to repair such Leased Property, the Lessor may either arrange such repair itself or request the Lessee to arrange such repair and if the applicable Insurance proceeds are insufficient to pay the full cost of repairing the same, the difference between the actual cost of repairing the same, and payment received for it from the Insurance company shall be payable by the Lessor.
-
-9.04 	Subject to the other provisions of this Lease Agreement any and all repairs, replacement or substitution of components, parts, accessories or equipment on the Leased Property shall be at the Lessee’s expense, and shall be deemed accretions to the Leased Property and the title thereto shall vest and remain with the Lessor.
-
-9.05 	The Lessor has not made and does not make hereby, any representation as to merchantability, condition or suitability, whether express or implied of the Leased Property for the purpose of this Lease Agreement or any other representation with respect thereto and the Lessee agrees that the Lessee’s obligations hereunder to pay rentals as herein provided shall not in any way be affected by any defect and/or failure regarding merchantability, condition or suitability of the Leased Property.
-
-
-
-10.0 	INDEMNITY
-
-10.01 	The Lessee covenants and agrees with the Lessor that notwithstanding any Insurance cover  provided under Clause 6 (Insurance cover on accidents & Injuries) hereof, it shall at all times and under all circumstances indemnify and hold the Lessor saved harmless from and against all fines and penalties, liabilities and claims, losses, costs, damages, suits, expenses, including attorney’s fees (save and except taxes or license fees or registration fees that are due from the Lessor in respect of the Leased Property) resulting from, caused or contributed by, related to or arising out of the possession, operation, use or misuse of the Leased Property and such liability shall not be affected by any termination of this Lease Agreement, with respect to any part or the whole of the Leased Property.
-
-10.02  	The Lessee shall also hold the Lessor indemnified and saved harmless from and against any and all loss or seizure of the Leased Property under distress, execution or other legal process brought, enforced or executed against the Lessee or from and against any and all losses resulting therefrom.
-
-10.03 	The Parties hereto agree that notwithstanding anything contained in this Lease Agreement, the Lessor shall not be responsible in any way whatsoever 
-(a)	Either for the products (if any) derived from or through the use or operation of the Leased Property by the Lessee or anybody else; or
-(b)	For the efficacy or merchantability or otherwise of such products.
-The Lessee shall indemnify and keep indemnified the Lessor against any and all actions, proceedings, liabilities, claims, losses, damages, cost and expenses relating to or arising out of the storage, sale, use or consumption or any product derived from the Leased Property which may be instituted against or suffered or incurred by the Lessor or by any other person or party.
-
-11.0 	DEFAULT AND TERMINATION
-
-11. 01 	Termination by Mutual Agreement
- (a)	Either Party may, subject to the other provisions of this Lease Agreement, terminate this Lease Agreement any time provided that termination shall be effective on completion of ninety (90) days of the date of the written notice being served on the other Party in accordance with this Lease Agreement (Clause 13.04 Notice).
-(b)	The terms and conditions of this Lease Agreement shall notwithstanding the giving of the aforesaid notice continue in full force and effect until all obligations of the Lessee under this Lease Agreement are duly discharged (including the obligation to return to the Lessor the Leased Property in good operating condition in accordance with the provisions of this Lease Agreement) and the payment of all sums due hereunder to the satisfaction of the Lessor.
-
-11.02 	Termination By Lessor
-Notwithstanding anything to the contrary stated herein the Lessor shall have the right at any time and without notice to immediately terminate this Lease Agreement on the occurrence of any one of the following events:
-
-(a)	If the Lessee fails to pay any rentals, charges or other sums whatsoever payable by the Lessee under the terms of this Lease Agreement, as and when they shall become due.
-(b)	If the Lessee commits a breach of any of the terms, covenants or conditions of this Lease Agreement.
-(c)	For unreasonable or abusive use or misuse of the Leased Property or if the Leased Property is dealt with by the Lessee contrary to any of the provisions of this Lease Agreement.
-(d)	If the Insurance cover mentioned in this Lease Agreement is for any reason cancelled in whole or in part.
-(e)	In the event of any levy of execution or attachment being made against the Lessee or upon the Lessee’s goods.
-(f)	If the Lessee suspends business, or a tax lien is filed against any of the Lessee’s property or if the Leased Property is confiscated or forfeited or seized by any authority.
-(g)	If it is discovered at any time that any statement or representation made by the Lessee herein or in the Lessee’s application for lease of the Leased Property or in any other related document is or has become false or incorrect in any respect.
-(h)	If the Lessee is unable to perform its obligations hereunder on account of a Force Majeure Event (Clause 13.06) and such inability continues for a period of seven (07) calendar days.
-(i)	Where the Lessee is a body Corporate in the event of any material changes in the constitution of the Company or in the Senior Management of the Company.
-(j)	In the event of total interruption or cessation of the business activities of the Lessee;
-(k)	In the event of the Lessee being adjudged bankrupt makes an assignment, arrangement or compromise for the benefit of its creditors;
-(l)	In the event of the Lessee (i) voluntarily or involuntarily becoming the subject of winding up proceedings; and/or (ii) has been unable or has admitted in writing the Lessee’s inability to pay the Lessee’s debts as they mature to the Lessor or to another party; and/or (iii) taken or suffered any action for its reorganization, amalgamation, liquidation or dissolution; and/or (iv) had a receiver or liquidator appointed for all or any part of the Lessee’s assets or business.
-(m)	Any authority of or registration with governmental or public bodies or courts required by the Lessee in connection with the execution, delivery, performance, validity, enforceability or admissibility in evidence of this Lease Agreement are modified in a manner unacceptable to the Lessor or is not granted or is revoked or otherwise ceases to be in full force and effect;
-
-11.03 	Consequences of Death of an Individual Lessee
- (a)	In the event of the Lessee’s death the Lessor shall be entitled to 
-(i)	call for a certified copy of the relevant death certificate; and 
-(ii)	request the Lessee’s heirs to provide the Lessor with documentary evidence deemed satisfactory to the Lessor in proof of their rights and respective positions as the deceased Lessee’s legal heirs.
-(b)	The Lessor may at its sole and absolute discretion, continue this Lease Agreement with the Lessee’s legal heirs subject to the receipt of their prior written consent for such continuation.
-(c)	Continuation of this Lease Agreement as aforesaid shall be subject to execution by the Lessee’s legal heirs of all such documents and agreements and carrying out of all acts and deeds that the Lessor may deem necessary and/or incidental to the due continuation of this Lease Agreement.
-(d)	The Lessor shall be entitled to immediately terminate this Lease Agreement with written notice to the Lessee’s heirs in the following circumstances:
-(i)	In the event that the Lessee’s legal heirs do not provide their written consent for continuation of this Lease Agreement as aforesaid within thirty (30) days of a written request to such effect from the Lessor; or 
-(ii) 	The Lessor is not agreeable to continue this Lease Agreement with the Lessee’s legal heirs.
-(e) 	Any notice or other communication given or made under this Clause shall be deemed duly given or made if in compliance with Clause 13.04, (Notice) below.
-
-11.04  	Notice to Contain Reasons for Termination
-If before expiry of the full period of the Lease Term (as defined in Clause 2.01 above)
-(a)	Should the Lessor wish to terminate this Lease Agreement for any reason other than those mentioned hereinabove; or
-(b)	Should the Lessee wish to terminate this Lease Agreement.
-
-then the notice (Clause 13.04, Notice) of the proposed termination shall contain the reason for the issuance of such notice.
-
-11.05 	Lessor’s Rights to Leased Property on Termination
-(a)	Lessor’s Right to Repossession
-(i)	The Lessee hereby also authorizes and empowers the Lessor, its officers, employees, servants, agents and other representatives to enter on any of the Lessee’s land or premises, or any other place or places where the Leased Property may be found, for the purpose of taking possession thereof. 
-(ii)	Save as provided hereunder, upon termination of this Lease Agreement, all rights of the Lessee hereunder and in respect of the Leased Property shall forthwith terminate and the Lessor shall have the right to take immediate possession of the Leased Property and Lessee shall immediately deliver the Leased Property to the Lessor and the Lessor may at its option sell the Leased Property or retain the Leased Property free of and unencumbered by this Lease Agreement.  However in the event of selling the repossessed Leased Property, the Lessor shall recover only the dues under this agreement and any excess amount should be paid to the Lessee.
-(iii)	Upon the Lessor becoming entitled for any reason whatsoever to the return of the Leased Property leased hereunder, then notwithstanding any terms or conditions herein contained, the Lessor may, in addition to any other remedy open to it, and without notice, take immediate possession of the Leased Property without process of law.
-(iv)	The Lessee shall pay to the Lessor all costs relating to repossession as aforesaid including the related transportation maintenance and storage charges.
-(b)	Lessor’s Right to Appoint a Caretaker of The Leased Property
-(i)	In the event of the Lessor giving notice of termination to Lessee, the Lessor may appoint a caretaker of the Leased Property and the Lessee shall grant such caretaker access to the place wherein the Leased Property is kept, stored, fixed or being used or operated.
-(ii)	The Lessee further agrees to grant such caretaker permission to periodically inspect the Leased Property as and when the Lessor deems necessary.
-(iii)	The rights of access and inspection granted to the Lessor’s caretaker as herein provided are in no manner to be construed to derogate from the Lessor’s general rights of access and inspection referred to herein.
-(c)	Irrevocable Power of Attorney in Lessor’s Favour
-Upon the happening of any of the foregoing event or events, the Lessee hereby irrevocably appoints the Lessor and the Chief Executive Officer of the Lessor for the time being or any other officer duly authorized by him, as the Lessee’s true and lawful attorneys to execute such documents as may be necessary for the purpose of regaining possession of the Leased Property and the accessories attached thereto.
-
-12.0 	ASSIGNMENT
-
-12.01 	It is agreed and understood between the Parties hereto that this Lease Agreement and the lease granted hereunder are personal to the Lessee and may not, under any circumstances, be transferred or assigned by the Lessee to any other person, firm or corporation without the prior written consent of the Lessor.
-
-12.02 	However, nothing herein contained shall be construed in any way to limit the Lessor’s right to sell the Leased Property and in the event of such a sale, the buyer shall succeed to all of the Lessor’s rights and obligations hereunder.
-
-12.03 	Subject to Clause 12.01 above, this Lease Agreement and every part thereof shall inure to the benefit of the Parties hereto and their respective successors, heirs, executors, administrators, and permitted assigns. 
-
-12.04 	The Lessee shall not be construed as the owner of the Leased Property leased hereunder and under no circumstance whatsoever shall the Lessee be considered as the agent of the Lessor for any purpose whatsoever. 
-
-13.0  	MISCELLANEOUS  
-
-The Lessor and the Lessee agree that:
-
-
-13.01 	Schedules and Headers
-(a)	All schedules annexed hereto are and shall form an integral part of this Lease Agreement.
-(b)	The headings in this Lease Agreement are for convenience only and shall not affect the constitution or interpretation of this Lease Agreement.
-	 	 	 	 	 	 	 	               
-13.02 	Non Waiver
-	(a)	Neither any delay in the exercise or omission to exercise any right, power or remedy occurring to the Lessor, whether under or pursuant to this Lease Agreement or otherwise, nor the failure of the Lessor to require payment from or by the Lessee, when due, of any sum owing hereunder, shall impair any right, power or remedy accruing or available to the Lessor, nor shall any such delay, failure or omission be construed as a waiver of or forbearance or acquiescence in any default  of the Lessee; and
-	(b)	No waiver of any right, power or remedy of the Lessor or any forbearance or acquiescence in any default of the Lessee shall affect or impair the right, power or remedy of the Lessor in respect of any other or subsequent event or default, nor shall such delay, failure or omission be construed as excusing the Lessee from future performance.
-	 	 	 	 	 
-13.03  	Costs and Taxes
-(a)	All stamp duties, registration fees, duties, taxes, charges, levies and surcharges (hereinafter also referred to as ‘the said charges’) of any kind or nature whatsoever if any, levied, imposed or payable in respect of this Lease Agreement or the transaction herein contemplated or any part thereof or in respect of any other agreement, document, deed or paper or any receipt of acknowledgement executed under or pursuant to or in connection with this Lease Agreement, shall be borne and paid by the Lessee provided however that the Lessor may at its sole and absolute discretion pay such charges and obtain reimbursement of same from the Lessee. 
-(b)	The Lessee shall also be liable for any and all additional duties and fees and/or any and all penalties payable in connection with the said charges, whether on account of any failure to pay the proper duties, taxes, surcharges or fees or otherwise. 
-(c)	If any of the foregoing is paid by the Lessor, the Lessee shall forthwith, on demand, reimburse to the Lessor, in full and without deduction, all such amounts paid by the Lessor.
-
-13.04  	Notice
-(a)	Any notice or other communication given or made hereunder shall, be in writing and shall be sent in the manner hereinafter provided; 
-(i)	if sent by personal delivery it is deemed delivered and served only upon actual delivery at the address of the relevant Party as herein provided;
-(ii)	if sent by registered post the same is deemed to be delivered and served three (03) working days after the date of posting;
-(iii)	if sent by facsimile, it is deemed served when the sender’s facsimile machine issues a transmission report which indicates that the relevant number of pages comprised in the notice or communication have been sent;
-(iv)	if sent by e-mail it is deemed served only if it is acknowledged by the recipient or a return receipt , deleted email message is generated in the sender’s computer in respect of such email.  
-(b)	If, in accordance with the above provisions, any such notice or other communication would otherwise be deemed to be given or made outside working hours (8.30 a. m – 5.00 p.m.), such notice or other communication shall be deemed to be given or made at the start of the next period of working hours.
-(c) 	The relevant contact details of each Party for the purposes of this Lease Agreement shall be as set out below:
-
-
-
-
-
-If to the Lessor	  Amana Bank PLC
-Address  	: No. 486, Galle Road, Colombo 03
-Fax No.  	:
-E-mail Address 	:
-If to the Lessee	
-Address  	: 
-Fax No.  	:
-E-mail Address 	:
-(d) 	The Lessee shall be obliged to provide the Lessor with reasonable prior written notice of any changes to the information herein provided. 
-
-13.05  	Governing Law 
-	This Lease Agreement shall be governed by the laws of Sri Lanka.
-
-13.06 	Force Majeure
-(a)	Any delays in or failure by a Party hereto in the performance of any obligation hereunder if and to the extent it is caused by an occurrence or circumstance beyond such Party’s reasonable control, including but not limited to, an act of God, fire, strike or other labour disturbances, riots, civil commotion, war (whether declared or not) sabotage, any other cause, similar to those herein specified (such cause, occurrence or circumstance hereinafter referred to as a ‘Force Majeure Event’) the Party affected by such Force Majeure Event shall promptly inform the other Party of the occurrence of same and shall furnish proof of details of the occurrence and reasons for such Party’s non-performance of whole or part of this Lease Agreement. 
-(b)	Subject to the other terms and conditions of this Lease Agreement, the Parties may consult each other to decide whether to terminate this Lease Agreement or to discharge part of the obligations of the affected Party or extend the period granted for the performance of such Party’s obligations on a best efforts and on an arm’s length basis.
-
-13.07 	Reconstruction Or Change In the Constitution Of The Lessor
-Any reconstruction, division, reorganization or change in the constitution of the Lessor or its absorption in or amalgamation with any other person or the acquisition of all or part of its undertaking by any other person shall not in any way prejudice or affect its rights hereunder.
-
-
-13.08 	Severability 
-All of the provisions of this Lease Agreement shall be considered as separate terms and conditions and in the event that this Lease Agreement is affected by any legislation or any amendments thereto, or if the provisions herein contained are by virtue of that legislation or otherwise held to be illegal, invalid, prohibited or unenforceable, any such provisions shall be ineffective only to the extent of the illegality, invalidity, prohibition or unenforceability and all other provisions hereof shall remain in full force and effect as if the illegal, invalid, prohibited or unenforceable provisions were not a part hereof.
-
-14.0 	The Lessee agrees and undertakes with the Lessor that:
-
-14.01 	Time shall be of essence of this Lease Agreement.
-
-14.02 	Marking Lessor’s Ownership on Leased Property
-(a)	The Lessee shall affix such plate/s, label/s or other mark/s as may be approved or otherwise specified by the Lessor, on the Leased Property sufficiently indicating that it has been leased from the Lessor and shall ensure that such plate, labels and marks are not covered up, obliterated, defaced or removed. 
-(b)	All such plates, labels and marks shall be affixed to the Leased Property in such manner as may be specified by the Lessor after consultation with the Lessee.
-
-14.03 	Access to Leased Property
-The Lessee shall allow the officers, employees, servants and agents of the Lessor or other persons authorised by the Lessor, free and full access to the Leased Property during normal working hours, or immediately on request in the case of any emergency as stipulated by the Lessor, to inspect, view and examine the state and condition of the Leased Property and for that purpose the Lessee shall permit the Lessor and its officers, employees, servants, agents and persons to enter the premises where the Leased Property may be stored or installed or may be in use or operation even where Leased Property is not situated at the location specified in Schedule A hereto.
-
-14.04 	Entire Agreement
-This Lease Agreement together with the schedules attached hereto, constitutes the entire agreement between the Lessor and the Lessee and there are no terms, conditions or obligations, oral or written relating hereto other than those contained in and/or referred to in this Lease Agreement and this Lease Agreement may be modified or amended only by mutual agreement, in writing, signed and duly executed by the Parties hereto.
-
-14.05 	Notice of an Adverse Effect
-The Lessee shall promptly inform the Lessor of the occurrence of any event of default or of any event (such as a Force Majeure Event) or condition which is likely to have an adverse effect on the due operation of this Lease Agreement and/or the operation, profit or business of the Lessee.
-
-14.06 	Lessee to Furnish the Lessor With Information
-The Lessee shall furnish to the Lessor all such information, documents and certificates as the Lessor may from time to time reasonably require in relation to the location, use and operation of the Leased Property or any item or part thereof and generally in relation to the business and operations of the Lessee and its accounts, including such information, documents and  certificate as the Lessor may require for the purposes of or in connection with the preparation, filing and processing of income tax return/s and the assessment of  income tax and other taxes payable by the Lessor or for the purpose of or in connection with any audit of the Lessor.
-
-15.0 	The Lessee hereby warrants, represents and undertakes:
-
-15.01 	Lessee’s capacity to execute this Agreement
-The Lessee has full power, capacity and authority to execute, deliver and perform this Lease Agreement and has taken all necessary actions, authorizations and approvals (corporate or otherwise) to authorise the taking on lease of the Leased Property upon the terms of this Lease Agreement and to authorise its execution, deliver and performance of this Lease Agreement and the Lessee undertakes to keep such authorisations effective and in force during the entire Lease Term  or any renewal thereof and till the Leased Property is delivered back to the Lessor in good order and condition.
-
-15.02 	Compliance with Laws/Agreements in force
-The execution of this Lease Agreement and the use and operation of the Leased Property by the Lessee shall not:
-(a) 	Contravene any statute, law, rules, regulations and any Governmental sanction or approval to which the Lessee is subject to and the Lessee’s Memorandum and Articles of Association (as relevant) nor 
-(b) 	Result in any breach of any agreement or arrangement to which the Lessee is a party.
- 	 	 	 
-15.03 	Audited Accounts & Report of Business
-In the event that the Lessee is an incorporated company then it shall furnish to the Lessor at or prior to the commencement of the Lease Term and thereafter during the Lease tenure.
-(i)	Lessee’s annual audited balance sheet and profit and loss accounts within six (06) months of the end of the relevant financial year; and
-(ii)	Lessee’s management accounts, un-audited financial reports, statements and/or any other documents relating to the financial status of the Lessee within two (02) weeks of the Lessor’s request to such effect and in such form and containing such particulars as may be required by the Lessor.
-
-15.04  	Every Statement/ Representation Is True & Correct
-The Lessee hereby declares that every statement and representation made and all information provided by the Lessee in this Lease Agreement or in relation thereto is true and correct.
-
-15.05  	Lessee shall not claim any relief by way of any deduction
-As the Lessee is not the owner of the Leased Property, the Lessee shall not claim any relief by way of any deduction, allowance or grant available to the Lessor as the owner of the Leased Property, under any laws or rules or regulations and shall not do anything by which the Lessor may be deprived of such allowance or grant.
-
-15.06  	The Lessee hereby represents and confirms that:
-	(a)	The Lessee has not defaulted in respect of any payment obligation (whether relating to loan, finance or otherwise) or any other type of obligation owed to any bank or financial institution; and 
-	(b)	The Lessee has not defaulted in payment of any taxes or other dues owed to the Government or any local authority.
-
-16.0  	LATE PAYMENT
-
-16.01  	Late Payment Charge
-Where the Lessee has defaulted to pay on the due date any sum payable by him under this Agreement and no postponement has been permitted by the Lessor in respect thereof the Lessor shall at its discretion be entitled to charge a late payment charge in such amount as may be determined by the Lessor from time to time for the entire period of such default. 
-(a)	The amount of such late payment charge shall be calculated by the Lessor on the total value of obligations undischarged as at the due date. 
-(b)	Any sums charged by the Lessor in addition to the amount in default hereunder such as the late payment charge aforesaid shall be payable immediately upon notice thereof by the Lessor. 
-(c)	Any payments made by the Lessee in settlement of any sums so due from him, shall be credited by the Lessor to a separate account maintained by the Lessor. The sums so credited shall be used by the Lessor for Sharia compliant charitable activities.
-
-16.02   	Court Imposed Penalty
-In case 
-(a)	any amount(s) referred to in Clause 16.01 above, is not paid by the Lessee; or 
-(b)	the Lessee delays the payment of any amount due hereunder as a result of which any direct or indirect costs are incurred by the Lessor, the Lessor shall have the right to approach a competent Court 
-(i) 	for recovery of any amounts remaining unpaid as well as 
-(ii) 	for imposing of a penalty on the Lessee. 
-In this regard the Lessee is aware and acknowledges that notwithstanding any amount paid by the Lessee to the Lessor hereunder, the Court has the power to impose penalty, at its discretion, and from the amount of such penalty, a smaller or bigger part, depending upon the circumstances, can be awarded as solatium to the Lessor, determined on the basis of direct and indirect costs incurred, other than the opportunity cost.
-
-Refer schedule ‘A’ – (F) for penalty rate
- 
-IN WITNESS WHEREOF the Parties hereto have set their hands and common seal hereunto and to two others of the same tenor and date as these presents at Colombo on this ……………day of  ……………Two Thousand and ……… (20………) 
-
-The Lessor
-
-Signed by ..................................................... 	)
-Authorized Signatories,  Amana Bank PLC 	) 
-on this ......................day of........................... )
-Two Thousand and ......... at ..........................	)
-	
-
-Signed by .....................................................
-Witnesses to above signature: 	 
-1.	Name :  ………………………….      
-		Signature: ……………………….	Witnesses to above signature: 	 
-2.	Name :  ………………………….      
-		Signature: ……………………….
-
-
-Signed by ..................................................... 	)
-Authorized Signatories,  Amana Bank PLC 	) 
-on this ......................day of........................... )
-Two Thousand and ......... at ..........................	)
-	
-
-Signed by .....................................................
-Witnesses to above signature: 	 
-1.	Name :  ………………………….      
-		Signature: ……………………….	Witnesses to above signature: 	 
-2.	Name :  ………………………….      
-		Signature: ……………………….
-The Lessee
-
-Signed by ..................................................... 	)
-......................................................................	) 
-on this ......................day of........................... )
-Two Thousand and ......... at ..........................	)
-	
-
-Signed by
-Witnesses to above signature: 	 
-1.	Name :  ………………………….      
-		Signature: ……………………….	Witnesses to above signature: 	 
-2.	Name :  ………………………….      
-		Signature: ……………………….
-
-Signed by ..................................................... 	)
-......................................................................	) 
-on this ......................day of........................... )
-Two Thousand and ......... at ..........................	)
-	
-Signed by 
-Witnesses to above signature: 	 
-1.	Name :  ………………………….      
-		Signature: ……………………….	Witnesses to above signature: 	 
-2.	Name :  ………………………….      
-		Signature: ……………………….
-	 	  
-SCHEDULE ‘A’
-
-
-(a)	Description & Condition of Leased Property
-NW DAB-5274
-MAHINDRA BMT PLUS MDI
-
-
-(b)	Duration
-
-Commencement Date  	: 	Date of physical delivery of the Leased Property to the Lessee being 
-the date of the duly executed Acceptance Receipt in the form set out in Schedule B attached to this Lease Agreement and which shall be part and parcel hereof.
-
-Duration 	 	:  	36 months from the Commencement Date
-
-(c)	Lease Rent & Installments (including profits)
-Rs. 87,293.00
-36 Months 
-
-
-(d)	Profits Markup per annum	: 10.75%
-
-
-(e)	Location for the Storage/Use/Operation/Parking of the Leased Property by Lessee:
-
-
-(e)	Location for the Return of the Leased Property by Lessee:
-Amana Bank PLC
-No. 486, Galle Road, Colombo 03
-
-
-(f)	Penalty rate on delayed rentals: .......................................
- 	 	 	 	 
- 
- 
-SCHEDULE ‘B’
-
-
-ACCEPTANCE RECEIPT
-
-
-Our Ref. 	: <span id = "reffNum16"></span>
-
-Date        	:  <<Todays Date>>
-
-1.	Name & Address of Lessee: 
-(Insert NIC No./Company Registration No.) 
-<<Custiomer Name>>
-<<Customer NIC>>
-<<Custoemr address>>
-
-2.	Name & Address of Lessor : 
-Amana Bank PLC, 
-No. 486, Galle Road, Colombo 3
-
-
-3.	Name & Address of Supplier :
-<<Supplier Name>>
-<<Supplier Addreess>>
-
-4.	Description of Leased Property : 
-Make and Model  	:  <<details>>
-Engine No./ Model No.  	:  <<details>>
-Chassis No. / Serial No.  	:  <<details>>
-Year of Manufacture  	:  <<details>>
-
-
-5.	Leased Property to be delivered at : 
-<<Customer address>>
-
-
-I/We hereby acknowledge the receipt of the above mentioned Leased Property (which is the subject matter of the Lease Agreement No. <<REf No>> dated ……………… day of ……....………….............................…… (         )   between Amana Bank PLC and me/us).  I/We have examined the above Leased Property and found it to be in good order and condition and to my/our satisfaction. 
-
-
-I/We acknowledge that the terms of the lease shall commence from the date of this receipt. 
-
-
-……………………………                                                                        Date: 
-Signature of the Lessee*                                                   
- 
-*In case of the Lessee being an incorporated company, the authorized signatory must sign and his/her signature verified.
+  NO:/ <span id = "reffNum18"></span> FOR
+  MOVABLE PROPERTY
+  THIS AGREEMENT is made by and between
+  AMANA BANK PLC a Company duly incorporated in Sri Lanka bearing Company Registration 
+  No. PB 3618 PQ and having its registered office at No. 486, Galle Road, Colombo 3 and
+  a branch office at Colombo 03 (hereinafter called ‘the Lessor’ which expression shall
+  where the context so admits include its successors and assigns) of the one part;
+  AND
+  <span id = "custName14"></span> of <span id = "custAdr1_13"></span> 
+  (hereinafter called ‘the Lessee’ which expression shall where the context so admits 
+  include its successors and permitted assigns ) of the other part.The said Lessor and
+  the said Lessee shall also hereinafter be individually referred to as ‘Party’ and
+  jointly referred to as ‘Parties’.WHEREAS the Lessor makes investments in strict compliance
+  with the principles of Sharia;AND WHEREAS in strict compliance with the principles of
+  Sharia, the Lessee has requested the Lessor to acquire certain property and lease the same
+  to the Lessee and the Parties have mutually agreed to carry out such lease subject to the
+  terms and conditions of this Lease Agreement. 
+      
+  NOW THIS AGREEMENT WITNESSETH and it is hereby agreed by and between the Parties as follows: 
+  
+  1.0 	LEASE 
+  
+  1.01 	The Lessor hereby agrees to lease to the Lessee and the Lessee hereby agrees to take on
+  lease the said Leased Property hereinafter morefully described in the said Schedule A below, 
+  including all accessories attached thereto and including all alterations replacements and/or 
+  additions to such Leased Property that may be made during the subsistence of this Lease Agreement 
+  for the Lease Term (as hereinafter defined in Clause 2.01 below) subject to the terms, conditions, 
+  covenants and stipulations herein contained and in the Schedules hereto attached.
+  
+  2.0 	TERM OF LEASE AND RENTS
+  
+  2.01 	The duration of the lease hereby granted (hereinafter referred to as the ‘Lease Term’) is as
+  set forth in Schedule ‘A’ hereto attached, subject to the terms and conditions hereof and shall 
+  start on the Commencement Date (as defined in Schedule A hereto) which shall be the date of 
+  physical delivery of the Leased Property to the Lessee as evidenced by a duly executed Acceptance
+  Receipt in the form set out in Schedule B attached hereto and which shall be part and parcel hereof. 
+  
+  2.02 	The rent payable by the Lessee hereunder with respect to the Leased Property shall be as set
+  forth in Schedule ‘A’ hereto attached. For the entire Lease Term, the rents of Rs 87,293.00 per 
+  month including the profit mark up at 10.75% per annum on the lease facility granted by the Lessor
+  shall be payable in accordance with the schedule as hereinafter provided in Schedule ‘A’ hereto 
+  attached. The rent payable hereunder by the Lessee shall be paid regularly and punctually in the
+  amounts specified in Schedule ‘A’ without any deduction or adjustments subject to the other 
+  provisions of this Clause 2.0.
+  
+  2.03 	If the Leased Property has been damaged due to no fault of the Lessee or in the event that
+  the Lessee is unable to otherwise operate the Leased Property such as in the case of a Force 
+  Majeure Event (Clause 13.06) (which the Lessor shall determine in its absolute discretion),the 
+  Lessor may at its sole and absolute discretion provide consent in writing for an abatement in 
+  rent payable under Schedule A hereto, for a period which the Lessor considers reasonable in the
+  following circumstances:
+  (a)	In the event that the Lessor deems that the Leased Property may be repaired within a reasonable
+   period; or
+  (b)	The Lessor deems that the circumstances undermining the due operation of the Leased Property 
+  shall abate within a reasonable period.Provided that all rentals due under this Lease Agreement
+  shall become due upon expiry of the abatement period permitted by the Lessor, and the lease tenor
+  will be deemed extended correspondingly.
+  
+  2.04 	In the event that the Lessor in its sole and absolute discretion is satisfied that the Leased
+  Property has been rendered useless, destroyed or damaged beyond repair due to a proven manufacturing
+  defect or due to a Force Majeure Event (Clause 13.06) from which the Lessee could not have reasonably
+  saved the Leased Property then the Lessor may at its sole and absolute discretion allow termination of
+  lease as a ‘total loss’ event. Provided that the Lessor deems that such uselessness, destruction or 
+  damage is not due to the negligence or misconduct of or any act or omission on the part of the Lessee
+  or the Lessee’s servants, agents, employees and contracts.
+  
+  2.05 	All rents, other costs and charges of any kind payable hereunder to the Lessor, shall be paid in
+  Sri Lanka Rupees at the Lessor’s office as provided in Clause 13.04 (Notice).    
+  
+  3.0 	DELIVERY
+  
+  The Lessee hereby agrees that upon acceptance of the Leased Property, the Lessee shall duly execute the
+  Acceptance Receipt in the form provided under Schedule B hereunder confirming that the Leased Property
+  is in good working order, condition and appearance and in all respects complete and satisfactory to 
+  he Lessee. Where the item/property which is specified in this Lease Agreement has not been delivered
+  to the lessee at or before the time fixed under this Lease Agreement for its delivery or has been 
+  delivered after such time or where such item/property delivered does not conform to the terms, 
+  conditions, warranties, specifications in the supply agreement(if any) relating to such item/property
+  , the Lessee may, subject to the provisions of Article 13 (2) of Finance Leasing Act , reject and 
+  return such item/property to the Lessor and terminate this Lease Agreement within a period of one 
+  week from the date in writing sent by registered post to the Lessor.    
+  
+  4.0 	USE OF LEASED PROPERTY
+  
+  4.01 	The Lessee shall keep the Leased Property at the place specified in Schedule A hereto provided
+  that in the event that the Leased Property is a vehicle, the Lessee shall be bound to maintain it in
+  the place specified in the said Schedule A hereto, when not in use. The Lessee shall not remove, 
+  relocate, reinstall, use or operate the Leased Property to or in any other place without the prior
+  written consent of the Lessor.
+  
+  4.02 	The Lessee hereby agrees and undertakes that:
+  (a)	the Lessee shall at all times store, house, use, maintain and operate the Leased Property carefully
+  and prudently and strictly in conformity with industry standards and, where applicable, the instructions
+  and directions of the manufacturers and/or suppliers thereof (including those relating to the environmental
+  conditions, if any, under which the Leased Property is to be transported, stored, housed, used, maintained
+  or operated), whether such instructions and directions are contained in the operational manuals relevant
+  to such Leased Property or are otherwise provided with or before or after the delivery of the Leased 
+  Property by the manufacturer and/or suppliers thereof;
+  (b)	the Leased Property shall be handled used and operated by suitably trained and experienced persons and
+  shall not be handled, used or operated by persons deemed by the Lessor to be insufficiently trained and/or
+  experienced; 
+  (c)	the Lessee shall not do or omit to do any act or thing by which the warranties and performance guaranties
+  given by the suppliers and/or manufacturers of the Leased Property shall or may become invalidated or 
+  unenforceable, whether wholly or in part;
+  (d)	the Leased Property shall be used for its normal and usual purpose for the business (in the event the 
+  Lessee is an entity such as a company or personal use of the Lessee and except with the prior written 
+  permission of the Lessor shall not be used for any other purpose whatsoever.
+  (e)	the Lessee shall store, house, install, use maintain and operate the Leased Property in compliance with 
+  all relevant laws, rules, regulations, orders and directions, whether of the Governmental or of any Provincial
+  Authority or of any Municipal or Local Authority or of any court, tribunal or other competent authority or officer; 
+  (f)	the Lessee shall not sell, transfer, assign or otherwise dispose of, or sub-lease, let for hire, loan, give 
+  on license, or part with the possession of, or in any way mortgage, hypothecate, pledge, charge or otherwise 
+  encumber, the Leased Property without the prior written consent of the Lessor.
+  (g)	the Lessee shall not, without the prior written consent of the Lessor, make any alternation, addition, or 
+  improvement to the Leased Property or change the condition thereof; and all alterations, additions and 
+  improvements of whatsoever kind or nature made (including replacement or substitution of any part or component
+  or accessory) shall become part of and an accretion to the Leased Property and shall belong to and be the 
+  property of the Lessor and shall be subject to the terms and conditions of this Lease Agreement.
+  
+  4.03 	Nothing contained in this Clause 4 shall derogate from the liability of the Lessee for any storage,
+  handling, use, maintenance or operation of the Leased Property 
+  (a)	in breach of any of the terms and conditions contained herein; or 
+  (b)	in a manner contrary to any provisions or requirements of the Insurance  policy or policies which now 
+  cover or will thereafter during Lease Term (as defined in Clause 2.01 above) cover the Lessor’s liability
+  as owner of the Leased Property; or 
+  (c)	in contravention of any law, rule, regulation, order or direction, whether of the Governmental or any 
+  Provincial or Municipal or Local Authority or of any court, tribunal or other competent authority or officer.
+  The Lessee hereby agrees to hold the lessor indemnified and served harmless from and against all claims 
+  and demands made and all fines or penalties levied or imposed in respect of or arising out of the storage, 
+  handling, use, maintenance or operation of the Leased Property
+  
+  5.0 	MAINTENANCE OF LEASED PROPERTY
+  
+  5.01 	The Lessee agrees to maintain each item of the Leased Property in a reasonable condition and to the 
+  satisfaction of the Lessor. All maintenance work in respect thereof shall be carried out strictly in 
+  accordance with the maintenance manuals or other instructions and directions of the manufacturers and/or 
+  suppliers of the Leased Property, or where no such manuals instructions or directions are provided, in 
+  accordance with the best practices prevailing in the industry.
+  
+  5.02 	The Lessee agrees to be solely responsible for all maintenance and operating costs and expenses 
+  relating to the Leased Property which shall include but shall not be limited to fuel, oil and lubricants, 
+  repairs, replacement or components and/or parts, periodic and preventive maintenance and repair costs, 
+  maintenance of electrical circuits, switches, fuses and safety devices, and other costs and expenses, 
+  fees, licenses and charges incurred in connection with or in any way referable to the delivery, storage, 
+  handling, use and operation of the Leased Property and/or any part thereof.
+  
+  5.03 	The Lessee also agrees to be responsible for and forthwith to pay all fees, taxes, fines or penalties 
+  of every nature and kind whatsoever and by and to whosoever payable and relating to the transportation, 
+  storage, handling, use, maintenance and operation of the Leased Property, except the income tax and Zakath
+  of the Lessor.
+  
+  5.04 	In the event of any maintenance or operation costs and expenses as aforesaid or fees, taxes, fines and
+  penalties or any other charges not being paid by the Lessee as herein required, the Lessor may, but shall 
+  not be obligated to, pay such cost, expenses, fees, taxes, fines, penalties and charges and the Lessee shall
+  forthwith upon demand reimburse the Lessor therefor.
+  
+  6.0 	INSURANCE COVER ON ACCIDENTS & INJURIES 
+  6.01 	The Leased property shall be comprehensively insured /covered by Takaful for the entire lease term for 
+  full replacement value.
+  6.02 	The Lessee undertakes to keep the Lessor informed, well in time, of the termination of the  Insurance 
+  cover on the Leased Property and renew/extend the Insurance cover from time to time, so as to cover the entire 
+  period of the Lease Term (as defined in Clause 2.01 above).
+  6.03 	The Lessee hereby agrees that should the Insurance be obtained and / or renewed / extended by the Lessor. 
+  The cost of so doing will be reimbursed, forthwith, to the Lessor by the Lessee. 
+  6.04 	The Lessee, its agents and employees shall comply with all the terms and conditions of the said Insurance 
+  cover policy, including the immediate reporting of accidents or damage to the Lessor and the Insurance  company 
+  and shall do all the things necessary or proper to protect or preserve the Leased Property in accordance with 
+  the relevant Insurance  policy. The Lessee shall also provide all assistance to the Insurance   company and the 
+  Lessor for a prompt settlement of any claim and shall take all such actions and steps as may be necessary 
+  in that regard.
+  6.05 	The Lessee shall be responsible for accidents and injuries, whether fatal or otherwise and any 
+  damages and losses occurring to any person or property which may result from or be traceable to the storage,
+  handling, use, maintenance or operation of the Leased Property by the Lessee, the Lessee’s contractors, 
+  employees or agents, or any failure on the part of the Lessee to observe and perform any of the Lessee’s
+  obligations under this Lease Agreement or the instructions contained in the relevant manufacturers’ 
+  and/or the suppliers’ maintenance and/or operation manual/s or any other instructions of the manufacturers
+  and/or suppliers and/or the Lessor. 
+  6.06 	The Lessee shall hold the Lessor indemnified and saved harmless from and against any and all 
+  costs, charges or expenses (including attorney’s fees) in connection with any claim or demand for 
+  which the Lessee is responsible hereunder. If the Lessor shall have to pay any sum or sums of money
+  in respect of any such claim or demand and incurs any costs, charges or expenses (including attorney’s
+  fees) in that connection, the full amount so incurred and paid by the Lessor shall be reimbursed by the
+  Lessee to the Lessor in full upon demand. 
+  6.07 	In the event the Leased property being affixed to any land or building the Lessee shall ensure that 
+  all assessment rates / taxes in relation to such land and building are properly and punctually paid by the
+  Lessee to the relevant Government or Provincial or Local authorities and that such buildings are properly 
+  valued and insured against any damages from fire, burglary…….., flood ….., storms, terrorist attacks, riots 
+  , explosions and other force majeure events. 
+               
+  7. 0 	TITLE
+  
+  7.01 	All rights title and ownership in and to the Leased Property leased hereunder and all obligations 
+  relating thereto shall at all times remain vested in the Lessor subject to the terms of this Lease Agreement 
+  and the Lessee covenants and agrees not to do or perform any act prejudicial to such rights title and ownership. 
+  Without limiting the generality of the foregoing the Lessee agrees not to sell, transfer, assign or otherwise 
+  dispose of, or sub-lease, let for hire, loan, or give on licence, or part with the possession of, or conceal 
+  or abandon, or in any way mortgage, hypothecate, pledge, charge or otherwise, encumber, or damage or destroy 
+  any item of Leased Property or any part thereof.
+  
+  7.02 	The Lessor shall be entitled to label the Leased Property as having been leased from the Lessor.
+  
+  7.03 	The Lessee hereby agrees to indemnify and save harmless the Lessor from any and all claims, losses, 
+  cost, damages, suits, expenses, including attorney’s fees which the Lessor may sustain or incur as a result 
+  of a breach of Clause 7.01 above.
+  
+  7.04 	As between the Lessor and the Lessee the Leased Property shall remain personal and moveable property 
+  and shall continue in the ownership of the Lessor notwithstanding that the same may have been affixed to 
+  any land or building in the event that the Leased Property comprises machinery and/or equipment. 
+  The Lessee shall be responsible for any damage caused to any such land or building by the affixing to or 
+  removal therefrom of the Leased Property, whether affixed or removed by the Lessee or by the Lessor, and 
+  the Lessee shall indemnify and save harmless the Lessor from and against any and all claims made in 
+  respect of such damage.
+  8.0 	RETURN OF THE LEASED PROPERTY
+  
+  8.01 	If so requested by the Lessor at any time during the Lease Term or on termination thereof by 
+  effluxion of time or otherwise or during or at termination of any extension of the Lease Term, 
+  the Lessee shall be obliged to return to the Lessor the Leased Property forthwith.
+  
+  8.02 	Return of the Leased Property shall be at the place as specified in Schedule “A” hereto 
+  attached in the original condition and good order fair ware and tear excepted.
+  
+  8.03 	When returning the Leased Property as aforesaid, the Leased Property shall be in the same 
+  condition as it was at the commencement of this Lease Agreement subject to fair wear and tear. 
+  The Lessee and the Lessor or their respective agents shall inspect and provide a jointly signed 
+  report on the condition of the Leased Property.  
+  
+  9.0 	LIMITATION OF LIABILITY
+  
+  9.01 	It is agreed and understood between the Parties that the Lessor shall not be liable or 
+  accountable to the Lessee or any other person claiming through or under the Lessee or to any 
+  third party for any loss (including but not limited to loss of property or life and/or loss 
+  due to physical and/or mental injury), damage, claim, demand, liability, cost or expense of 
+  any nature or kind sustained either directly or indirectly 
+  (a) 	by the Lessee; 
+  (b)	by any contractor or agent of the Lessee; 
+  (c)	by any of their respective employees; or 
+  (d)	by any third party
+  resulting from any inadequacy for any purpose, mechanical failure whether due to misuse, 
+  abuse or lack of adequate maintenance or care of the Leased Property by the Lessee or by 
+  the Lessee’s contractor, agents, or employees or from loss or interruption of use of the 
+  Leased Property, or any loss of business, profits, consequential or any other damage of 
+  any nature whatsoever.
+  
+  9.02 	The Lessor shall not be required to carry out any of the terms of this Lease Agreement 
+  if prevented from so doing by a Force Majeure Event (Clause 13.06) and shall not be liable 
+  for any loss or damages sustained by the Lessee and resulting therefrom.
+  
+  9.03 	If the Leased Property or any part thereof is damaged due to a Force Majeure Event, but 
+  is capable of being repaired, the Lessor may at its sole discretion opt to either repair the 
+  Leased Property or may, by written notice (Notice, Clause13.04) to the Lessee forthwith terminate
+  this Lease Agreement or permit abatement of this Agreement (See Clause 2.03). If the Lessor opts
+  to repair such Leased Property, the Lessor may either arrange such repair itself or request the
+  Lessee to arrange such repair and if the applicable Insurance proceeds are insufficient to pay
+  the full cost of repairing the same, the difference between the actual cost of repairing the
+  same, and payment received for it from the Insurance company shall be payable by the Lessor.
+  
+  9.04 	Subject to the other provisions of this Lease Agreement any and all repairs, replacement or
+   substitution of components, parts, accessories or equipment on the Leased Property shall be at 
+   the Lessee’s expense, and shall be deemed accretions to the Leased Property and the title thereto
+    shall vest and remain with the Lessor.
+  
+  9.05 	The Lessor has not made and does not make hereby, any representation as to merchantability, 
+  condition or suitability, whether express or implied of the Leased Property for the purpose of this 
+  Lease Agreement or any other representation with respect thereto and the Lessee agrees that the 
+  Lessee’s obligations hereunder to pay rentals as herein provided shall not in any way be affected 
+  by any defect and/or failure regarding merchantability, condition or suitability of the Leased Property.
+  
+  
+  
+  10.0 	INDEMNITY
+  
+  10.01 	The Lessee covenants and agrees with the Lessor that notwithstanding any Insurance cover  
+  provided under Clause 6 (Insurance cover on accidents & Injuries) hereof, it shall at all times and
+  under all circumstances indemnify and hold the Lessor saved harmless from and against all fines and
+  penalties, liabilities and claims, losses, costs, damages, suits, expenses, including attorney’s 
+  fees (save and except taxes or license fees or registration fees that are due from the Lessor in 
+  respect of the Leased Property) resulting from, caused or contributed by, related to or arising out 
+  of the possession, operation, use or misuse of the Leased Property and such liability shall not be 
+  affected by any termination of this Lease Agreement, with respect to any part or the whole of the 
+  Leased Property.
+  
+  10.02  	The Lessee shall also hold the Lessor indemnified and saved harmless from and against any 
+  and all loss or seizure of the Leased Property under distress, execution or other legal process 
+  brought, enforced or executed against the Lessee or from and against any and all losses resulting therefrom.
+  
+  10.03 	The Parties hereto agree that notwithstanding anything contained in this Lease Agreement, 
+  the Lessor shall not be responsible in any way whatsoever 
+  (a)	Either for the products (if any) derived from or through the use or operation of the Leased 
+  Property by the Lessee or anybody else; or
+  (b)	For the efficacy or merchantability or otherwise of such products.
+  The Lessee shall indemnify and keep indemnified the Lessor against any and all actions, proceedings, 
+  liabilities, claims, losses, damages, cost and expenses relating to or arising out of the storage, 
+  sale, use or consumption or any product derived from the Leased Property which may be instituted against 
+  or suffered or incurred by the Lessor or by any other person or party.
+  
+  11.0 	DEFAULT AND TERMINATION
+  
+  11. 01 	Termination by Mutual Agreement
+   (a)	Either Party may, subject to the other provisions of this Lease Agreement, terminate this Lease 
+   Agreement any time provided that termination shall be effective on completion of ninety (90) days of 
+   the date of the written notice being served on the other Party in accordance with this Lease Agreement 
+   (Clause 13.04 Notice).
+  (b)	The terms and conditions of this Lease Agreement shall notwithstanding the giving of the aforesaid 
+  notice continue in full force and effect until all obligations of the Lessee under this Lease Agreement 
+  are duly discharged (including the obligation to return to the Lessor the Leased Property in good 
+  operating condition in accordance with the provisions of this Lease Agreement) and the payment of all 
+  sums due hereunder to the satisfaction of the Lessor.
+  
+  11.02 	Termination By Lessor
+  Notwithstanding anything to the contrary stated herein the Lessor shall have the right at any time and 
+  without notice to immediately terminate this Lease Agreement on the occurrence of any one of the following 
+  events:
+  
+  (a)	If the Lessee fails to pay any rentals, charges or other sums whatsoever payable by the Lessee under 
+  the terms of this Lease Agreement, as and when they shall become due.
+  (b)	If the Lessee commits a breach of any of the terms, covenants or conditions of this Lease Agreement.
+  (c)	For unreasonable or abusive use or misuse of the Leased Property or if the Leased Property is dealt 
+  with by the Lessee contrary to any of the provisions of this Lease Agreement.
+  (d)	If the Insurance cover mentioned in this Lease Agreement is for any reason cancelled in whole or in part.
+  (e)	In the event of any levy of execution or attachment being made against the Lessee or upon the Lessee’s 
+  goods.
+  (f)	If the Lessee suspends business, or a tax lien is filed against any of the Lessee’s property or if the 
+  Leased Property is confiscated or forfeited or seized by any authority.
+  (g)	If it is discovered at any time that any statement or representation made by the Lessee herein or in 
+  the Lessee’s application for lease of the Leased Property or in any other related document is or has become 
+  false or incorrect in any respect.
+  (h)	If the Lessee is unable to perform its obligations hereunder on account of a Force Majeure Event 
+  (Clause 13.06) and such inability continues for a period of seven (07) calendar days.
+  (i)	Where the Lessee is a body Corporate in the event of any material changes in the constitution of the 
+  Company or in the Senior Management of the Company.
+  (j)	In the event of total interruption or cessation of the business activities of the Lessee;
+  (k)	In the event of the Lessee being adjudged bankrupt makes an assignment, arrangement or compromise 
+  for the benefit of its creditors;
+  (l)	In the event of the Lessee (i) voluntarily or involuntarily becoming the subject of winding up 
+  proceedings; and/or (ii) has been unable or has admitted in writing the Lessee’s inability to pay 
+  the Lessee’s debts as they mature to the Lessor or to another party; and/or (iii) taken or suffered 
+  any action for its reorganization, amalgamation, liquidation or dissolution; and/or (iv) had a 
+  receiver or liquidator appointed for all or any part of the Lessee’s assets or business.
+  (m)	Any authority of or registration with governmental or public bodies or courts required by the 
+  Lessee in connection with the execution, delivery, performance, validity, enforceability or 
+  admissibility in evidence of this Lease Agreement are modified in a manner unacceptable to the 
+  Lessor or is not granted or is revoked or otherwise ceases to be in full force and effect;
+  
+  11.03 	Consequences of Death of an Individual Lessee
+   (a)	In the event of the Lessee’s death the Lessor shall be entitled to 
+  (i)	call for a certified copy of the relevant death certificate; and 
+  (ii)	request the Lessee’s heirs to provide the Lessor with documentary evidence deemed satisfactory 
+  to the Lessor in proof of their rights and respective positions as the deceased Lessee’s legal heirs.
+  (b)	The Lessor may at its sole and absolute discretion, continue this Lease Agreement with the Lessee’s 
+  legal heirs subject to the receipt of their prior written consent for such continuation.
+  (c)	Continuation of this Lease Agreement as aforesaid shall be subject to execution by the Lessee’s legal 
+  heirs of all such documents and agreements and carrying out of all acts and deeds that the Lessor may deem 
+  necessary and/or incidental to the due continuation of this Lease Agreement.
+  (d)	The Lessor shall be entitled to immediately terminate this Lease Agreement with written notice to 
+  the Lessee’s heirs in the following circumstances:
+  (i)	In the event that the Lessee’s legal heirs do not provide their written consent for continuation 
+  of this Lease Agreement as aforesaid within thirty (30) days of a written request to such effect from 
+  the Lessor; or 
+  (ii) 	The Lessor is not agreeable to continue this Lease Agreement with the Lessee’s legal heirs.
+  (e) 	Any notice or other communication given or made under this Clause shall be deemed duly given or 
+  made if in compliance with Clause 13.04, (Notice) below.
+  
+  11.04  	Notice to Contain Reasons for Termination
+  If before expiry of the full period of the Lease Term (as defined in Clause 2.01 above)
+  (a)	Should the Lessor wish to terminate this Lease Agreement for any reason other than those mentioned 
+  hereinabove; or
+  (b)	Should the Lessee wish to terminate this Lease Agreement.
+  
+  then the notice (Clause 13.04, Notice) of the proposed termination shall contain the reason for the 
+  issuance of such notice.
+  
+  11.05 	Lessor’s Rights to Leased Property on Termination
+  (a)	Lessor’s Right to Repossession
+  (i)	The Lessee hereby also authorizes and empowers the Lessor, its officers, employees, servants, agents 
+  and other representatives to enter on any of the Lessee’s land or premises, or any other place or places 
+  where the Leased Property may be found, for the purpose of taking possession thereof. 
+  (ii)	Save as provided hereunder, upon termination of this Lease Agreement, all rights of the Lessee 
+  hereunder and in respect of the Leased Property shall forthwith terminate and the Lessor shall have the 
+  right to take immediate possession of the Leased Property and Lessee shall immediately deliver the Leased 
+  Property to the Lessor and the Lessor may at its option sell the Leased Property or retain the Leased 
+  Property free of and unencumbered by this Lease Agreement.  However in the event of selling the repossessed 
+  Leased Property, the Lessor shall recover only the dues under this agreement and any excess amount should 
+  be paid to the Lessee.
+  (iii)	Upon the Lessor becoming entitled for any reason whatsoever to the return of the Leased Property 
+  leased hereunder, then notwithstanding any terms or conditions herein contained, the Lessor may, in addition 
+  to any other remedy open to it, and without notice, take immediate possession of the Leased Property without 
+  process of law.
+  (iv)	The Lessee shall pay to the Lessor all costs relating to repossession as aforesaid including the related 
+  transportation maintenance and storage charges.
+  (b)	Lessor’s Right to Appoint a Caretaker of The Leased Property
+  (i)	In the event of the Lessor giving notice of termination to Lessee, the Lessor may appoint a caretaker of 
+  the Leased Property and the Lessee shall grant such caretaker access to the place wherein the Leased Property 
+  is kept, stored, fixed or being used or operated.
+  (ii)	The Lessee further agrees to grant such caretaker permission to periodically inspect the Leased Property 
+  as and when the Lessor deems necessary.
+  (iii)	The rights of access and inspection granted to the Lessor’s caretaker as herein provided are in no manner 
+  to be construed to derogate from the Lessor’s general rights of access and inspection referred to herein.
+  (c)	Irrevocable Power of Attorney in Lessor’s Favour
+  Upon the happening of any of the foregoing event or events, the Lessee hereby irrevocably appoints the Lessor 
+  and the Chief Executive Officer of the Lessor for the time being or any other officer duly authorized by him, 
+  as the Lessee’s true and lawful attorneys to execute such documents as may be necessary for the purpose of 
+  regaining possession of the Leased Property and the accessories attached thereto.
+  
+  12.0 	ASSIGNMENT
+  
+  12.01 	It is agreed and understood between the Parties hereto that this Lease Agreement and the lease granted 
+  hereunder are personal to the Lessee and may not, under any circumstances, be transferred or assigned by the 
+  Lessee to any other person, firm or corporation without the prior written consent of the Lessor.
+  
+  12.02 	However, nothing herein contained shall be construed in any way to limit the Lessor’s right to sell 
+  the Leased Property and in the event of such a sale, the buyer shall succeed to all of the Lessor’s rights 
+  and obligations hereunder.
+  
+  12.03 	Subject to Clause 12.01 above, this Lease Agreement and every part thereof shall inure to the benefit 
+  of the Parties hereto and their respective successors, heirs, executors, administrators, and permitted assigns. 
+  
+  12.04 	The Lessee shall not be construed as the owner of the Leased Property leased hereunder and under no 
+  circumstance whatsoever shall the Lessee be considered as the agent of the Lessor for any purpose whatsoever. 
+  
+  13.0  	MISCELLANEOUS  
+  
+  The Lessor and the Lessee agree that:
+  
+  
+  13.01 	Schedules and Headers
+  (a)	All schedules annexed hereto are and shall form an integral part of this Lease Agreement.
+  (b)	The headings in this Lease Agreement are for convenience only and shall not affect the constitution or 
+  interpretation of this Lease Agreement.
+                                        
+  13.02 	Non Waiver
+    (a)	Neither any delay in the exercise or omission to exercise any right, power or remedy occurring to the 
+    Lessor, whether under or pursuant to this Lease Agreement or otherwise, nor the failure of the Lessor to 
+    require payment from or by the Lessee, when due, of any sum owing hereunder, shall impair any right, power 
+    or remedy accruing or available to the Lessor, nor shall any such delay, failure or omission be construed 
+    as a waiver of or forbearance or acquiescence in any default  of the Lessee; and
+    (b)	No waiver of any right, power or remedy of the Lessor or any forbearance or acquiescence in any default
+     of the Lessee shall affect or impair the right, power or remedy of the Lessor in respect of any other or 
+     subsequent event or default, nor shall such delay, failure or omission be construed as excusing the Lessee
+      from future performance.
+                 
+  13.03  	Costs and Taxes
+  (a)	All stamp duties, registration fees, duties, taxes, charges, levies and surcharges (hereinafter also 
+  referred to as ‘the said charges’) of any kind or nature whatsoever if any, levied, imposed or payable in 
+  respect of this Lease Agreement or the transaction herein contemplated or any part thereof or in respect of 
+  any other agreement, document, deed or paper or any receipt of acknowledgement executed under or pursuant to
+  or in connection with this Lease Agreement, shall be borne and paid by the Lessee provided however that the
+  Lessor may at its sole and absolute discretion pay such charges and obtain reimbursement of same from the Lessee. 
+  (b)	The Lessee shall also be liable for any and all additional duties and fees and/or any and all penalties 
+  payable in connection with the said charges, whether on account of any failure to pay the proper duties, taxes, 
+  surcharges or fees or otherwise. 
+  (c)	If any of the foregoing is paid by the Lessor, the Lessee shall forthwith, on demand, reimburse to the 
+  Lessor, in full and without deduction, all such amounts paid by the Lessor.
+  
+  13.04  	Notice
+  (a)	Any notice or other communication given or made hereunder shall, be in writing and shall be sent in the 
+  manner hereinafter provided; 
+  (i)	if sent by personal delivery it is deemed delivered and served only upon actual delivery at the address 
+  of the relevant Party as herein provided;
+  (ii)	if sent by registered post the same is deemed to be delivered and served three (03) working days after 
+  the date of posting;
+  (iii)	if sent by facsimile, it is deemed served when the sender’s facsimile machine issues a transmission 
+  report which indicates that the relevant number of pages comprised in the notice or communication have been 
+  sent;
+  (iv)	if sent by e-mail it is deemed served only if it is acknowledged by the recipient or a return receipt , 
+  deleted email message is generated in the sender’s computer in respect of such email.  
+  (b)	If, in accordance with the above provisions, any such notice or other communication would otherwise be 
+  deemed to be given or made outside working hours (8.30 a. m – 5.00 p.m.), such notice or other communication 
+  shall be deemed to be given or made at the start of the next period of working hours.
+  (c) 	The relevant contact details of each Party for the purposes of this Lease Agreement shall be as set out below:
+  
+  
+  
+  
+  
+  If to the Lessor	  Amana Bank PLC
+  Address  	: No. 486, Galle Road, Colombo 03
+  Fax No.  	:
+  E-mail Address 	:
+  If to the Lessee	
+  Address  	: 
+  Fax No.  	:
+  E-mail Address 	:
+  (d) 	The Lessee shall be obliged to provide the Lessor with reasonable prior written notice of any changes 
+  to the information herein provided. 
+  
+  13.05  	Governing Law 
+    This Lease Agreement shall be governed by the laws of Sri Lanka.
+  
+  13.06 	Force Majeure
+  (a)	Any delays in or failure by a Party hereto in the performance of any obligation hereunder if and to the
+  extent it is caused by an occurrence or circumstance beyond such Party’s reasonable control, including but
+  not limited to, an act of God, fire, strike or other labour disturbances, riots, civil commotion, war (
+  whether declared or not) sabotage, any other cause, similar to those herein specified (such cause, occurrence
+  or circumstance hereinafter referred to as a ‘Force Majeure Event’) the Party affected by such Force Majeure
+  Event shall promptly inform the other Party of the occurrence of same and shall furnish proof of details of
+  the occurrence and reasons for such Party’s non-performance of whole or part of this Lease Agreement. 
+  (b)	Subject to the other terms and conditions of this Lease Agreement, the Parties may consult each other to
+  decide whether to terminate this Lease Agreement or to discharge part of the obligations of the affected Party 
+  or extend the period granted for the performance of such Party’s obligations on a best efforts and on an arm’s 
+  length basis.
+  
+  13.07 	Reconstruction Or Change In the Constitution Of The Lessor
+  Any reconstruction, division, reorganization or change in the constitution of the Lessor or its absorption in 
+  or amalgamation with any other person or the acquisition of all or part of its undertaking by any other person 
+  shall not in any way prejudice or affect its rights hereunder.
+  
+  
+  13.08 	Severability 
+  All of the provisions of this Lease Agreement shall be considered as separate terms and conditions and in the 
+  event that this Lease Agreement is affected by any legislation or any amendments thereto, or if the provisions 
+  herein contained are by virtue of that legislation or otherwise held to be illegal, invalid, prohibited or 
+  unenforceable, any such provisions shall be ineffective only to the extent of the illegality, invalidity, 
+  prohibition or unenforceability and all other provisions hereof shall remain in full force and effect as if 
+  the illegal, invalid, prohibited or unenforceable provisions were not a part hereof.
+  
+  14.0 	The Lessee agrees and undertakes with the Lessor that:
+  
+  14.01 	Time shall be of essence of this Lease Agreement.
+  
+  14.02 	Marking Lessor’s Ownership on Leased Property
+  (a)	The Lessee shall affix such plate/s, label/s or other mark/s as may be approved or otherwise specified by 
+  the Lessor, on the Leased Property sufficiently indicating that it has been leased from the Lessor and shall 
+  ensure that such plate, labels and marks are not covered up, obliterated, defaced or removed. 
+  (b)	All such plates, labels and marks shall be affixed to the Leased Property in such manner as may be specified 
+  by the Lessor after consultation with the Lessee.
+  
+  14.03 	Access to Leased Property
+  The Lessee shall allow the officers, employees, servants and agents of the Lessor or other persons authorised 
+  by the Lessor, free and full access to the Leased Property during normal working hours, or immediately on request 
+  in the case of any emergency as stipulated by the Lessor, to inspect, view and examine the state and condition 
+  of the Leased Property and for that purpose the Lessee shall permit the Lessor and its officers, employees, 
+  servants, agents and persons to enter the premises where the Leased Property may be stored or installed or may 
+  be in use or operation even where Leased Property is not situated at the location specified in Schedule A hereto.
+  
+  14.04 	Entire Agreement
+  This Lease Agreement together with the schedules attached hereto, constitutes the entire agreement between the 
+  Lessor and the Lessee and there are no terms, conditions or obligations, oral or written relating hereto other 
+  than those contained in and/or referred to in this Lease Agreement and this Lease Agreement may be modified or 
+  amended only by mutual agreement, in writing, signed and duly executed by the Parties hereto.
+  
+  14.05 	Notice of an Adverse Effect
+  The Lessee shall promptly inform the Lessor of the occurrence of any event of default or of any event (such as 
+   Force Majeure Event) or condition which is likely to have an adverse effect on the due operation of this Lease 
+   Agreement and/or the operation, profit or business of the Lessee.
+  
+  14.06 	Lessee to Furnish the Lessor With Information
+  The Lessee shall furnish to the Lessor all such information, documents and certificates as the Lessor may from 
+  time to time reasonably require in relation to the location, use and operation of the Leased Property or any 
+  item or part thereof and generally in relation to the business and operations of the Lessee and its accounts, 
+  including such information, documents and  certificate as the Lessor may require for the purposes of or in 
+  connection with the preparation, filing and processing of income tax return/s and the assessment of  income 
+  tax and other taxes payable by the Lessor or for the purpose of or in connection with any audit of the Lessor.
+  
+  15.0 	The Lessee hereby warrants, represents and undertakes:
+  
+  15.01 	Lessee’s capacity to execute this Agreement
+  The Lessee has full power, capacity and authority to execute, deliver and perform this Lease Agreement and 
+  has taken all necessary actions, authorizations and approvals (corporate or otherwise) to authorise the taking 
+  on lease of the Leased Property upon the terms of this Lease Agreement and to authorise its execution, deliver 
+  and performance of this Lease Agreement and the Lessee undertakes to keep such authorisations effective and in 
+  force during the entire Lease Term  or any renewal thereof and till the Leased Property is delivered back to 
+  the Lessor in good order and condition.
+  
+  15.02 	Compliance with Laws/Agreements in force
+  The execution of this Lease Agreement and the use and operation of the Leased Property by the Lessee shall not:
+  (a) 	Contravene any statute, law, rules, regulations and any Governmental sanction or approval to which the 
+  Lessee is subject to and the Lessee’s Memorandum and Articles of Association (as relevant) nor 
+  (b) 	Result in any breach of any agreement or arrangement to which the Lessee is a party.
+            
+  15.03 	Audited Accounts & Report of Business
+  In the event that the Lessee is an incorporated company then it shall furnish to the Lessor at or prior to the 
+  commencement of the Lease Term and thereafter during the Lease tenure.
+  (i)	Lessee’s annual audited balance sheet and profit and loss accounts within six (06) months of the end of the 
+  relevant financial year; and
+  (ii)	Lessee’s management accounts, un-audited financial reports, statements and/or any other documents relating 
+  to the financial status of the Lessee within two (02) weeks of the Lessor’s request to such effect and in such 
+  form and containing such particulars as may be required by the Lessor.
+  
+  15.04  	Every Statement/ Representation Is True & Correct
+  The Lessee hereby declares that every statement and representation made and all information provided by the 
+  Lessee in this Lease Agreement or in relation thereto is true and correct.
+  
+  15.05  	Lessee shall not claim any relief by way of any deduction
+  As the Lessee is not the owner of the Leased Property, the Lessee shall not claim any relief by way of any 
+  deduction, allowance or grant available to the Lessor as the owner of the Leased Property, under any laws 
+  or rules or regulations and shall not do anything by which the Lessor may be deprived of such allowance or grant.
+  
+  15.06  	The Lessee hereby represents and confirms that:
+    (a)	The Lessee has not defaulted in respect of any payment obligation (whether relating to loan, finance 
+    or otherwise) or any other type of obligation owed to any bank or financial institution; and 
+    (b)	The Lessee has not defaulted in payment of any taxes or other dues owed to the Government or any local 
+    authority.
+  
+  16.0  	LATE PAYMENT
+  
+  16.01  	Late Payment Charge
+  Where the Lessee has defaulted to pay on the due date any sum payable by him under this Agreement and no 
+  postponement has been permitted by the Lessor in respect thereof the Lessor shall at its discretion be 
+  entitled to charge a late payment charge in such amount as may be determined by the Lessor from time to 
+  time for the entire period of such default. 
+  (a)	The amount of such late payment charge shall be calculated by the Lessor on the total value of obligations
+   undischarged as at the due date. 
+  (b)	Any sums charged by the Lessor in addition to the amount in default hereunder such as the late payment charge
+   aforesaid shall be payable immediately upon notice thereof by the Lessor. 
+  (c)	Any payments made by the Lessee in settlement of any sums so due from him, shall be credited by the Lessor
+   to a separate account maintained by the Lessor. The sums so credited shall be used by the Lessor for Sharia 
+   compliant charitable activities.
+  
+  16.02   	Court Imposed Penalty
+  In case 
+  (a)	any amount(s) referred to in Clause 16.01 above, is not paid by the Lessee; or 
+  (b)	the Lessee delays the payment of any amount due hereunder as a result of which any direct or indirect 
+  costs are incurred by the Lessor, the Lessor shall have the right to approach a competent Court 
+  (i) 	for recovery of any amounts remaining unpaid as well as 
+  (ii) 	for imposing of a penalty on the Lessee. 
+  In this regard the Lessee is aware and acknowledges that notwithstanding any amount paid by the Lessee to 
+  the Lessor hereunder, the Court has the power to impose penalty, at its discretion, and from the amount of 
+  such penalty, a smaller or bigger part, depending upon the circumstances, can be awarded as solatium to the 
+  Lessor, determined on the basis of direct and indirect costs incurred, other than the opportunity cost.
+  
+  Refer schedule ‘A’ – (F) for penalty rate
+   
+  IN WITNESS WHEREOF the Parties hereto have set their hands and common seal hereunto and to two others of the 
+  same tenor and date as these presents at Colombo on this ……………day of  ……………Two Thousand and ……… (20………) 
+  
+  The Lessor
+  
+  Signed by ..................................................... 	)
+  Authorized Signatories,  Amana Bank PLC 	) 
+  on this ......................day of........................... )
+  Two Thousand and ......... at ..........................	)
+    
+  
+  Signed by .....................................................
+  Witnesses to above signature: 	 
+  1.	Name :  ………………………….      
+      Signature: ……………………….	Witnesses to above signature: 	 
+  2.	Name :  ………………………….      
+      Signature: ……………………….
+  
+  
+  Signed by ..................................................... 	)
+  Authorized Signatories,  Amana Bank PLC 	) 
+  on this ......................day of........................... )
+  Two Thousand and ......... at ..........................	)
+    
+  
+  Signed by .....................................................
+  Witnesses to above signature: 	 
+  1.	Name :  ………………………….      
+      Signature: ……………………….	Witnesses to above signature: 	 
+  2.	Name :  ………………………….      
+      Signature: ……………………….
+  The Lessee
+  
+  Signed by ..................................................... 	)
+  ......................................................................	) 
+  on this ......................day of........................... )
+  Two Thousand and ......... at ..........................	)
+    
+  
+  Signed by
+  Witnesses to above signature: 	 
+  1.	Name :  ………………………….      
+      Signature: ……………………….	Witnesses to above signature: 	 
+  2.	Name :  ………………………….      
+      Signature: ……………………….
+  
+  Signed by ..................................................... 	)
+  ......................................................................	) 
+  on this ......................day of........................... )
+  Two Thousand and ......... at ..........................	)
+    
+  Signed by 
+  Witnesses to above signature: 	 
+  1.	Name :  ………………………….      
+      Signature: ……………………….	Witnesses to above signature: 	 
+  2.	Name :  ………………………….      
+      Signature: ……………………….
+         
+  SCHEDULE ‘A’
+  
+  
+  (a)	Description & Condition of Leased Property
+  NW DAB-5274
+  MAHINDRA BMT PLUS MDI
+  
+  
+  (b)	Duration
+  
+  Commencement Date  	: 	Date of physical delivery of the Leased Property to the Lessee being 
+  the date of the duly executed Acceptance Receipt in the form set out in Schedule B attached to this 
+  Lease Agreement and which shall be part and parcel hereof.
+  
+  Duration 	 	:  	36 months from the Commencement Date
+  
+  (c)	Lease Rent & Installments (including profits)
+  Rs. 87,293.00
+  36 Months 
+  
+  
+  (d)	Profits Markup per annum	: 10.75%
+  
+  
+  (e)	Location for the Storage/Use/Operation/Parking of the Leased Property by Lessee:
+  
+  
+  (e)	Location for the Return of the Leased Property by Lessee:
+  Amana Bank PLC
+  No. 486, Galle Road, Colombo 03
+  
+  
+  (f)	Penalty rate on delayed rentals: .......................................
+               
+   
+   
+  SCHEDULE ‘B’
+  
+  
+  ACCEPTANCE RECEIPT
+  
+  
+  Our Ref. 	: <span id = "reffNum16"></span> 
+  
+  Date        	:  <span id = "date6"></span> 
+  
+  1.	Name & Address of Lessee: 
+  (Insert NIC No./Company Registration No.) 
+  <span id = "custName15"></span> 
+  <span id = "cusNIC6"></span> 
+  <span id = "custAdr1_14"></span> 
+  
+  2.	Name & Address of Lessor : 
+  Amana Bank PLC, 
+  No. 486, Galle Road, Colombo 3
+  
+  
+  3.	Name & Address of Supplier :
+  <span id = "supname3"></span> 
+  <span id = "supAdrs3"></span> 
+  
+  4.	Description of Leased Property : 
+  Make and Model  	:  <span id = "vehtype5"></span> 
+  Engine No./ Model No.  	:  <span id = "enginum4"></span> 
+  Chassis No. / Serial No.  	:  <span id = "chasnum4"></span> 
+  Year of Manufacture  	:  <span id = "yofm4"></span> 
+  
+  
+  5.	Leased Property to be delivered at : 
+  <span id = "custAdr1_15"></span> 
+  
+  
+  I/We hereby acknowledge the receipt of the above mentioned Leased Property (which is the subject matter 
+  of the Lease Agreement No. <span id = "reffNum19"></span> dated ………………
+  day of ……....………….............................…… (         )   between Amana Bank PLC and me/us).  I/We 
+  have examined the above Leased Property and found it to be in good order and condition and to my/our 
+  satisfaction. 
+  
+  
+  I/We acknowledge that the terms of the lease shall commence from the date of this receipt. 
+  
+  
+  ……………………………                                                                        Date: 
+  Signature of the Lessee*                                                   
+   
+  *In case of the Lessee being an incorporated company, the authorized signatory must sign and his/her 
+  signature verified.
+  
 
 </pre>
 </div>
@@ -1558,9 +1875,9 @@ Signature of the Lessee*
 <pre id="test4">
   GUARANTEE BOND
 
-Ref No. : «Ref_No»
+Ref No. : <span id ="reffNum20"></span>
 
-«Date_Offer_Letter»
+<span id="dateoffer3"></span>
 
 Manager,
 Amãna Bank PLC,
@@ -1568,44 +1885,145 @@ Amãna Bank PLC,
 
 Dear Sir / Madam,
 
-In consideration of AMÃNA BANK PLC a licensed commercial bank established under the Companies Act. No. 07 of 2007 of the said republic of Sri Lanka and having its Registered Office at No. 486 Galle Road, Colombo 3, (hereinafter referred to as the “BANK”) having agreed to lease upon the terms and conditions contained in an Indenture of Lease bearing the date of these presents (hereinafter referred to as the “LEASE”) and executed between the BANK of the one part and «Customer_Full_Name» of «Customer_Address» (hereinafter referred to as the “LESSEE”) of the other part enabling the LESSEE to have the use and enjoyment of the Asset/Equipment described in the LEASE (hereinafter referred to as the  “ASSET/EQUIPMENT”)  but upon the terms and conditions contained in the LEASE including the conditions that the LESSEE shall pay to the BANK the rentals specified in the LEASE in time (hereinafter referred to as the “RENTAL PAYMENT OBLIGATION”), I/We the undersigned having seen the lease having taken note of the contents thereof. 
+In consideration of AMÃNA BANK PLC a licensed commercial bank established under the 
+Companies Act. No. 07 of 2007 of the said republic of Sri Lanka and having its Registered
+Office at No. 486 Galle Road, Colombo 3, (hereinafter referred to as the “BANK”) having
+agreed to lease upon the terms and conditions contained in an Indenture of Lease bearing
+the date of these presents (hereinafter referred to as the “LEASE”) and executed between
+the BANK of the one part and <span id="custName16"></span> of <span id="custAdr1_16"></span> (hereinafter 
+referred to as the “LESSEE”) of the other part enabling the LESSEE to have the use and
+enjoyment of the Asset/Equipment described in the LEASE (hereinafter referred to as the
+“ASSET/EQUIPMENT”)  but upon the terms and conditions contained in the LEASE including
+the conditions that the LESSEE shall pay to the BANK the rentals specified in the LEASE in 
+time (hereinafter referred to as the “RENTAL PAYMENT OBLIGATION”), I/We the undersigned 
+having seen the lease having taken note of the contents thereof. 
 
-1.	«Personal_Guarantee_Full_Name» holder of National Identity Card bearing No. «Personal_Guarantee_NIC» of «Personal_Guarantee_Address».
+1.<span id="pgName"></span> holder of National Identity Card bearing No. <span id="pgNIC"></span> of
+ <span id="pgAdrs"></span>.
 
-2.	«Personal_Guarantee_Full_Name» holder of National Identity Card bearing No. «Personal_Guarantee_NIC» of «Personal_Guarantee_Address».
+2.<span id="pgName2"></span> holder of National Identity Card bearing No. <span id="pgNIC2"></span> of
+ <span id="pgAdrs2"></span>.
 
-Do hereby agree and undertake and bind ourselves and our heirs, executors, administrators and assigns as follows:
+  Do hereby agree and undertake and bind ourselves and our heirs, executors, administrators and assigns
+  as follows:
 
-1.	To Guarantee unto the BANK the compliance by the LESSEE of the several terms  and conditions contained in the LEASE including but not being limited to meet the Rental Payment Obligation in the event of the LESSEE failing to meet the same in time to the BANK in terms of the LEASE and to pay to the BANK on demand at its head office in Colombo / Branch at ____________________ without any demur or protest the Rentals or any part thereof together with other charges thereon at the rate or rates specified in the LEASE and legal and other charges and expenses whether taxable or not occasioned by or incidental to the enforcement of this or any other security for the LEASE or the recovery thereof (hereinafter collectively referred to as the “GUARANTEE”).
+1.To Guarantee unto the BANK the compliance by the LESSEE of the several terms  and conditions contained in 
+the LEASE including but not being limited to meet the Rental Payment Obligation in the event of the LESSEE 
+failing to meet the same in time to the BANK in terms of the LEASE and to pay to the BANK on demand at its 
+head office in Colombo / Branch at ____________________ without any demur or protest the Rentals or any part 
+thereof together with other charges thereon at the rate or rates specified in the LEASE and legal and other 
+charges and expenses whether taxable or not occasioned by or incidental to the enforcement of this or any 
+other security for the LEASE or the recovery thereof (hereinafter collectively referred to as the “GUARANTEE”).
 
-2.	The liability hereunder shall not in any way be affected or reduced nor shall I/we be released from my/our obligation hereunder if the BANK from time to time varies or postpones the terms of the LEASE and/or grants the LESSEE any financial assistance.
+2.The liability hereunder shall not in any way be affected or reduced nor shall I/we be released from my/our 
+obligation hereunder if the BANK from time to time varies or postpones the terms of the LEASE and/or grants 
+the LESSEE any financial assistance.
 
-3.	This Guarantee shall be deemed to be binding on me/us notwithstanding any incapacity of or limitation upon the LESSEE or any person acting or purporting to act on behalf of or in the name of the LESSEE with respect to leasing or of or upon the BANK or any person acting or purporting to act on behalf of the BANK or in the name of the BANK with respect to leasing or any defect or insufficiency in the leasing powers of the LESSEE or of any such person aforesaid or in the exercise thereon respectively which might be a defense between the LESSEE and the BANK nor shall this Guarantee be or become in any way prejudice, affected or unenforceable whether wholly or in part by reason of any fact matter or circumstances concerning the LESSEE or any other person or concerning the LEASE or any transaction of or with the LESSEE or any other person whether or not such fact matter or circumstances be known to the BANK or come to the knowledge of the BANK at any time in the future whether or not the same be disclosed by the BANK to me/us
+3.This Guarantee shall be deemed to be binding on me/us notwithstanding any incapacity of or limitation upon 
+the LESSEE or any person acting or purporting to act on behalf of or in the name of the LESSEE with respect 
+to leasing or of or upon the BANK or any person acting or purporting to act on behalf of the BANK or in the 
+name of the BANK with respect to leasing or any defect or insufficiency in the leasing powers of the LESSEE 
+or of any such person aforesaid or in the exercise thereon respectively which might be a defense between the 
+LESSEE and the BANK nor shall this Guarantee be or become in any way prejudice, affected or unenforceable 
+whether wholly or in part by reason of any fact matter or circumstances concerning the LESSEE or any other 
+person or concerning the LEASE or any transaction of or with the LESSEE or any other person whether or not 
+such fact matter or circumstances be known to the BANK or come to the knowledge of the BANK at any time in 
+the future whether or not the same be disclosed by the BANK to me/us
 
-4.	This Guarantee shall not be considered as satisfied by an intermediate or part performance or satisfaction by the LESSEE or any other person of any part of the obligations cast on the LESSEE including the RENTAL PAYMENT OBLIGATION.
+4.This Guarantee shall not be considered as satisfied by an intermediate or part performance or satisfaction 
+by the LESSEE or any other person of any part of the obligations cast on the LESSEE including the RENTAL 
+PAYMENT OBLIGATION.
 
-5.	In all matters concerning the LEASE the BANK shall entitled to act on the instructions of the LESSEE and in the absence of such instructions to act at the BANKS discretion and our liability hereunder shall not in any way be affected or reduced by the acting of the BANK in accordance with such instructions or at the BANK'S discretion or the purposes of this Guarantee any instructions given by any person being or purporting to be or acting or purporting to act on behalf of the LESSEE or by any person or persons expressly or impliedly authorised by the LESSEE shall be deemed to be the instructions of the LESSEE
+5.In all matters concerning the LEASE the BANK shall entitled to act on the instructions of the LESSEE and in 
+the absence of such instructions to act at the BANKS discretion and our liability hereunder shall not in any 
+way be affected or reduced by the acting of the BANK in accordance with such instructions or at the BANK'S 
+discretion or the purposes of this Guarantee any instructions given by any person being or purporting to be 
+or acting or purporting to act on behalf of the LESSEE or by any person or persons expressly or impliedly 
+authorised by the LESSEE shall be deemed to be the instructions of the LESSEE
 
  
-6.	This Guarantee shall be binding on and remain in force and be enforceable at all times against and shall continue to be a security against us and our estate notwithstanding the death or disability of us until the whole of the obligations under the LEASE shall have been fully satisfied and performed to the BANK and shall be irrevocable by us or any of our heirs executors and administrators.
-7.	Any acknowledgement in writing by the LESSEE or by any person being or appearing to be or acting or purporting to act on behalf of the LESSEE of the amount of the moneys owing to the BANK by the LESSEE and any judgment obtained by the BANK against the LESSEE in respect thereof shall be binding and conclusive on and against us or our heirs executors or administrators in all courts of law and elsewhere
+6.This Guarantee shall be binding on and remain in force and be enforceable at all times against and shall 
+continue to be a security against us and our estate notwithstanding the death or disability of us until the 
+whole of the obligations under the LEASE shall have been fully satisfied and performed to the BANK and shall 
+be irrevocable by us or any of our heirs executors and administrators.
+7.Any acknowledgement in writing by the LESSEE or by any person being or appearing to be or acting or 
+purporting to act on behalf of the LESSEE of the amount of the moneys owing to the BANK by the LESSEE and 
+any judgment obtained by the BANK against the LESSEE in respect thereof shall be binding and conclusive on 
+and against us or our heirs executors or administrators in all courts of law and elsewhere
 
-8.	The BANK is at liberty (without the consent of or notice to us or our heirs executors or administrators) without thereby affecting the rights of the BANK hereunder at any time and from time to time to accept from any other person or persons one or more Guarantee for the obligations under the LEASE and/or to vary exchange abstain from perfecting or release in whole or in part any Guarantee or security received taken or held or to be received taken or held by the BANK from or on behalf or on account of the LESSEE or us or any persons or persons in respect of the obligations under the LEASE or any part thereof and to compound with give time for payment or other indulgence to accept payment of rentals on a deferred basis from the LESSEE or us or our aforewritten or any person or persons liable therefore or liable on any Guarantee or security received taken or held or to be received taken or held by the BANK.
+8.The BANK is at liberty (without the consent of or notice to us or our heirs executors or administrators) 
+without thereby affecting the rights of the BANK hereunder at any time and from time to time to accept from 
+any other person or persons one or more Guarantee for the obligations under the LEASE and/or to vary exchange 
+abstain from perfecting or release in whole or in part any Guarantee or security received taken or held or 
+to be received taken or held by the BANK from or on behalf or on account of the LESSEE or us or any persons 
+or persons in respect of the obligations under the LEASE or any part thereof and to compound with give time 
+for payment or other indulgence to accept payment of rentals on a deferred basis from the LESSEE or us or 
+our aforewritten or any person or persons liable therefore or liable on any Guarantee or security received 
+taken or held or to be received taken or held by the BANK.
 
-9.	Any payment which the BANK may receive from the LESSEE or me/us or from any other person or persons or from my/our estate whether in or in consequence of Bankruptcy liquidation, any arrangement or composition with creditors or otherwise howsoever shall be taken and applied as payments in gross without any right on my/our part or on the part of my/our aforewritten to stand in the place of the BANK in respect of or to claim the benefit of any such composition or payment or any security held by the BANK until the BANK shall have received the full amount of the moneys due to it and shall not prejudice the right of the BANK to recover monies from me/us or my/our aforewritten to the full extent of this Guarantee.
+9.Any payment which the BANK may receive from the LESSEE or me/us or from any other person or persons or 
+from my/our estate whether in or in consequence of Bankruptcy liquidation, any arrangement or composition 
+with creditors or otherwise howsoever shall be taken and applied as payments in gross without any right on 
+my/our part or on the part of my/our aforewritten to stand in the place of the BANK in respect of or to 
+claim the benefit of any such composition or payment or any security held by the BANK until the BANK shall 
+have received the full amount of the moneys due to it and shall not prejudice the right of the BANK to 
+recover monies from me/us or my/our aforewritten to the full extent of this Guarantee.
 
-10.	This Guarantee shall be construed and take effect as a Guarantee of the whole and every part of the LESSEE’S obligations under the LEASE and accordingly I/we shall not be entitled as against the BANK to any right of proof in the Bankruptcy or insolvency of the LESSEE or other right of a surety discharging its liability in respect of the principal debt unless and until the whole of the LESSEE'S obligations under the LEASE shall have first been completely discharged and satisfied and further for the purpose of enabling the BANK to sue the LESSEE or prove against the assets of the LESSEE for the whole of the LESSEE’S obligations under the LEASE or to preserve intact the liability of the LESSEE and keep for such time as the BANK may think prudent any monies received recovered or realized hereunder to and in a separate or suspense account to my/our credit or the credit of such other person or transactions if any as the BANK shall think fit without any intermediate obligation on the part of the BANK to apply the same or any part thereof in or towards the discharge of the LESSEE’S obligations under the LEASE or any intermediate right on my/our part or on my/our aforewritten to sue the LESSEE or prove against its assets in competition with or so as to diminish any advantage that would or might come to the BANK or to treat the liability of the LESSEE as diminished.
+10.This Guarantee shall be construed and take effect as a Guarantee of the whole and every part of the 
+LESSEE’S obligations under the LEASE and accordingly I/we shall not be entitled as against the BANK to 
+any right of proof in the Bankruptcy or insolvency of the LESSEE or other right of a surety discharging 
+its liability in respect of the principal debt unless and until the whole of the LESSEE'S obligations 
+under the LEASE shall have first been completely discharged and satisfied and further for the purpose of 
+enabling the BANK to sue the LESSEE or prove against the assets of the LESSEE for the whole of the LESSEE’S 
+obligations under the LEASE or to preserve intact the liability of the LESSEE and keep for such time as the 
+BANK may think prudent any monies received recovered or realized hereunder to and in a separate or suspense 
+account to my/our credit or the credit of such other person or transactions if any as the BANK shall think 
+fit without any intermediate obligation on the part of the BANK to apply the same or any part thereof in or 
+towards the discharge of the LESSEE’S obligations under the LEASE or any intermediate right on my/our part 
+or on my/our aforewritten to sue the LESSEE or prove against its assets in competition with or so as to 
+diminish any advantage that would or might come to the BANK or to treat the liability of the LESSEE as diminished.
 
-11.	No assurance or security given to the BANK which may be avoided and no payment made to the BANK which may be recoverable under any law for the time being in force relating to Bankruptcy or insolvency and no release settlement or discharge which may have been given or made on the faith of any such assurance security or payment shall prejudice or affect the right of the recovery from me/us to the full extent of this Guarantee.
+11.No assurance or security given to the BANK which may be avoided and no payment made to the BANK which 
+may be recoverable under any law for the time being in force relating to Bankruptcy or insolvency and no 
+release settlement or discharge which may have been given or made on the faith of any such assurance security 
+or payment shall prejudice or affect the right of the recovery from me/us to the full extent of this Guarantee.
 
-12.	I/We have not taken in respect of the liability hereby undertaken by me/us and I/we will not take from the LESSEE either directly or indirectly without the consent of the BANK any sum of money or promissory note, bill of exchange, mortgage charge or other security whether merely personal or involving any change on any ASSET/EQUIPMENT whatsoever of the LESSEE thereby I/we or any person or persons claiming through me/us by endorsement assignment or otherwise would or might diminish the ASSET/EQUIPMENT distributable amongst the creditors of the LESSEE and as regards any such security as aforesaid which I/we may have taken or may take with such consent as aforesaid shall be a security to the BANK for the fulfillment of my/our obligations hereunder and shall be forthwith deposited with the BANK for that purpose by me/us or my/our aforewritten who may have taken or take the same.
+12.I/We have not taken in respect of the liability hereby undertaken by me/us and I/we will not take from the 
+LESSEE either directly or indirectly without the consent of the BANK any sum of money or promissory note, bill 
+of exchange, mortgage charge or other security whether merely personal or involving any change on any ASSET/
+EQUIPMENT whatsoever of the LESSEE thereby I/we or any person or persons claiming through me/us by endorsement 
+assignment or otherwise would or might diminish the ASSET/EQUIPMENT distributable amongst the creditors of the 
+LESSEE and as regards any such security as aforesaid which I/we may have taken or may take with such consent as
+aforesaid shall be a security to the BANK for the fulfillment of my/our obligations hereunder and shall be f
+orthwith deposited with the BANK for that purpose by me/us or my/our aforewritten who may have taken or take
+ the same.
 
-13.	My/our liability or the liability of my/our respective aforewritten hereunder shall not be affected by failure on the part of the BANK to take any security or by any invalidity or insufficiency of any security taken or by any existing or future arrangements as to the application by the LESSEE of the ASSET/EQUIPMENT leased by the BANK or in the event of this Guarantee proving not to be binding on me/us or my/our aforewritten for any reason whatsoever and this Guarantee shall be in addition to and shall not in any way be prejudiced or affected by any collateral or other security now or hereafter held by the BANK for all or any part of the LESSEE'S obligations under the LEASE nor shall such collateral or other security or any lien to which the BANK may be otherwise entitled or the liability of any person not party hereto for all or any part of the LESSEE'S obligations under the LEASE be in anywise prejudiced or affected by this Guarantee.
+13.My/our liability or the liability of my/our respective aforewritten hereunder shall not be affected by 
+failure on the part of the BANK to take any security or by any invalidity or insufficiency of any security 
+taken or by any existing or future arrangements as to the application by the LESSEE of the ASSET/EQUIPMENT 
+leased by the BANK or in the event of this Guarantee proving not to be binding on me/us or my/our aforewritten
+ for any reason whatsoever and this Guarantee shall be in addition to and shall not in any way be prejudiced 
+ or affected by any collateral or other security now or hereafter held by the BANK for all or any part of 
+ the LESSEE'S obligations under the LEASE nor shall such collateral or other security or any lien to which 
+ the BANK may be otherwise entitled or the liability of any person not party hereto for all or any part of 
+ the LESSEE'S obligations under the LEASE be in anywise prejudiced or affected by this Guarantee.
 
  
-14.	I/We specifically agree that the BANK shall be at liberty either in one action to sue the LESSEE and me/us or my/our aforewritten and also any other person or persons or to proceed in the first instance against me/us or my/our aforewritten and further that I/we hereby renounce the right to claim that the LESSEE should be excused or proceeded against by action in the first instance and the right to claim that the BANK should divide the claim of the BANK and bring actions against me/us or any other person or persons whomsoever each for his/her portion pro rata and the right to claim in any action brought against me/us or my/our aforewritten with or without all or any other person that the BANK should only recover from me/us or my/our aforewritten a pro rata share of the amount claimed and all other rights and benefits to which sureties are or may be by law entitled it being agreed that I am/we are liable in all respects hereunder as principal debtors to the extent aforementioned including the liability to be sued before recourse is had against the LESSEE.
+14.I/We specifically agree that the BANK shall be at liberty either in one action to sue the LESSEE and 
+me/us or my/our aforewritten and also any other person or persons or to proceed in the first instance 
+against me/us or my/our aforewritten and further that I/we hereby renounce the right to claim that the 
+LESSEE should be excused or proceeded against by action in the first instance and the right to claim 
+that the BANK should divide the claim of the BANK and bring actions against me/us or any other person 
+or persons whomsoever each for his/her portion pro rata and the right to claim in any action brought 
+against me/us or my/our aforewritten with or without all or any other person that the BANK should only 
+recover from me/us or my/our aforewritten a pro rata share of the amount claimed and all other rights 
+and benefits to which sureties are or may be by law entitled it being agreed that I am/we are liable 
+in all respects hereunder as principal debtors to the extent aforementioned including the liability 
+to be sued before recourse is had against the LESSEE.
 
-15.	In the foregoing paragraphs the words “We”  “our” and "us " shall where the context so requires or admits mean and include each or any of us and may be construed by the BANK in such manner as is most advantageous to the BANK.
+15.In the foregoing paragraphs the words “We”  “our” and "us " shall where the context so requires 
+or admits mean and include each or any of us and may be construed by the BANK in such manner as is 
+most advantageous to the BANK.
 
 Signed by the within named
 ________________________________________________ in the presence of 
@@ -1641,36 +2059,39 @@ Year of Manufacture  	         :   <span id = "yofm3"></span>
 Registration Number		 :   <span id = "regstatus2"></span>
 
 
-2.	Purchase Price (If applicable)                         	                   :  Rs.3,900,000.00
-Bank’s (Lessor’s) Contribution 			                   :  Rs.2,700,000.00
-Customer’s (Lessee’s) Contribution	 		      :  Rs.1,200,000.00
+2.Purchase Price (If applicable)                :  Rs.3,900,000.00
+Bank’s (Lessor’s) Contribution 			:  Rs.2,700,000.00
+Customer’s (Lessee’s) Contribution	        :  Rs.1,200,000.00
 
 
-Present Market Value                                                             :  Rs.3,900,000.00
-3.	
+3.Present Market Value                          :  Rs.3,900,000.00
+	
 
-4.	Initial/Present Proportionate Ownership over the vehicle as per the Market Value
+4.Initial/Present Proportionate Ownership over the vehicle as per the Market Value
 Initial/Present Proportionate Ownership of the Bank (Lessor’s)           : 44% 
-Initial/Present Proportionate Ownership of the Customer (Lessee’s)    : 56%
+Initial/Present Proportionate Ownership of the Customer (Lessee’s)       : 56%
 
 
 5.	Beneficial  Ownership
-The Customer’s (Lessee’s) Beneficial Ownership                                   : 44%  
+The Customer’s (Lessee’s) Beneficial Ownership                           : 44%  
 
-The Beneficial Ownership of the Customer (Lessee) is the portion renting out (as per the above item No-5) by the Bank (Lessor) to the customer (Lessee).    
+The Beneficial Ownership of the Customer (Lessee) is the portion renting out (as per the above item No-5) by the Bank 
+(Lessor) to the customer (Lessee).    
 
 6.	Legal  Ownership
 The complete Legal Ownership over the vehicle is with the Bank (Lessor).
 
-All rights title and ownership in and to the Leased Property leased hereunder and all obligations relating thereto shall at all times remain vested in the Lessor subject to the terms of this Lease Agreement and the Lessee covenants and agrees not to do or perform any act prejudicial to such rights title and ownership.
+All rights title and ownership in and to the Leased Property leased hereunder and all obligations relating thereto shall
+at all times remain vested in the Lessor subject to the terms of this Lease Agreement and the Lessee covenants and agrees
+ not to do or perform any act prejudicial to such rights title and ownership.
 
 
-                                               I/We acknowledge the above details. 
+                                                                                   I/We acknowledge the above details. 
 
 
-……………………………                                            ……………………………   
-The Lessor 				         	Lessee*
-Authorized Signatory- Amana Bank PLC		Signature of the Customer
+……………………………                                                                                  ……………………………   
+The Lessor 				                                                	Lessee*
+Authorized Signatory- Amana Bank PLC		                           Signature of the Customer
 Date:                                                                       Date:                                                    
 
 

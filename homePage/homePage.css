@@ -211,9 +211,10 @@ header .container {
   box-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.05);
 }
 
-.person {
-  width: 100%;
-  transform: translate(2%, 10px);
+img.person {
+  width: 120%;
+  height: 600px;
+  transform: translate(1%, -60px);
 }
 
 .toggle-btn {
@@ -360,8 +361,9 @@ header .container {
   }
 
   .person {
-    width: 100%;
-    transform: none;
+    width: 120%;
+    height: 600px;
+    transform: translate(2%, 10px);
   }
 
   .logo h3 {

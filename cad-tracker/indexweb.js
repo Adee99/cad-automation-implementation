@@ -1,4 +1,5 @@
 // fetch data from Excel
+let refnum = 0;
 let selectedFile;
 console.log(window.XLSX);
 document.getElementById('input').addEventListener("change", (event) => {
@@ -47,7 +48,7 @@ document.getElementById('button').addEventListener("click", () => {
               //console.log(data);
               //document.getElementById("jsondata").innerHTML = JSON.stringify(rowObject,undefined,4)
              
-              const refnum = rowObject.map((item) => {
+               refnum = rowObject.map((item) => {
                   return item.RefNo;
               })
 
@@ -128,6 +129,9 @@ document.getElementById('button').addEventListener("click", () => {
               document.getElementById("refNum").innerHTML = refnum;
               document.getElementById("refNum1").innerHTML = refnum;
               document.getElementById("refNum3").innerHTML = refnum;
+
+              //document.getElementById("refNum9").innerHTML = refnum;
+      
            
               document.getElementById("date").innerHTML = date;
               document.getElementById("cstAdr1").innerHTML = cstAdrOne;
@@ -312,10 +316,11 @@ window.onload = function(){
       const invoice2 = this.document.getElementById("test");
       const invoice3 = this.document.getElementById("test2");
       const invoice4 = this.document.getElementById("test3");
-      
+      //var abc = document.getElementById("refNum").value;
+     
       var opt1 = {
         margin: 1,
-        filename: 'Delivery_Order_Report.pdf',
+        filename:refnum +'_Delivery_Order_Report.pdf',
         image: { type: 'jpeg', quality: 0.98 },
         html2canvas: { scale: 4 },
         jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
@@ -325,7 +330,7 @@ window.onload = function(){
       var opt2 = {
         margin: 0.6,
         top:0.6,
-        filename: 'Offer_Letter.pdf',
+        filename:refnum + '_Offer_Letter.pdf',
         //path: 'C:\Users\Acer\Documents\abc',
         image: { type: 'jpeg', quality: 0.98 },
         html2canvas: { scale: 2},
@@ -334,7 +339,7 @@ window.onload = function(){
 
       var opt3 = {
         margin: 0.6,
-        filename: 'Facility_Term_Sheet.pdf',
+        filename:refnum + '_Facility_Term_Sheet.pdf',
         //path: 'C:\Users\Acer\Documents\abc',
         image: { type: 'jpeg', quality: 0.98 },
         html2canvas: { scale: 2 },
@@ -343,7 +348,7 @@ window.onload = function(){
 
       var opt4 = {
         margin: 0.5,
-        filename: 'Sharia_Documents.pdf',
+        filename:refnum + "_Sharia_Document.pdf",
         //path: 'C:\Users\Acer\Documents\abc',
         image: { type: 'jpeg', quality: 0.98 },
         html2canvas: { scale: 2 },
