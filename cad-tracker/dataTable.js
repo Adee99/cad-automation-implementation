@@ -180,8 +180,8 @@ function butRowEdit(but) {
       var cont = $td.html(); 
       //Save previous content in a hide <div>
       var div  = '<div style="display: none;">' + cont + '</div>';  
-      var input= '<input class="form-control input-sm"  value="' + cont + '">';
-      $td.html(div + input);  //Set new content
+      var input= '<input class="form-control  input-sm"  value="' + cont + '">';
+      $td.html(div + input);  //Set new content: ;
       //Set focus to first column
       if (!focused) {
         $td.find('input').focus();

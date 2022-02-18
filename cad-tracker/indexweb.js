@@ -110,13 +110,14 @@ document.getElementById('button').addEventListener("click", () => {
               }))
 
               let rsum = rowObject.map((item => {
-                return item.RSUM.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+                return item.RSUM;
               }))
 
               //  rsum = new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 2 }).format(rsum);
 
               let dmsum = rowObject.map((item => {
-                return item.DmSum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+                return item.DmSum;
+                //.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
               }))
 
               const setdate = rowObject.map((item => {
@@ -206,11 +207,12 @@ document.getElementById('button').addEventListener("click", () => {
               document.getElementById("yom5").innerHTML = yom;
               document.getElementById("yom6").innerHTML = yom;
 
-              document.getElementById("rsum").innerHTML = rsum;
-              document.getElementById("rsum1").innerHTML = rsum;
-              document.getElementById("rsum2").innerHTML = rsum;
-              document.getElementById("rsum3").innerHTML = rsum;
-              document.getElementById("rsum4").innerHTML = rsum;
+              //rsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+              document.getElementById("rsum").innerHTML = rsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+              document.getElementById("rsum1").innerHTML = rsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+              document.getElementById("rsum2").innerHTML = rsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+              document.getElementById("rsum3").innerHTML = rsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+              document.getElementById("rsum4").innerHTML = rsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
 
               document.getElementById("stdate").innerHTML = setdate;
 
@@ -225,7 +227,7 @@ document.getElementById('button').addEventListener("click", () => {
               document.getElementById("stdate1").innerHTML = setdate;
               document.getElementById("cstAdr1_3").innerHTML = cstAdrTwo;
 
-              document.getElementById("dmsum").innerHTML = dmsum;  
+              document.getElementById("dmsum").innerHTML = dmsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");  
 
 
               //dateTime

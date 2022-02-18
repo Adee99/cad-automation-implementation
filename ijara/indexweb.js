@@ -340,11 +340,11 @@ document.getElementById('button').addEventListener("click", () => {
 
               document.getElementById("servicecharge").innerHTML = servicecharge;
 
-              document.getElementById("mvalue").innerHTML = marketvalue;
+              document.getElementById("mvalue").innerHTML = marketvalue.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
 
-              document.getElementById("dmvalue").innerHTML = dmvalue;
-              document.getElementById("dmvalue2").innerHTML = dmvalue;
-              document.getElementById("dmvalue3").innerHTML = dmvalue;
+              document.getElementById("dmvalue").innerHTML = dmvalue.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+              document.getElementById("dmvalue2").innerHTML = dmvalue.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+              document.getElementById("dmvalue3").innerHTML = dmvalue.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
 
               // document.getElementById("rsum").innerHTML = rsum;
               // document.getElementById("rsum1").innerHTML = rsum;
