@@ -140,8 +140,11 @@ function butRowAcep(but) {
 
     document.getElementById("supGreet_0").innerHTML = document.getElementById("supGreet_01tb").innerHTML;
 
-    //document.getElementById("rsum").innerHTML = document.getElementById("rsum3").innerHTML;
-    document.getElementById("rsum1").innerHTML = document.getElementById("rsum3").innerHTML;
+    //document.getElementById("dmsum").innerHTML = document.getElementById("dmsum3").innerHTML;
+    document.getElementById("dmsum1").innerHTML = document.getElementById("dmsum3").innerHTML;
+    document.getElementById("dmsum_0").innerHTML = document.getElementById("dmsum3").innerHTML;
+    document.getElementById("dmsum2").innerHTML = document.getElementById("dmsum3").innerHTML;
+    document.getElementById("dmsum4").innerHTML = document.getElementById("dmsum3").innerHTML;
 
     document.getElementById("cstAdr1").innerHTML = document.getElementById("cstAdr1_5").innerHTML;
     document.getElementById("cstAdr1_1").innerHTML = document.getElementById("cstAdr1_5").innerHTML;

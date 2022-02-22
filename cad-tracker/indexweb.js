@@ -125,11 +125,11 @@ document.getElementById('button').addEventListener("click", () => {
                 return item.YOM;
               }))
 
-              let rsum = rowObject.map((item => {
-                return item.RSUM;
-              }))
+              // let dmsum = rowObject.map((item => {
+              //   return 0;
+              // }))
 
-              //  rsum = new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 2 }).format(rsum);
+              //  dmsum = new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 2 }).format(dmsum);
 
               let dmsum = rowObject.map((item => {
                 return item.DmSum;
@@ -382,12 +382,13 @@ document.getElementById('button').addEventListener("click", () => {
               document.getElementById("yom5").innerHTML = yom;
               document.getElementById("yom6").innerHTML = yom;
 
-              //rsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
-              //document.getElementById("rsum").innerHTML = rsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
-              document.getElementById("rsum1").innerHTML = rsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
-              document.getElementById("rsum2").innerHTML = rsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
-              document.getElementById("rsum3").innerHTML = rsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
-              document.getElementById("rsum4").innerHTML = rsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+              //dmsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+              //document.getElementById("dmsum").innerHTML = dmsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+              document.getElementById("dmsum1").innerHTML = dmsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+              document.getElementById("dmsum2").innerHTML = dmsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+              document.getElementById("dmsum3").innerHTML = dmsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+              document.getElementById("dmsum_0").innerHTML = dmsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+              document.getElementById("dmsum4").innerHTML = dmsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
 
               //document.getElementById("stdate").innerHTML = setdate;
 
