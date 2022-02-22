@@ -194,6 +194,7 @@
                     <b>Address:</b>
                     <span class="nullwrap" id="cstAdr1_1"></span>
                     <span class="nullwrap" id="cstAdr1_2"></span>
+                    <span class="nullwrap" id="cstAdr3_1"></span>
                     </div>
                 </p>
             </div>
@@ -213,7 +214,9 @@
                     <span class="nullwrap" id="supName1"></span><br>
                     <b>Address:</b>
                     <span class="nullwrap" id="supName1"></span>
-                    <span class="nullwrap" id="cstAdr1_3"></span>
+                    <span class="nullwrap" id="supAdr_011"></span>
+                    <span class="nullwrap" id="supAdr_021"></span>
+                    <span class="nullwrap" id="supAdr_031"></span>
                     </div>
                 </p>
 
@@ -287,7 +290,7 @@
                 <p class="card-text ">
                   <div class="crdTabs">
                   <b>LKR</b> 
-                  <span class="nullwrap" id="dmsum"></span><br>
+                  <span class="nullwrap" id="purchVal_01"></span><br>
                   </div>
               </p>
               </div>
@@ -356,6 +359,12 @@
                       <th class="table-white" id="cstName3" ></th>
                       <td  id="cstName4" ></td>
                   </tr>
+
+                  <tr>
+                    <th class="table-dark">Customer Greeting</th>
+                    <th class="table-white" id="cstGreet_0" ></th>
+                    <td  id="cstGreet_01" ></td>
+                  </tr>
                 
                   <tr>
                       <th class="table-dark">Customer Address line 1</th>
@@ -368,11 +377,48 @@
                     <th class="table-white" id="cstAdr1_41" ></th>
                     <td id="cstAdr1_51"></td>
            
-                </tr>
+                  </tr>
+                  <tr>
+                    <th class="table-dark">Customer Address line 3</th>
+                    <th class="table-white" id="cstAdr3_2" ></th>
+                    <td id="cstAdr3_3"></td>
+           
+                  </tr>
                   <tr>
                       <th class="table-dark">DM Value</th>
                       <th class="table-white" id="rsum2"></th>
                       <td id="rsum3"></td>
+                  </tr>
+
+                  <tr>
+                    <th class="table-dark">Supplier Name</th>
+                    <th class="table-white" id="supName4" ></th>
+                    <td  id="supName4tb" ></td>
+                  </tr>
+
+                  <tr>
+                    <th class="table-dark">Supplier Greeting</th>
+                    <th class="table-white" id="supGreet_01" ></th>
+                    <td  id="supGreet_01tb" ></td>
+                  </tr>
+
+                  <tr>
+                    <th class="table-dark">Supplier Address line 1</th>
+                    <th class="table-white" id="supAdr_012" ></th>
+                    <td id="supAdr_012tb"></td>
+                  
+                  </tr>
+                  <tr>
+                  <th class="table-dark">Supplier Address line 2</th>
+                  <th class="table-white" id="supAdr_022" ></th>
+                  <td id="supAdr_022tb"></td>
+         
+                  </tr>
+                  <tr>
+                  <th class="table-dark">Supplier Address line 3</th>
+                  <th class="table-white" id="supAdr_032" ></th>
+                  <td id="supAdr_032tb"></td>
+         
                   </tr>
 
                   <tr data>
@@ -469,36 +515,40 @@
                       </b>
                   </p> 
   
-                  <p id="date"> </p>
-  
-                  <span id="cstAdr1"></span>
-                  <span id="cstAdr2"></span>
+                  <p id="date_0"> </p>
+                  
+                  <span id="supName"></span><br>
+                  <span id="supAdr_01"></span><br>
+                  <span id="supAdr_02"></span><br>
+                  <span id="supAdr_03"></span>
+                  
+
                   <br><br>
   
-                  Dear Mr.<span id="supName"></span>,<br><br>
+                  <span id="supGreet_0"></span>,<br><br>
   
                   <p style="text-decoration: underline;">
-                  DELIVERY ORDER ONE UNIT <span id="vhMade"></span> <span id="vhNum"></span> <span id="vhMode"></span> Motor Vehicle.<br></p>
+                  DELIVERY ORDER ONE UNIT <span id="vhNum"></span> Motor Vehicle.<br></p>
   
-                  Please deliver the vehicle described below to our client Mr.<span id="cstName"></span> of <span id="cstAdr1"></span>
-                  <span id="cstAdr2"></span> bearing<br>NIC/Reg. 123456 and transfer the same in favor of the client.<br><br>
-                  Vehicle No		: 	<span id="vhNum1"></span><br>
-                  Make & Model		:	<span id="vhMade1"></span> <span id="vhMode1"></span> <br>
-                  Chassis No		:	<span id="chnum"></span><br>
-                  Engine No		:	<span id="engnum"></span><br>
-                  Year of Manufacture	:	<span id="yom"></span><br>
-                  Special Conditons: <span id="splCondition2">N\A</span><br><br>
-                  We hereby undertake to remit a sum of Rs.<span id="rsum"></span> in your favour, as indicated in your invoice<br><span id="stdate"></span>, subject to the receipt of Duplicate Key & the original Certificate of Registration in favour of<br> Mr.<span id="cstName2"></span>. <br><br>   
+                  Please deliver the vehicle described below to our client <span id="cstName"></span> of <span id="cstAdr1"></span>
+                  <span id="cstAdr2"></span><span id="cstAdr3"></span> bearing NIC/Reg.<span id="cstNic_0"></span> and transfer the same in favor of the client.<br><br>
+                  &emsp;&emsp;Vehicle No: <span id="vhNum1"></span><br>
+                  &emsp;&emsp;Make & Model: <span id="vhMade1"></span> <span id="vhMode1"></span> <br>
+                  &emsp;&emsp;Chassis No: <span id="chnum"></span><br>
+                  &emsp;&emsp;Engine No: <span id="engnum"></span><br>
+                  &emsp;&emsp;Year of Manufacture: <span id="yom"></span><br><br>
+                  <!-- Special Conditons: <span id="splCondition2">N\A</span><br><br> -->
+                  We hereby undertake to remit a sum of Rs.<span id="dmsum1"></span> (<span id="dmsumWrd_0"></span>) in your favour,being the balance amount 
+                  of the total value of Rs.<span id="purchVal_0"></span> (<span id="purchValWrd_0"></span>) indicated in your invoice dated <span id="invoiceDate_0" ></span>, 
+                  subject to the receipt of Duplicate Key & the original Certificate of Registration in favour of <span id="cstName2"></span>. <br><br>   
   
   
-                  <p>
-                     
-                          <span class="nullwrap2"> Yours faithfully,<br><br>
-                                                                                                                                                  
-  ............................................<br>                                                                                          
-                              Authorized Signatory	
-                          </span>
-                  </p> 
+                  <div>Yours faithfully,</div>
+                  <h2 style='margin:0in;font-size:16px;font-family:"Times New Roman",serif;line-height:115%;'><span style='font-size:15px;line-height:115%;font-family:"Garamond",serif;font-weight:normal;'>&nbsp;</span></h2>
+                  <p style='margin:0in;font-size:13px;font-family:"Times New Roman",serif;line-height:115%;'><br></p>
+                  <p style='margin:0in;font-size:13px;font-family:"Times New Roman",serif;line-height:115%;'><span style='font-size:15px;line-height:115%;font-family:"Garamond",serif;'>&hellip;.&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &hellip;.&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;</span></p>
+                  <div>&nbsp; Authorized Signatory &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Authorized Signatory</div>
+                  <p><strong><span style='font-size:15px;line-height:115%;font-family:"Garamond",serif;'><br>&nbsp;</span></strong></p>
             </p>
           
                 </div>

@@ -132,7 +132,15 @@ function butRowAcep(but) {
     document.getElementById("cstName7").innerHTML = document.getElementById("cstName4").innerHTML;
     document.getElementById("cstName8").innerHTML = document.getElementById("cstName4").innerHTML;
 
-    document.getElementById("rsum").innerHTML = document.getElementById("rsum3").innerHTML;
+    document.getElementById("supName").innerHTML = document.getElementById("supName4tb").innerHTML;
+    document.getElementById("supName1").innerHTML = document.getElementById("supName4tb").innerHTML;
+    document.getElementById("supName2").innerHTML = document.getElementById("supName4tb").innerHTML;
+    document.getElementById("supName3").innerHTML = document.getElementById("supName4tb").innerHTML;
+    document.getElementById("supName4").innerHTML = document.getElementById("supName4tb").innerHTML;
+
+    document.getElementById("supGreet_0").innerHTML = document.getElementById("supGreet_01tb").innerHTML;
+
+    //document.getElementById("rsum").innerHTML = document.getElementById("rsum3").innerHTML;
     document.getElementById("rsum1").innerHTML = document.getElementById("rsum3").innerHTML;
 
     document.getElementById("cstAdr1").innerHTML = document.getElementById("cstAdr1_5").innerHTML;
@@ -144,12 +152,29 @@ function butRowAcep(but) {
     //document.getElementById("cstAdr1_1").innerHTML = document.getElementById("cstAdr1_5").innerHTML;
     document.getElementById("cstAdr2").innerHTML = document.getElementById("cstAdr1_51").innerHTML;
     document.getElementById("cstAdr1_2").innerHTML = document.getElementById("cstAdr1_51").innerHTML;
-    document.getElementById("cstAdr1_3").innerHTML = document.getElementById("cstAdr1_51").innerHTML;
+    //document.getElementById("cstAdr1_3").innerHTML = document.getElementById("cstAdr1_51").innerHTML;
     document.getElementById("cstAdr1_61").innerHTML = document.getElementById("cstAdr1_51").innerHTML;
     document.getElementById("cstAdr1_71").innerHTML = document.getElementById("cstAdr1_51").innerHTML;
     document.getElementById("cstAdr1_81").innerHTML = document.getElementById("cstAdr1_51").innerHTML;
 
-    document.getElementById("splCondition2").innerHTML = document.getElementById("splCondition").innerHTML;
+    document.getElementById("cstAdr3").innerHTML = document.getElementById("cstAdr3_3").innerHTML;
+    document.getElementById("cstAdr3_1").innerHTML = document.getElementById("cstAdr3_3").innerHTML;
+    document.getElementById("cstAdr3_2").innerHTML = document.getElementById("cstAdr3_3").innerHTML;
+
+    document.getElementById("supAdr_01").innerHTML = document.getElementById("supAdr_012tb").innerHTML;
+    document.getElementById("supAdr_02").innerHTML = document.getElementById("supAdr_022tb").innerHTML;
+    document.getElementById("supAdr_03").innerHTML = document.getElementById("supAdr_032tb").innerHTML;
+
+    document.getElementById("supAdr_011").innerHTML =  document.getElementById("supAdr_012tb").innerHTML;
+    document.getElementById("supAdr_021").innerHTML =  document.getElementById("supAdr_022tb").innerHTML
+    document.getElementById("supAdr_031").innerHTML =  document.getElementById("supAdr_032tb").innerHTML;
+    //data modification Tables
+    document.getElementById("supAdr_012").innerHTML = document.getElementById("supAdr_012tb").innerHTML;
+    document.getElementById("supAdr_022").innerHTML = document.getElementById("supAdr_022tb").innerHTML;
+    document.getElementById("supAdr_032").innerHTML = document.getElementById("supAdr_032tb").innerHTML;
+
+
+    //document.getElementById("splCondition2").innerHTML = document.getElementById("splCondition").innerHTML;
     document.getElementById("splCondition3").innerHTML = document.getElementById("splCondition").innerHTML;
     document.getElementById("splCondition4").innerHTML = document.getElementById("splCondition").innerHTML;
     //document.getElementById("vhMade1").innerHTML = document.getElementById("vhMade").innerHTML;
@@ -161,7 +186,7 @@ function butRowAcep(but) {
 }
 function butRowCancel(but) {
   var $row = $(but).parents('tr'); 
-  var $cols = $row.find('td');  
+  var $cols = $row.find('td');
   if (!ModoEdicion($row)) return;  
 
   IterarCamposEdit($cols, function($td) {  

@@ -19,6 +19,7 @@ function clock()
     document.getElementById("date3").innerHTML=date+" "+month+", "+year;
     document.getElementById("date4").innerHTML=date+" "+month+", "+year;
     document.getElementById("date5").innerHTML=date+" "+month+", "+year;
+    document.getElementById("date_0").innerHTML=date+" "+month+", "+year;
 }
 
 
@@ -64,6 +65,10 @@ document.getElementById('button').addEventListener("click", () => {
                 return item.CstAddressTwo;
               })
 
+              const cstAdrThree = rowObject.map((item) => {
+                return item.CstAddressThree;
+              })
+
               const supname = rowObject.map((item) => {
                 return item.SupName;
               })
@@ -97,6 +102,17 @@ document.getElementById('button').addEventListener("click", () => {
                 return item.CstName;
               }))
 
+              //customer NIC 
+              const cstNic = rowObject.map((item) => {
+                return item.CstNIC;
+              })
+
+              const cstGreet = rowObject.map((item) => {
+                return item.CstGreeting;
+              })
+
+
+
               const chasNum = rowObject.map((item => {
                 return item.ChasNo;
               }))
@@ -120,9 +136,129 @@ document.getElementById('button').addEventListener("click", () => {
                 //.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
               }))
 
+              const dmsumWord = rowObject.map((item => {
+                return item.DmSumWords;
+                //.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+              }))
+
               const setdate = rowObject.map((item => {
                 return item.SetDate;
               }))
+
+            
+
+              //supplier greeting
+              const supGreet = rowObject.map((item) => {
+                return item.SupGreeting;
+              })
+
+              //supplier Adresses
+              const supAdrOne = rowObject.map((item) => {
+                return item.SupAddressOne;
+              })
+
+              const supAdrTwo = rowObject.map((item) => {
+                return item.SupAddressTwo;
+              })
+
+              const supAdrThree = rowObject.map((item) => {
+                return item.SupAddressThree;
+              })
+
+              //purchase value
+              const purchValue = rowObject.map((item) => {
+                return item.PurchaseValue;
+              })
+
+              const purchValueWrd = rowObject.map((item) => {
+                return item.PurchaseValueWords;
+              })
+
+              const processFee = rowObject.map((item) => {
+                return item.ProcessingFee;
+              })
+
+              const invoiceDate = rowObject.map((item) => {
+                return item.InvoiceDate;
+              })
+
+              // const invoiceDate = rowObject.map((item) => {
+              //   return item.InvoiceDate;
+              // })
+
+              //rate %
+              const rate = rowObject.map((item) => {
+                return item.Rate;
+              })
+
+              const awplr = rowObject.map((item) => {
+                return item.AWPLR;
+              })
+
+              const floor = rowObject.map((item) => {
+                return item.Floor;
+              })
+
+              const cap = rowObject.map((item) => {
+                return item.Cap;
+              })
+
+              const tenure = rowObject.map((item) => {
+                return item.Tenure;
+              })
+
+              const grace = rowObject.map((item) => {
+                return item.Grace;
+              })
+
+              const guarantorName = rowObject.map((item) => {
+                return item.GuarantorName;
+              })
+
+              const guarantorNic = rowObject.map((item) => {
+                return item.GuarantorNIC;
+              })
+
+              const totalUnits = rowObject.map((item) => {
+                return item.TotalUnits;
+              })
+
+              const unitsAmana = rowObject.map((item) => {
+                return item.Units_Amana;
+              })
+
+              const unitsCustomer = rowObject.map((item) => {
+                return item.Units_Customer;
+              })
+
+              const sharesAmana = rowObject.map((item) => {
+                return item.Shares_Amana;
+              })
+
+              const sharesCustomer = rowObject.map((item) => {
+                return item.Shares_Customer;
+              })
+
+              const ratioAmana = rowObject.map((item) => {
+                return item.Ratio_Amana;
+              })
+
+              const ratioCustomer = rowObject.map((item) => {
+                return item.Ratio_Customer;
+              })
+
+              const customerContribution = rowObject.map((item) => {
+                return item.CustomerContribution;
+              })
+
+
+
+
+
+
+
+
+
 
 
               //console.log(refnum);      
@@ -134,7 +270,7 @@ document.getElementById('button').addEventListener("click", () => {
               //document.getElementById("refNum9").innerHTML = refnum;
       
            
-              document.getElementById("date").innerHTML = date;
+              //document.getElementById("date").innerHTML = date;
               document.getElementById("cstAdr1").innerHTML = cstAdrOne;
               document.getElementById("cstAdr1_1").innerHTML = cstAdrOne;
               document.getElementById("cstAdr1_4").innerHTML = cstAdrOne;
@@ -149,6 +285,34 @@ document.getElementById('button').addEventListener("click", () => {
               document.getElementById("cstAdr1_61").innerHTML = cstAdrTwo;
               document.getElementById("cstAdr1_71").innerHTML = cstAdrTwo;
               document.getElementById("cstAdr1_81").innerHTML = cstAdrTwo;
+
+              document.getElementById("cstAdr3").innerHTML = cstAdrThree;
+              document.getElementById("cstAdr3_1").innerHTML = cstAdrThree;
+              document.getElementById("cstAdr3_2").innerHTML = cstAdrThree;
+              document.getElementById("cstAdr3_3").innerHTML = cstAdrThree;
+
+              //supplier Address
+              document.getElementById("supAdr_01").innerHTML = supAdrOne;
+              document.getElementById("supAdr_02").innerHTML = supAdrTwo;
+              document.getElementById("supAdr_03").innerHTML = supAdrThree;
+
+              document.getElementById("supAdr_011").innerHTML = supAdrOne;
+              document.getElementById("supAdr_021").innerHTML = supAdrTwo;
+              document.getElementById("supAdr_031").innerHTML = supAdrThree;
+              
+              //data modification table
+              document.getElementById("supAdr_012").innerHTML = supAdrOne;
+              document.getElementById("supAdr_022").innerHTML = supAdrTwo;
+              document.getElementById("supAdr_032").innerHTML = supAdrThree;
+
+              document.getElementById("supAdr_012tb").innerHTML = supAdrOne;
+              document.getElementById("supAdr_022tb").innerHTML = supAdrTwo;
+              document.getElementById("supAdr_032tb").innerHTML = supAdrThree;
+
+
+              //supplier greeting
+              //document.getElementById("supGreet_0").innerHTML = supGreet;
+
               
              
               document.getElementById("refNum2").innerHTML = refnum;          
@@ -163,14 +327,25 @@ document.getElementById('button').addEventListener("click", () => {
               document.getElementById("cstName7").innerHTML = cstname;
               document.getElementById("cstName8").innerHTML = cstname;
               document.getElementById("cstName9").innerHTML = cstname;
+
+              document.getElementById("cstGreet_0").innerHTML = cstGreet;
+              document.getElementById("cstGreet_01").innerHTML = cstGreet;
+              document.getElementById("cstNic_0").innerHTML = cstNic;
+              
               
               
               document.getElementById("supName").innerHTML = supname;
               document.getElementById("supName1").innerHTML = supname;
               document.getElementById("supName2").innerHTML = supname;
               document.getElementById("supName3").innerHTML = supname;
+              document.getElementById("supName4").innerHTML = supname;
+              document.getElementById("supName4tb").innerHTML = supname;
 
-              document.getElementById("vhMade").innerHTML = vhMade;
+              document.getElementById("supGreet_0").innerHTML = supGreet;
+              document.getElementById("supGreet_01").innerHTML = supGreet;
+              document.getElementById("supGreet_01tb").innerHTML = supGreet;
+
+              //document.getElementById("vhMade").innerHTML = vhMade;
               document.getElementById("vhMade1").innerHTML = vhMade1;
               document.getElementById("vhMade2").innerHTML = vhMade;
               document.getElementById("vhMade3").innerHTML = vhMade;
@@ -184,7 +359,7 @@ document.getElementById('button').addEventListener("click", () => {
               document.getElementById("vhNum5").innerHTML = vheNum;
               document.getElementById("vhNum6").innerHTML = vheNum;
 
-              document.getElementById("vhMode").innerHTML = vheMode;
+              //document.getElementById("vhMode").innerHTML = vheMode;
               
               document.getElementById("chnum").innerHTML = chasNum;
               document.getElementById("chnum1").innerHTML = chasNum;
@@ -208,13 +383,13 @@ document.getElementById('button').addEventListener("click", () => {
               document.getElementById("yom6").innerHTML = yom;
 
               //rsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
-              document.getElementById("rsum").innerHTML = rsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+              //document.getElementById("rsum").innerHTML = rsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
               document.getElementById("rsum1").innerHTML = rsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
               document.getElementById("rsum2").innerHTML = rsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
               document.getElementById("rsum3").innerHTML = rsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
               document.getElementById("rsum4").innerHTML = rsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
 
-              document.getElementById("stdate").innerHTML = setdate;
+              //document.getElementById("stdate").innerHTML = setdate;
 
               document.getElementById("vhNum1").innerHTML = vheNum1;
           
@@ -225,18 +400,31 @@ document.getElementById('button').addEventListener("click", () => {
 
 
               document.getElementById("stdate1").innerHTML = setdate;
-              document.getElementById("cstAdr1_3").innerHTML = cstAdrTwo;
+              //document.getElementById("cstAdr1_3").innerHTML = cstAdrTwo;
 
-              document.getElementById("dmsum").innerHTML = dmsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");  
+              //document.getElementById("dmsum").innerHTML = dmsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");  
+              document.getElementById("dmsum1").innerHTML = dmsum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","); 
+              
+              document.getElementById("dmsumWrd_0").innerHTML = dmsumWord;
+
+              document.getElementById("purchVal_0").innerHTML = purchValue.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+              document.getElementById("purchVal_01").innerHTML = purchValue.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+              document.getElementById("purchValWrd_0").innerHTML = purchValueWrd;
+
+              document.getElementById("invoiceDate_0").innerHTML = invoiceDate;
+              
+
+
+
 
 
               //dateTime
               //datetime
-              n =  new Date();
-              y = n.getFullYear();
-              m = n.getMonth() + 1;
-              d = n.getDate();
-              document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+              // n =  new Date();
+              // y = n.getFullYear();
+              // m = n.getMonth() + 1;
+              // d = n.getDate();
+              // document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
 
 
          });
@@ -321,10 +509,10 @@ window.onload = function(){
       //var abc = document.getElementById("refNum").value;
      
       var opt1 = {
-        margin: 1,
+        margin: 0.6,
         filename:refnum +'_Delivery_Order_Report.pdf',
         image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 4 },
+        html2canvas: { scale: 2 },
         jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
         
     };
